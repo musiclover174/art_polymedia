@@ -1,0 +1,351 @@
+html,
+body
+  font-family $os
+body
+  overflow-x hidden
+         
+.container
+  w 100%
+  max-width 1344px
+  margin 0 auto
+.content
+  h1:not([class])
+    color $red
+    fontify 96px 700 100px
+    margin 63px 0 35px
+    text-align center
+  h2:not([class])
+    color black
+    fontify 48px 400 56px
+    margin 63px 0 -3px
+  h3:not([class]),
+  h4:not([class])
+    color black
+    fontify 36px 400 44px
+    margin 63px 0 20px
+  img:not([class])
+    margin 4px 0
+    max-width 100%
+  ul:not([class])
+    list-style  none
+    margin  18px 0
+  ul:not([class]) li
+    font-family $sans
+    pl 30px
+    pos relative
+    fontify 18px 400 26px
+  ul:not([class]) li + li
+    mt 24px
+  ul:not([class]) > li:before
+    content ""
+    pos absolute
+    l 0
+    t 14px
+    size 20px 1px
+    bgc $green
+  ol:not([class])
+    list-style none
+    margin 18px 0 30px
+    counter-reset myCounter
+  ol:not([class]) li
+    pl 30px
+    pos relative
+    font-family $sans
+    fontify 18px 400 26px
+    @media $desktopMedium
+      fontify 17px 400 25px
+  ol:not([class]) li + li
+    mt 16px
+  ol:not([class]) > li:before
+    counter-increment myCounter
+    content counter(myCounter)"."	
+    pos absolute
+    l 0
+    t 0
+    w 30px
+    pr 9px
+    color $green
+    font-family $sans
+    fontify 18px 700 26px
+  p:not([class])
+    font-family $sans
+    fontify 18px 400 26px
+    margin 25px 0
+  a:not([class])
+    font-family $sans
+    color $green
+    border-bottom 1px solid alpha($green, .4)
+    transition .5s border
+    &:hover
+      border-color transparent
+ 
+  *:not([class]):not(span):first-child
+    mt 0 !important
+  *:not([class]):not(span):last-child
+    margin-bottom 0 !important
+
+  table
+    font-family $sans
+    border 2px solid $green
+    margin 30px 0
+    td
+      padding 20px 24px
+      color $dark
+      fontify 15px 400 21px
+      border 1px solid #e9f1e6
+
+input::-webkit-input-placeholder
+  color alpha(white, .5)
+input::-moz-placeholder
+  color alpha(white, .5)
+input:-ms-input-placeholder
+  color alpha(white, .5)
+    
+div[class\^="table-scroller"]
+  overflow auto
+  pos relative
+  pl 1px
+  &:not(:last-child)
+    mb 36px
+  @media $desktopMax
+    w 100%
+
+.text
+  max-width 876px
+  margin 0 auto
+  @media $desktopMax
+    max-width 764px
+  @media $desktopTablet
+    max-width 100%
+    
+.common
+  &__input
+    w 100%
+    h 36px
+    border 0
+    border-bottom 1px solid alpha(white, .3)
+    bgc transparent
+    color white
+    font-family $os
+    font-size 16px
+    line-height 300
+    transition .7s border
+    &.notempty, 
+    &:focus
+      border-bottom 1px solid alpha(white, 1)
+    &:focus + ^[0]__placeholder,
+    &.notempty + ^[0]__placeholder
+      t -17px
+      line-height 18px
+  &__textarea
+    w 100%
+    h 76px
+    overflow hidden
+    resize none
+    padding 0 0 11px
+    border 0
+    border-bottom 1px solid alpha(white, .3)
+    bgc transparent
+    color white
+    font-family $os
+    fontify 16px 300 22px
+    transition .7s border
+    & + ^[0]__placeholder
+      line-height 22px
+    &.notempty, 
+    &:focus
+      border-bottom 1px solid alpha(white, 1)
+    &:focus + ^[0]__placeholder,
+    &.notempty + ^[0]__placeholder
+      t -17px
+      line-height 18px
+  &__sbm
+    cursor pointer
+    font-family $os
+    mt 5px
+    border-radius 5px
+  &__select
+    h 36px
+    bgc #fff
+    border 2px solid #b6b6b6
+    w auto
+    cursor pointer
+    transition .5s border
+    &.warning
+      border-color #ed1c24
+  &__placeholder
+    pos absolute
+    z-index -1
+    l 0 
+    t 0
+    color alpha(white, .5)
+    fontify 13px 400 35px
+    letter-spacing .1em
+    text-transform uppercase
+    text-overflow ellipsis
+    white-space nowrap
+    overflow hidden
+    max-width 100%
+    transition .7s top, .7s line-height
+  &__col
+    pos relative
+    z-index 1
+    w calc(50% - 30px)
+    &_col3
+      w calc(100% / 3 - 20px)
+    &_wide
+      w 100%
+    @media $LandscapeMedium
+      w 100%
+      & + &
+        mt 35px
+  &__row
+    display flex
+    justify-content space-between
+    pos relative
+    w 100%
+    @media $LandscapeMedium
+      flex-direction column
+    & + &
+      mt 35px
+  &__fileover
+    w 100%
+    pos relative
+    transition .5s border
+    &.warning
+      border-color #ed1c24
+    & + &
+      mt 20px
+  &__file
+    pos absolute
+    w 0
+    h 0
+    l 0
+    t 0
+    opacity 0
+    &[data-req]:after
+      content "*"
+      pos absolute
+      r -11px
+      fontify 23px 400 14px
+      t -3px
+    &name
+      ib()
+      pos relative
+      l 26px
+      cursor pointer
+      color alpha(white, .5)
+      fontify 14px 700 14px
+      letter-spacing .1em
+      text-transform uppercase
+      border-bottom 1px solid alpha(white, .25)
+      transition .5s border
+      @media $lDesktopSmall
+        font-size 12px
+      &.choosed
+        color white
+        text-transform none
+        letter-spacing 0
+        font-weight 300
+      &.choosed,
+      &:hover
+        border-color transparent
+      &:before
+        content ""
+        pos absolute
+        l -24px
+        t 3px
+        size 16px 8px
+        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAMAAADHqI+lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAe1BMVEX////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////QYBnOAAAAKHRSTlMAFJLi/uaFBRrhukMXERM+1IeisgE0t8xM8EeJRFvnRmnsaKQ1uVUVNSas3QAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABYSURBVAjXRc1ZEkAwEATQJvZ9jxC74P4nRATvr6eqewBNJ8ahmJYNx/X8IHxEcZIiywuUFZWAmoE1AGm5BHQ92PAf+DjNWK7KqipUbLhGxTcKadfJ+/WOJ3rfCXxQ+WZgAAAAAElFTkSuQmCC") no-repeat center
+      &.choosed + ^[-1]delete
+        visibility visible
+        cursor pointer
+      &.choosed:after
+        content ""
+    &delete
+      ib()
+      visibility hidden
+      mt 3px
+      ml 32px
+      size 9px
+      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJBAMAAAASvxsjAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAKlBMVEX///////////////////////////////////////////////////////9q+00tAAAADXRSTlMA0Do74eI5bGtqOM7MEv0urwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA3SURBVAjXYxBiYGAWYFBRYDBNYGByYg5jYGBQLU0Akhw3GUDsKQoMDExRTE4MDKYLQMp2AbkHAKcGB4WerKhTAAAAAElFTkSuQmCC") no-repeat center
+      
+.fakecheckbox
+  ib()
+  pos relative
+  &__label
+    ib()
+    color alpha(white, .5)
+    fontify 14px 300 20px
+    pos relative
+    pl 30px
+    pt 9px
+    &:before 
+      content ""
+      pos absolute
+      l 0px
+      t 8px
+      size 16px
+      border 2px solid alpha(white, .5)
+      border-radius 4px
+      cursor pointer
+      transition .5s border
+    &:after
+      content ""
+      pos absolute
+      size 10px 7px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAMAAAAGcixRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAaVBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9tAe1xAAAAInRSTlMAMeJ2BDvvyIHoKkb1ww/H6StU+bkKEs70/K4GE6IDzZQB32lQYAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABCSURBVAjXJYvFEcAwAMNUZoYUUvL+Q/Zy8Ud6yOAXhBHEzpJUGXlRQlWraenUD+OkeYHVaNt1nC6zRrpuf7bP+zn+aAUDdRP9KA0AAAAASUVORK5CYII=') no-repeat center
+      l 5px
+      t 15px
+      opacity 0
+      cursor pointer
+      transition .5s opacity
+    a
+      color inherit
+      border-bottom 1px solid alpha(white, .2)
+      transition .7s border
+      &:hover
+        border-color transparent
+  &__truecheck
+    pos absolute
+    l 0
+    t 0
+    w 0
+    h 0
+    border 0
+    opacity 0
+    &:checked + ^[0]__label:after
+      opacity 1
+    &.warning + ^[0]__label:before 
+      border-color #ff0f37
+
+.breadcrumbs
+  font-family $sans
+  text-align center
+  pl 18px
+  mb 70px
+  color black
+  @media $LandscapeMin
+    mb 40px
+  &__href
+    color black
+    fontify 11px 700 14px
+    text-transform uppercase
+    letter-spacing .12em
+    border-bottom 1px solid alpha(black, .25)
+    transition .5s border
+    &:hover
+      border-color transparent
+  &__delim
+    fontify 11px 700 14px
+    margin 0 5px
+
+h1:not([class]) + .breadcrumbs
+  mt -6px
+      
+input.warning,
+textarea.warning
+  border-color #ff0f37
+
+.hidden-block
+  display none
