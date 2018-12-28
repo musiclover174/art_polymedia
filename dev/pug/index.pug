@@ -6,7 +6,185 @@ html
     include layout/__head
   body.index
     include layout/__header
-  
+
     +b('main').main
-       
+
+      +b('section').banner
+        +e.car.swiper-container.js-banner
+          .swiper-wrapper
+            .swiper-slide
+              +e.container
+                +e.img(src="img/banner1.jpg")
+                +e.hrefover(data-swiper-parallax="-800")
+                  +e.href(href="#") 
+                    span Гала-ужины для гостей выставки Metro Expo 2018
+            .swiper-slide
+              +e.container
+                +e.img(src="img/banner1.jpg")
+                +e.hrefover(data-swiper-parallax="-800")
+                  +e.href(href="#") 
+                    span Гала-ужины для гостей выставки Metro Expo 2018
+        .swiper-buttons
+            .swiper-button-prev
+            .swiper-button-next
+
+      +b('section').about
+        +e.sticky-parent.js-sticky-parent
+          +e.sticky.js-sticky
+            +e('video').video(preload="", autoplay, muted, loop, poster="img/video.jpg")
+              source(src="video/about.mp4" type="video/mp4")
+          .container
+            +e('section').info
+              +e.info-col
+                h4.about__info-title Более 15&nbsp;лет в&nbsp;деле
+              +e.info-col
+                p Успех любого мероприятия зависит от того, насколько ярко, оригинально и качественно оно будет представлено публике. Не важно, идет ли речь о деловой конференции, спортивном соревновании или творческом шоу - именно видеопрезентации задают тон и настроение в ходе происходящего действия, надолго оставаясь в памяти зрителей.
+                p Компания ART Polymedia уже более 15 лет специализируется на предоставлении и обслуживании профессиональных систем визуализации на крупных конференциях,  выставках, корпоративных и спортивных мероприятиях. 
+            +e('ul').feats
+              +e.feat
+                +e.feat-imgover
+                  +e.feat-icon(src="img/feat1.png")
+                +e('p').feat-text
+                  mark Высокая квалификация 
+                  | инженерно-технического состава
+              +e.feat
+                +e.feat-imgover
+                  +e.feat-icon(src="img/feat2.png")
+                +e('p').feat-text
+                  mark Гибкое 
+                  | ценообразование
+              +e.feat
+                +e.feat-imgover
+                  +e.feat-icon(src="img/feat3.png")
+                +e('p').feat-text
+                  mark Современное 
+                  | профессиональное оборудование
+              +e.feat
+                +e.feat-imgover
+                  +e.feat-icon(src="img/feat4.png")
+                +e('p').feat-text Решения для управления экранами 
+                  mark любой сложности
+              +e.feat
+                +e.feat-imgover
+                  +e.feat-icon(src="img/feat5.png")
+                +e('p').feat-text
+                  mark Большой опыт 
+                  | в подготовке тендерной документации
+            +e('section').projects
+              +e('p').projects-count 27 крутых проектов за&nbsp;2018 год
+              +e.projects-href(href="https://www.youtube.com/watch?v=HEXWRTEbj1I", data-fancybox)
+              +e('p').projects-showreel Смотрите Showreel
+        .container
+          +e.bottom
+            +e('p').bottom-text За время работы компанией было успешно реализовано свыше 12 000 крупных проектов как в Москве, так и в других городах России и странах СНГ.
+            +e('p').bottom-text Компания ART Polymedia не раз завоевывала престижные награды, такие как EMEA InAVation Awards 2009 и 2014 в Амстердаме, Golden Puzzle ‘09 и PRO Integration Awards 2010-2013.
+            +e.bottom-topage.btn(href="#") Еще больше о компании
+
+      +b('section').feeds
+        .container
+          h4.common__title.common__title_bigger Клиенты о нас
+          +e.car.swiper-container.js-feeds
+            .swiper-wrapper
+              .swiper-slide
+                +b('article').review
+                  +e(href="img/fullrev.jpg").imgover
+                    +e.img(src="img/rev1.jpg")
+                  +e.content
+                    +e('p').title Awards Party 2013
+                    +e.text
+                      p Уважаемая Виктория Михайловна! 
+                      p Позвольте поблагодарить Вас лично и коллектив компании ART Polymedia за профессионализм, исключительную компетентность сотрудников, оперативность в решении поставленных задач и ответственное отношение к работе, которые позволили успешно реализовать более 60 мероприятий компании и стали залогом нашего 17-летнего сотрудничества. 
+                      p Желаю вам успехов в работе и дальнейшего профессионального развития!
+                    +e('p').from Генеральный директор Ульянова И. А. 
+              .swiper-slide
+                +b('article').review
+                  +e(href="img/fullrev.jpg").imgover
+                    +e.img(src="img/rev1.jpg")
+                  +e.content
+                    +e('p').title 1С-Софт
+                    +e.text
+                      p Коллектив компании EDE выражает свою благодарность компании ART Polymedia за профессионализм и слаженную работу, проявленные в ходе технического оснащения Московского международного форума инновационного развития, который прошел 16-18 октября 2017 года в технопарке “Сколково”. 
+                      p Надеемся на продолжение нашего плодотворного сотрудничества и желаем вам профессиональных успехов!
+                    +e('p').from Генеральный директор Ульянова И. А.
+              .swiper-slide
+                +b('article').review
+                  +e(href="img/fullrev.jpg").imgover
+                    +e.img(src="img/rev2.jpg")
+                  +e.content
+                    +e('p').title Awards Party 2013
+                    +e.text
+                      p Уважаемая Виктория Михайловна! 
+                      p Позвольте поблагодарить Вас лично и коллектив компании ART Polymedia за профессионализм, исключительную компетентность сотрудников, оперативность в решении поставленных задач и ответственное отношение к работе, которые позволили успешно реализовать более 60 мероприятий компании и стали залогом нашего 17-летнего сотрудничества. 
+                      p Желаю вам успехов в работе и дальнейшего профессионального развития!
+                    +e('p').from Генеральный директор Ульянова И. А. 
+            .swiper-buttons
+              .swiper-button-prev.swiper-button-prev_dark
+              .swiper-button-next.swiper-button-next_dark
+          +e.bottom
+            +e.toall.btn(href="#") Полный список отзывов
+
+      +b('section').realized
+        +e('span').bg(style="background-image: url('img/video.jpg')")
+        .container
+          h4.common__title Реализованные<br>проекты
+          +e('ul').list
+            +e.item
+              +e.href.js-realized-elem(href="__index-card.html") 
+                span Владимирский Экономический Форум&nbsp;2018
+            +e.item
+              +e.href.js-realized-elem(href="__index-card.html") 
+                span Цикл Открытых уроков «ПроеКТОриЯ»
+            +e.item
+              +e.href.js-realized-elem(href="__index-card.html") 
+                span Выставка TransRussia 2018
+            +e.item
+              +e.href.js-realized-elem(href="__index-card.html") 
+                span Презентация седана Genesis G70
+            +e.item
+              +e.href.js-realized-elem(href="__index-card.html") 
+                span SAP Forum Москва 2018
+            +e.item
+              +e.href.js-realized-elem(href="__index-card.html") 
+                span Гала-ужины для гостей выставки METRO EXPO 2018
+            +e.item
+              +e.href.js-realized-elem(href="__index-card.html") 
+                span Владимирский Экономический Форум 2018
+            +e.item
+              +e.href.js-realized-elem(href="__index-card.html") 
+                span Цикл Открытых уроков «ПроеКТОриЯ»
+            +e.item
+              +e.href.js-realized-elem(href="__index-card.html") 
+                span Шоу братьев Запашных «АнгелЫ»
+            +e.item
+              +e.href.js-realized-elem(href="__index-card.html") 
+                span Презентация седана Genesis G70
+          +e('p').toall-title И это лишь малая часть
+          +e.toall.btn(href="#") Полный список проектов
+
+      +b('section').callback
+        .container
+          h4.common__title У вас есть проект?
+          p.common__subtitle Давайте обсудим его. Продумаем и сделаем!
+          +e('form').form
+            .common__col
+              .common__row
+                input(type="text", data-req="req").common__input
+                label.common__placeholder Представьтесь, пожалуйста
+              .common__row
+                input(type="text", data-req="req").common__input
+                label.common__placeholder Как с вами связаться?
+              .common__row
+                .common__fileover
+                  label(for="file1").common__filename.js-common-file Прикрепите файл
+                  input(type="file", name="").common__file#file1.js-common-fileinput
+                  button(type="button").common__filedelete.js-common-filedelete
+            .common__col
+              .common__row
+                textarea(data-req="req").common__textarea
+                label.common__placeholder Расскажите о вашем проекте
+              .common__row
+                +e('span').spacer
+                button(type="submit").callback__send.btn.common__sbm Отправить
+
+    include layout/__footer
     include layout/__scripts

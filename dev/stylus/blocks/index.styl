@@ -1,0 +1,338 @@
+.banner
+  &__car
+    min-height 100vh
+  .swiper-slide
+    overflow hidden
+    z-index 1
+    df(flex-end, flex-start)
+    pb 213px
+    min-height 100vh
+    perspective 1000px
+  .swiper-buttons
+    pos absolute
+    z-index 1
+    b 137px
+    l 50%
+    w 100%
+    max-width 1573px
+    padding 0 60px
+    transform translateX(-50%)
+  &__container
+    w 100%
+    max-width 1573px
+    padding 0 60px
+    margin 0 auto
+  &__img
+    pos absolute
+    t 0
+    l 0
+    min-width 100%
+    min-height 100%
+    z-index -1
+    transition 2s transform
+  &__hrefover
+    max-width 50%
+    pb 23px
+  &__href
+    color white
+    fontify 100px 700 100px
+    border-bottom 1px solid rgba(255, 255, 255, .25)
+    transition .7s border
+    &:hover
+      border-color transparent
+    span
+      pos relative
+      t 23px
+
+body.pace-done
+  .banner__img
+    transform translate3d(5%, -4%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.5)
+    transform-style preserve-3d
+    animation movie 8s 2s infinite ease-in-out
+
+.about
+  pb 120px
+  &__sticky
+    size 100% 100vh
+    pos absolute
+    l 0
+    t 0
+    z-index -1
+    opacity .35
+    overflow hidden
+    transform scale(1)
+    will-change transform
+    transition .5s transform
+    &.fixed
+      pos fixed
+    &.bottom
+      b 0
+      t auto
+      transition 1.4s transform
+      transform scale(.5)
+      transform-origin 50% 130%
+    &-parent
+      pt 156px
+      pos relative
+  &__video
+    pos absolute
+    l 50%
+    t 50%
+    min-width 100%
+    min-height 100%
+    transform translate(-50%, -50%)
+  &__info
+    df()
+    &-title
+      color white
+      fontify 120px 700 120px
+      mt -16px
+      ml -8px
+      &:after
+        content ""
+        display inline-block
+        vertical-align baseline
+        ml 10px
+        size 13px
+        bgc $red
+    &-col
+      w calc(50% - 24px)
+      color white
+      p:not([class])
+        fontify 24px 600 32px
+      & + &
+        ml 48px
+  &__feats
+    df(flex-start, space-between)
+    flex-wrap wrap
+    mt 175px
+    mb -65px
+  &__feat
+    w calc(50% - 24px)
+    mb 65px
+    &-imgover
+      dfv(flex-start, flex-end)
+      h 58px
+      mb 20px
+    &-icon
+      max-height 100%
+    &-text
+      color white
+      fontify 24px 600 32px
+      w 90%
+      max-width 372px
+      mark
+        color $blue
+        bgc transparent
+  &__projects
+    df(center, space-between)
+    mt 300px
+    color white
+    fontify 60px 700 60px
+    &-count
+      w 324px
+    &-showreel
+      w 324px
+    &-href
+      pos relative
+      z-index 1
+      size 56px
+      &:after
+        content ""
+        pos absolute
+        l 50%
+        t 50%
+        ml -4px
+        mt -8px
+        size 11px 17px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAARCAQAAACh6J5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsMIwkb3xsXAAAAl0lEQVQY03WQsQ2CYBBGP0QTCxIbtdY4AoUGN5DERSx0Bgodw8YGNrBxACnsqAkNJg7xKKSQ4/eu+l4uX3JPXBkjuwJerFz4wJt9H4s1JRd8i8WUOw/mFosBCRVbi4XYUXPqY7EgJyPwQJ5+Z6JCT3u9JCcl6OKYmmO32yehIvqmYds4000jhfq0GRAbSs72yz9OnAadvhvc0cv72fj0UgAAAABJRU5ErkJggg==') no-repeat center
+        transition .7s background
+      &:before
+        content ""
+        size 56px
+        pos absolute
+        z-index -1
+        l 50%
+        t 50%
+        mt -28px
+        ml -28px
+        border-radius 50%
+        bgc $blue
+        transition .7s width, .7s height, .7s margin
+      &:hover
+        &:after
+          background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAARCAQAAACh6J5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsMJQ7T4SkyAAAAZ0lEQVQY023QoRHCYBBE4Z/BRMRCA+ki6YFWQhVQRnRQVEALNBGPR+TDc3vn3tzc7L5m0Wn/2/A2JMzHJWF2d8eK4eWcMJspYb6uCcNDf6DVeabrVV9/zynJmHKfastbbRmdRIPR9w+c8wSqdmnVhQAAAABJRU5ErkJggg==') no-repeat center
+        &:before
+          size 66px
+          ml -33px
+          mt -33px
+  &__bottom
+    mt 316px
+    df(flex-start, center)
+    flex-wrap wrap
+    &-text
+      w calc(50% - 24px)
+      color white
+      fontify 24px 600 32px
+      pr 50px
+      & + &
+        ml 48px
+    &-topage
+      mt 93px
+
+.feeds
+  bgc $grey
+  pt 105px
+  pb 120px
+  .swiper-buttons
+    pos absolute
+    l 0
+    b -90px
+  &__car
+    mt 70px
+    &.swiper-container
+      overflow visible
+  &__bottom
+    mt 60px
+    text-align right
+  &__toall
+    ib()
+
+.realized
+  pos relative
+  z-index 1
+  color white
+  padding 100px 0 120px
+  &__bg
+    pos absolute
+    z-index -1
+    t 0
+    l 0
+    w 100%
+    h 100%
+    opacity .35
+    background-position top center
+    background-repeat no-repeat
+    background-attachment fixed
+  &__list
+    df()
+    flex-wrap wrap
+    mt 55px
+    ml -48px
+    w calc(100% + 48px)
+  &__item
+    w 35.5%
+    ml 48px
+    mb 65px
+  &__href
+    color white
+    fontify 24px 600 32px
+    border-bottom 1px dotted rgba(255, 255, 255, .25)
+    transition .7s color, .7s border
+    span
+      pos relative
+      t 3px
+    &:hover
+      color $blue
+      border-color transparent
+  &__toall
+    ib()
+    mt 47px
+    &-title
+      fontify 60px 700 68px
+      mt 76px
+      ml -2px
+  &__card
+    padding 120px 0 60px
+    opacity 0
+    transition .7s opacity
+    &-bg
+      pos absolute
+      z-index -1
+      l 0
+      t 0
+      min-width 100%
+      min-height 100%
+      opacity 0
+      transition 2s transform
+    &-left
+      w calc(50% - 24px)
+    &-title
+      fontify 72px 700 72px
+      ml -4px
+    &-text
+      fontify 24px 600 32px
+      mt 70px
+    &-more
+      ib()
+      mt 50px
+    &-hashs
+      df()
+      ml -4px
+      w calc(100% + 4px)
+      flex-wrap wrap
+      mb 30px
+    &-hash
+      ml 4px
+      mb 4px
+      bgc $blue
+      white-space nowrap
+      padding 2px 4px 2px
+      fontify 13px 400 14px
+    &-video
+      ib()
+      pos relative
+      mt 57px
+      color white
+      fontify 18px 600 46px
+      ml 60px
+      &:before
+        content ""
+        pos absolute
+        l -60px
+        size 46px
+        t 0
+        bgc $blue
+        border-radius 50%
+        transition .7s top, .7s left, .7s width, .7s height  
+      &:after
+        content ""
+        pos absolute
+        l -41px
+        t 50%
+        mt -8px
+        size 11px 17px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAARCAQAAACh6J5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsMIwkb3xsXAAAAl0lEQVQY03WQsQ2CYBBGP0QTCxIbtdY4AoUGN5DERSx0Bgodw8YGNrBxACnsqAkNJg7xKKSQ4/eu+l4uX3JPXBkjuwJerFz4wJt9H4s1JRd8i8WUOw/mFosBCRVbi4XYUXPqY7EgJyPwQJ5+Z6JCT3u9JCcl6OKYmmO32yehIvqmYds4000jhfq0GRAbSs72yz9OnAadvhvc0cv72fj0UgAAAABJRU5ErkJggg==') no-repeat center
+        transition .7s background
+      &:hover
+        &:before
+          size 57px
+          l -67px
+          t -5px
+        &:after
+          background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAARCAQAAACh6J5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsMJQ7T4SkyAAAAZ0lEQVQY023QoRHCYBBE4Z/BRMRCA+ki6YFWQhVQRnRQVEALNBGPR+TDc3vn3tzc7L5m0Wn/2/A2JMzHJWF2d8eK4eWcMJspYb6uCcNDf6DVeabrVV9/zynJmHKfastbbRmdRIPR9w+c8wSqdmnVhQAAAABJRU5ErkJggg==') no-repeat center
+
+.popup_realized.show
+  .realized__card
+    opacity 1
+    transition .7s 2s opacity
+  .realized__card-bg
+    opacity 1
+    transform translate3d(15%, -14%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.4)
+    transform-style preserve-3d
+    transition 2s .5s opacity, 2s .5s transform
+    animation moviePopup 8s 3s infinite ease-in-out
+
+.callback
+  bgc $grey
+  color $dark
+  padding 100px 0 120px
+  &__form
+    bgc white
+    mt 70px
+    padding 32px 50px 37px 50px
+    df(flex-start, space-between)
+  &__send
+    align-content flex-end
+    &:hover
+      color $dark

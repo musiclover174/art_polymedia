@@ -1,3 +1,61 @@
 include ../bemto/bemto.pug
 
 +b('header').header
+  +e.left
+    +e.logo(href="#")
+      +e.logo-img(src="img/logo.png", alt="")
+    +e.socials
+      +e.socials-elem(href="#", data-type="yt")
+      +e.socials-elem(href="#", data-type="fb")
+      +e.socials-elem(href="#", data-type="tw")
+      +e.socials-elem(href="#", data-type="inst")
+    +e.order.btn(type="button", data-fancybox, data-src="order") Отправить запрос
+    +e.search.js-search(type="button")
+  +e('aside').right
+    +e.row
+      +e.lang(href="#") ENG
+      +e.tel(href="tel:+74959568587") +7 (495) 956-85-87
+    +e.row
+      +b('nav').menu
+        +e('ul').list
+          +e.item
+            +e.href._active(href="#") Главная
+          +e.item
+            +e.href(href="#") О компании
+            +e('ul').sublist
+              +e.sublist-item
+                +e.sublist-href(href="#") Генеральный директор
+              +e.sublist-item
+                +e.sublist-href(href="#") История
+              +e.sublist-item
+                +e.sublist-href(href="#") Награды
+              +e.sublist-item
+                +e.sublist-href(href="#") Партнеры
+              +e.sublist-item
+                +e.sublist-href(href="#") СМИ о нас
+              +e.sublist-item
+                +e.sublist-href(href="#") Реквизиты
+              +e.sublist-item
+                +e.sublist-href(href="#") Новости
+              +e.sublist-item
+                +e.sublist-href(href="#") Отзывы
+          +e.item
+            +e.href(href="#") Портфолио
+            +e('ul').sublist
+              +e.sublist-item
+                +e.sublist-href(href="#") Реализованные проекты
+              +e.sublist-item
+                +e.sublist-href(href="#") Видео
+          +e.item
+            +e.href(href="#") Услуги
+            +e('ul').sublist
+              +e.sublist-item
+                +e.sublist-href(href="#") Парк арендного оборудования
+              +e.sublist-item
+                +e.sublist-href(href="#") Комплексное техническое оснащение мероприятий
+              +e.sublist-item
+                +e.sublist-href(href="#") Сервисный центр
+              +e.sublist-item
+                +e.sublist-href(href="#") Решения для мероприятий
+          +e.item
+            +e.href(href="#") Контакты

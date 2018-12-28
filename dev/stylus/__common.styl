@@ -3,14 +3,16 @@ body
   font-family $os
 body
   overflow-x hidden
+  bgc $dark
          
 .container
   w 100%
-  max-width 1344px
+  max-width 1573px
   margin 0 auto
-.content
+  padding 0 180px
+.main
   h1:not([class])
-    color $red
+    color black
     fontify 96px 700 100px
     margin 63px 0 35px
     text-align center
@@ -30,7 +32,6 @@ body
     list-style  none
     margin  18px 0
   ul:not([class]) li
-    font-family $sans
     pl 30px
     pos relative
     fontify 18px 400 26px
@@ -42,7 +43,7 @@ body
     l 0
     t 14px
     size 20px 1px
-    bgc $green
+    bgc $blue
   ol:not([class])
     list-style none
     margin 18px 0 30px
@@ -50,7 +51,6 @@ body
   ol:not([class]) li
     pl 30px
     pos relative
-    font-family $sans
     fontify 18px 400 26px
     @media $desktopMedium
       fontify 17px 400 25px
@@ -64,17 +64,14 @@ body
     t 0
     w 30px
     pr 9px
-    color $green
-    font-family $sans
+    color $blue
     fontify 18px 700 26px
   p:not([class])
-    font-family $sans
     fontify 18px 400 26px
-    margin 25px 0
+    margin 20px 0
   a:not([class])
-    font-family $sans
-    color $green
-    border-bottom 1px solid alpha($green, .4)
+    color $blue
+    border-bottom 1px solid alpha($blue, .4)
     transition .5s border
     &:hover
       border-color transparent
@@ -85,8 +82,7 @@ body
     margin-bottom 0 !important
 
   table
-    font-family $sans
-    border 2px solid $green
+    border 2px solid $blue
     margin 30px 0
     td
       padding 20px 24px
@@ -119,51 +115,57 @@ div[class\^="table-scroller"]
     max-width 100%
     
 .common
+  &__title
+    fontify 100px 700 100px
+    ml -8px
+    &_bigger
+      fontify 120px 700 104px
+  &__subtitle
+    fontify 24px 600 32px
+    mt 38px
   &__input
     w 100%
-    h 36px
+    h 50px
     border 0
-    border-bottom 1px solid alpha(white, .3)
+    border-bottom 1px solid $dark
     bgc transparent
-    color white
+    color $dark
     font-family $os
-    font-size 16px
-    line-height 300
+    font-size 18px
     transition .7s border
     &.notempty, 
     &:focus
-      border-bottom 1px solid alpha(white, 1)
+      border-bottom 1px solid $blue
     &:focus + ^[0]__placeholder,
     &.notempty + ^[0]__placeholder
-      t -17px
-      line-height 18px
+      opacity .35
+      t -7px
+      font-size 12px
+      line-height 12px
   &__textarea
     w 100%
-    h 76px
+    h 135px
     overflow hidden
     resize none
-    padding 0 0 11px
+    padding 12px 0
     border 0
-    border-bottom 1px solid alpha(white, .3)
+    border-bottom 1px solid $dark
     bgc transparent
-    color white
+    color $dark
     font-family $os
-    fontify 16px 300 22px
+    fontify 18px 400 26px
     transition .7s border
     & + ^[0]__placeholder
       line-height 22px
     &.notempty, 
     &:focus
-      border-bottom 1px solid alpha(white, 1)
+      border-bottom 1px solid $blue
     &:focus + ^[0]__placeholder,
     &.notempty + ^[0]__placeholder
-      t -17px
-      line-height 18px
-  &__sbm
-    cursor pointer
-    font-family $os
-    mt 5px
-    border-radius 5px
+      opacity .35
+      t -7px
+      font-size 12px
+      line-height 12px
   &__select
     h 36px
     bgc #fff
@@ -178,39 +180,27 @@ div[class\^="table-scroller"]
     z-index -1
     l 0 
     t 0
-    color alpha(white, .5)
-    fontify 13px 400 35px
-    letter-spacing .1em
-    text-transform uppercase
-    text-overflow ellipsis
+    color $dark
+    fontify 18px 400 48px
     white-space nowrap
     overflow hidden
     max-width 100%
-    transition .7s top, .7s line-height
+    transition .7s top, .7s line-height, .7s font-size, .7s opacity
   &__col
     pos relative
     z-index 1
-    w calc(50% - 30px)
-    &_col3
-      w calc(100% / 3 - 20px)
-    &_wide
-      w 100%
-    @media $LandscapeMedium
-      w 100%
-      & + &
-        mt 35px
+    w calc(50% - 24px)
   &__row
     display flex
     justify-content space-between
     pos relative
     w 100%
-    @media $LandscapeMedium
-      flex-direction column
     & + &
       mt 35px
   &__fileover
     w 100%
     pos relative
+    mt 13px
     transition .5s border
     &.warning
       border-color #ed1c24
@@ -232,16 +222,13 @@ div[class\^="table-scroller"]
     &name
       ib()
       pos relative
-      l 26px
+      l 23px
+      mr 23px
       cursor pointer
-      color alpha(white, .5)
-      fontify 14px 700 14px
-      letter-spacing .1em
-      text-transform uppercase
-      border-bottom 1px solid alpha(white, .25)
+      color $dark
+      fontify 18px 400 18px
+      border-bottom 1px dotted $dark
       transition .5s border
-      @media $lDesktopSmall
-        font-size 12px
       &.choosed
         color white
         text-transform none
@@ -253,23 +240,39 @@ div[class\^="table-scroller"]
       &:before
         content ""
         pos absolute
-        l -24px
-        t 3px
-        size 16px 8px
-        background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAMAAADHqI+lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAe1BMVEX////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////QYBnOAAAAKHRSTlMAFJLi/uaFBRrhukMXERM+1IeisgE0t8xM8EeJRFvnRmnsaKQ1uVUVNSas3QAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABYSURBVAjXRc1ZEkAwEATQJvZ9jxC74P4nRATvr6eqewBNJ8ahmJYNx/X8IHxEcZIiywuUFZWAmoE1AGm5BHQ92PAf+DjNWK7KqipUbLhGxTcKadfJ+/WOJ3rfCXxQ+WZgAAAAAElFTkSuQmCC") no-repeat center
-      &.choosed + ^[-1]delete
-        visibility visible
-        cursor pointer
-      &.choosed:after
-        content ""
+        l -23px
+        t 1px
+        size 16px 15px
+        background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAQAAABHeoekAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsOCAb+lC+BAAABGElEQVQY02WROUsDURRGz8tMY7D8QMEy09i4oEhAMQiCFmJhKZigiII/wEaQ2IiNRqMEJEia2FqoDAoulUUUN4xVWiEYsLBW0MI3Mknube7Hee+uRjSYwzK7iH2GKTEXacIHjNDBNecIn4Kpy2DIE2MRn232gFbenGgY5+hkHp8cWQBStLmh/xm6SXFCngwAU6QZQ4Fv6laeylq1ekJV9YgAr+tBMT1pzepx1dQnggdpPcvTvTYsHlVV8b8YoRWV5amkLYsTetdgUBpNq6J2XSkrI4SGVFPivzOMXlnghi5e+AHiHJHkIjS7vmjh26p+fJKchXcXocKAjXs5ZbYegxP9ZIc7PpjkkCWOG2/nUsSlgMcjM1zSZL/0qUObwFqRwAAAAABJRU5ErkJggg==') no-repeat center
     &delete
       ib()
       visibility hidden
-      mt 3px
-      ml 32px
-      size 9px
-      background url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAJBAMAAAASvxsjAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAKlBMVEX///////////////////////////////////////////////////////9q+00tAAAADXRSTlMA0Do74eI5bGtqOM7MEv0urwAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAA3SURBVAjXYxBiYGAWYFBRYDBNYGByYg5jYGBQLU0Akhw3GUDsKQoMDExRTE4MDKYLQMp2AbkHAKcGB4WerKhTAAAAAElFTkSuQmCC") no-repeat center
-      
+      pos relative
+      ml 35px
+      pl 22px
+      color $dark
+      fontify 18px 400 18px
+      &.choosed
+        visibility visible
+        cursor pointer
+      &:before
+        content ""
+        pos absolute
+        l 0
+        size 15px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsOCzeEZ3x4AAAAl0lEQVQY03XRwQ3CIBSA4b9yaMK5MzGExhk6gfHgoYlLaNrAEHYJOgBM4QAeKD4qleP7fhLIa7qJkZm9Yzgr/cbhiTtouSod8TgWQoUnXkpDHawISsNv8MXMZVCgcA5a7oIlQ6TlxsBDRofNa3su9BgZyW2D5ciTBSu/yJxwBkIZJBZkDRyekHiLKfApULrGImi6ken/xj4ByUdmLURzEAAAAABJRU5ErkJggg==') no-repeat center
+
+.btn
+  font-family $os
+  border 1px solid $blue
+  padding 0 24px
+  fontify 18px 600 44px
+  bgc $blue
+  color white
+  transition .7s background
+  &:hover
+    background transparent
+
 .fakecheckbox
   ib()
   pos relative

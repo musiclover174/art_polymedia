@@ -1,0 +1,54 @@
+.menu
+  &__list
+    df()
+  &__item
+    pos relative
+    & + &
+      ml 29px
+  &__href
+    pos relative
+    color white
+    fontify 14px 600 18px
+    transition .7s color
+    &_active,
+    &:hover
+      color $blue
+    &_active:after
+      content ""
+      pos absolute
+      b -30px
+      w 100%
+      h 1px
+      bgc $blue
+      l 0
+  &__sublist
+    visibility hidden
+    opacity 0
+    pos absolute
+    t 30px
+    l -24px
+    padding 22px 24px
+    bgc $blue
+    transition .3s visibility, .3s opacity, .3s top
+    &:before
+      content ""
+      pos absolute
+      l 0
+      t -21px
+      h 21px
+      w 100%
+    ^[0]__item:hover &
+      t 40px
+      opacity 1
+      visibility visible
+    &-item
+      & + &
+        mt 16px
+    &-href
+      pos relative
+      color white
+      fontify 14px 600 18px
+      transition .7s opacity
+      &:hover,
+      &_active
+        opacity .7

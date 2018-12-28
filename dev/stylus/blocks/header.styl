@@ -1,0 +1,64 @@
+.header
+  pos absolute
+  l 0
+  t 0
+  w 100%
+  z-index 2
+  padding 19px 33px
+  df(center, space-between)
+  &__left
+    df(center, flex-start)
+  &__logo
+    pos relative
+    t 14px
+  &__socials
+    df(center, flex-start)
+    ml 100px
+    &-elem
+      transition .7s filter
+      &:hover
+        filter brightness(0) invert(1)
+      & + &
+        ml 30px
+      &[data-type="yt"]
+        size 15px 11px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAALCAMAAACXmSduAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAaVBMVEX///8LX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7z///8EghN3AAAAIXRSTlMAFKja4+76FZvZ6vSR+fAipv78AYk4x/XvmROg19/y9tgm4KIlAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+IMGwkDMjmbFHoAAABcSURBVAjXZY1XEoAgDERDFVTsXVFz/0sqoDOW/OzbbAoQyriQiCgFZzQChc9SoF9eQ+wkSU3wGZggeVE6qOBqQ914uvO2w5D7/T5MIw6/++Pn/zQvVqwnbsLulBxmlBCE74hRaAAAAABJRU5ErkJggg==') no-repeat center
+      &[data-type="fb"]
+        size 13px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAV1BMVEX///8LX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7z///9GE+Z7AAAAG3RSTlMAR+fm48MrAh/+HRUv6An34Q87ARE/LVHi5UQcfnr+AAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+IMGwkEHkQC7l4AAABLSURBVAjXdcpJEoAgEEPRNM4j4gjm/vfUBbQu9K/yqgIxTGWCnE8GcRRlVZNRTYuuVw0YLVUTHFWzw7JuSTvuju/nj/xLHhJU4bwACDQOUavBqcMAAAAASUVORK5CYII=') no-repeat center
+      &[data-type="tw"]
+        size 15px 12px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAMCAMAAACKnBfWAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAApVBMVEX///8LX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7z///93yyYaAAAANXRSTlMAAhZE1PivHU0iKC8x7jpqm98jwOmPPbxGD6g3BjXjybpIaf6y0cwmfKnsoApmxvT18NiUKmOi4PEAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4gwbCQQ0n7kniAAAAHRJREFUCNdNztcSglAMRdGjWCgqiBSvHRSQooCY//81IdcB9tuaTCbBZApOmc0XS1WDTkbHFXWtN9CIzNYWe2sDOyLH9Xz2HhAHGjoCpxFJtJvnS88rX7r1Dtjh/c+H/AQiYsaM5JlmzFwOi9e7rOpP85X8AbewFcQdzjioAAAAAElFTkSuQmCC') no-repeat center
+      &[data-type="inst"]
+        size 13px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAMAAABFNRROAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAS1BMVEX///8LX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7z///9aB44uAAAAF3RSTlMAYN3eYeaz/txMtKkrBqTnq6qoKQVf20tez2UAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4gwbCQUVyssGlwAAAFhJREFUCNdtzkkSgCAMRNGOI0hwADX3v6kEY+nCXv1XWQBAjdxrO4CspR9GgnvkMTloBI4cZr+IaoUulFJxFZtiVfy9bVXJJCnvWSHve2UOx0dUvnZan4QLf2kKZv3ChqAAAAAASUVORK5CYII=') no-repeat center
+  &__order
+    ml 75px
+    fontify 14px 600 41px
+  &__search
+    ml 37px
+    size 21px
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAQAAAADHm0dAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsJEiJ39ScOAAABGElEQVQoz42SP0oDQRjF326SFWKhBxCEYBFiQLTwApoFC+9gY2IjgueIGmOxgqD3EJt4BiGFpBDstE2R3aw/iyzZ2ewOyfuK4c38+ObPG6GkGvQYEjLmgz7N+fy8ZkOFB2KuqFOhyi6XxASs5VGPV+4pZRZc7ninuoj26eW3Q3R5yaINppQLUYc/DlPvqqNrTVUkdK626YfUC3sKUWOUOodQ64pULFeRSqkJ5cmmsnk0V1/atqJb+jbRNx1b0SMNzGs1iXGtj7WfjSCwRHDDUz7YAd2Fzg63/HJqzrmSQp1oU5EutCNPnmrqKNaGzvQsPxNJUnsEfDJhwohHDhDC5wc/+wntZcDLUANejorWDF4FTWAHraSW2v+W3WEu8LR8cQAAAABJRU5ErkJggg==') no-repeat center
+    transition .7s opacity
+    &:hover
+      opacity .6
+  &__right
+    ml 40px
+    dfv()
+  &__row
+    w 100%
+    df(flex-start, flex-end)
+    & + &
+      mt 25px
+  &__lang
+    color white
+    fontify 12px 700 14px
+    mr 52px
+    letter-spacing .18em
+    transition .7s color
+    &:hover
+      color $blue
+  &__tel
+    color white
+    fontify 12px 700 14px
+    letter-spacing .18em

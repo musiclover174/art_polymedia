@@ -1,15 +1,23 @@
-import {fadeIn, fadeOut, scrollTo, visChecker, resizeWatcher, elemVisCheck} from './modules/helpers';
+import { resizeWatcher, elemVisCheck, qsAll } from './modules/helpers';
+
 import Index from './modules/index';
-import Burger from './modules/burger';
+// import Burger from './modules/burger';
 import Contacts from './modules/contacts';
-import Sticky from './modules/sticky';
+import Forms from './modules/forms';
 
 document.addEventListener('DOMContentLoaded', () => {
   // const burger = new Burger();
-  const elVisArray = ['.about__img', '.about p, .about__clients, .catalog__img, .catalog__elem-img'];
+  const elVisArray = ['.about__img'];
   if (document.body.classList.contains('index')) {
-    const index = new Index(30);
-    index.preload();
+    const index = new Index(
+      {
+        bannerClass: '.js-banner',
+        feedsClass: '.js-feeds',
+        stickyEl: '.js-sticky',
+        stickyParent: '.js-sticky-parent',
+        realizedElem: '.js-realized-elem',
+      },
+    );
   }
 
   if (document.querySelector('.js-contacts-map')) {
@@ -17,13 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
     contacts.init();
   }
 
-  if (document.querySelector('.js-sticky')) {
-    Sticky(20, 0);
-  }
+  if (qsAll('form').length) Forms.init();
 
-  if (document.querySelectorAll('.js-shave').length) {
-    document.querySelectorAll('.js-shave').forEach((sh) => {
-      shave(sh, sh.getAttribute('data-height'));
+  if (qsAll('[data-fancybox]')) { // позор моей седой башке
+    $('[data-fancybox]').fancybox({ 
+      i18n: {
+        en: {
+          CLOSE: 'Закрыть',
+        },
+      },
+      clickOutside: '',
+      clickSlide: '',
+      touch: 0,
     });
   }
 
