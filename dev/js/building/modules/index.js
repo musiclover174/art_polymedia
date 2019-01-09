@@ -84,22 +84,24 @@ export default class Index {
       });
 
       item.addEventListener('click', (e) => {
-        $.fancybox.open({
-          src: item.getAttribute('href'),
-          type: 'ajax',
-          opts: {
-            i18n: {
-              en: {
-                CLOSE: 'Закрыть',
+        if (window.innerWidth >= 768) {
+          $.fancybox.open({
+            src: item.getAttribute('data-href'),
+            type: 'ajax',
+            opts: {
+              i18n: {
+                en: {
+                  CLOSE: 'Закрыть',
+                },
               },
+              clickOutside: '',
+              clickSlide: '',
+              touch: 0,
+              afterShow: () => qs('.popup_realized').classList.add('show'),
             },
-            clickOutside: '',
-            clickSlide: '',
-            touch: 0,
-            afterShow: () => qs('.popup_realized').classList.add('show'),
-          },
-        });
-        e.preventDefault();
+          });
+          e.preventDefault();
+        }
       });
     });
   }
