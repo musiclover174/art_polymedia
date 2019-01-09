@@ -1,6 +1,14 @@
 .banner
+  opacity 0
+  transition 2s opacity
+  pos relative
   &__car
     min-height 100vh
+    @media $LandscapeMedium
+      min-height 580px
+      h 100vh
+    @media $PortraitMedium
+      min-height 530px
   .swiper-slide
     overflow hidden
     z-index 1
@@ -8,6 +16,13 @@
     pb 213px
     min-height 100vh
     perspective 1000px
+    @media $LandscapeMax
+      pb 97px
+    @media $LandscapeMedium
+      min-height 580px
+      h 100vh
+    @media $PortraitMedium
+      min-height 530px
   .swiper-buttons
     pos absolute
     z-index 1
@@ -17,11 +32,25 @@
     max-width 1573px
     padding 0 60px
     transform translateX(-50%)
+    @media $lDesktopSmall
+      max-width 1366px
+      padding 0 32px
+    @media $desktopMax
+      max-width 1142px
+    @media $LandscapeMax
+      b 37px
   &__container
     w 100%
     max-width 1573px
     padding 0 60px
     margin 0 auto
+    @media $lDesktopSmall
+      max-width 1366px
+      padding 0 32px
+    @media $desktopMax
+      max-width 1142px
+    @media $PortraitMedium
+      padding 0 15px
   &__img
     pos absolute
     t 0
@@ -30,28 +59,72 @@
     min-height 100%
     z-index -1
     transition 2s transform
+    @media $LandscapeMax
+      max-width inherit
+      max-height 100%
+      l 50%
+      transform translateX(-50%)
   &__hrefover
     max-width 50%
     pb 23px
+    ml -6px
+    @media $lDesktopSmall
+      ml -4px
+    @media $desktopMin
+      max-width 70%
+    @media $LandscapeMedium
+      max-width none
   &__href
     color white
     fontify 100px 700 100px
     border-bottom 1px solid rgba(255, 255, 255, .25)
     transition .7s border
+    @media $lDesktopSmall
+      fontify 72px 900 72px
+    @media $LandscapeMedium
+      fontify 62px 900 62px
+    @media $PortraitMedium
+      fontify 42px 900 42px
+    @media $Mobile
+      fontify 34px 900 34px
     &:hover
       border-color transparent
     span
       pos relative
       t 23px
+      @media $lDesktopSmall
+        t 16px
+      @media $LandscapeMedium
+        t 14px
+      @media $PortraitMedium
+        t 8px
 
 body.pace-done
+  .banner
+    opacity 1
   .banner__img
-    transform translate3d(5%, -4%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.5)
+    opacity 1
     transform-style preserve-3d
     animation movie 8s 2s infinite ease-in-out
+    @media $lDesktopSmallFrom
+      transform translate3d(5%, -4%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.5)
+    @media (max-width: 1600px) and (min-width: 1271px)
+      transform translate3d(5%, -12%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.4)
+    @media (max-width: 1270px) and (min-width: 1001px)
+      transform translate3d(-5%, -12%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.4)
+    @media $LandscapeMax
+      opacity .2
 
 .about
   pb 120px
+  background-size cover
+  background-attachment fixed
+  background-position center
+  background-repeat no-repeat
+  @media $LandscapeMediumMin
+    background-image none !important
+  @media $LandscapeMedium
+    pb 70px
   &__sticky
     size 100% 100vh
     pos absolute
@@ -63,6 +136,8 @@ body.pace-done
     transform scale(1)
     will-change transform
     transition .5s transform
+    @media $LandscapeMedium
+      dn()
     &.fixed
       pos fixed
     &.bottom
@@ -74,6 +149,8 @@ body.pace-done
     &-parent
       pt 156px
       pos relative
+      @media $LandscapeMedium
+        pt 96px
   &__video
     pos absolute
     l 50%
@@ -81,13 +158,34 @@ body.pace-done
     min-width 100%
     min-height 100%
     transform translate(-50%, -50%)
+    @media $LandscapeMedium
+      l 0
+      w 100%
+      min-height auto
+      transform translateY(-50%)
   &__info
     df()
+    @media $LandscapeMax
+      flex-direction column
     &-title
       color white
       fontify 120px 700 120px
       mt -16px
       ml -8px
+      @media $lDesktopSmall
+        fontify 100px 700 100px
+      @media $desktopMin
+        fontify 72px 700 72px
+      @media $LandscapeMax
+        br
+          dn()
+      @media $LandscapeMedium
+        fontify 62px 900 62px
+      @media $PortraitMedium
+        fontify 42px 900 42px
+        ml -4px
+      @media $Mobile
+        fontify 34px 900 34px
       &:after
         content ""
         display inline-block
@@ -95,21 +193,37 @@ body.pace-done
         ml 10px
         size 13px
         bgc $red
+        @media $PortraitMedium
+          size 8px
+          ml 6px
     &-col
       w calc(50% - 24px)
       color white
+      @media $LandscapeMax
+        w 100%
       p:not([class])
         fontify 24px 600 32px
+        @media $LandscapeMedium
+          fontify 20px 600 28px
       & + &
         ml 48px
+        @media $LandscapeMax
+          ml 0
+          mt 40px
   &__feats
     df(flex-start, space-between)
     flex-wrap wrap
     mt 175px
     mb -65px
+    @media $LandscapeMedium
+      mt 100px
   &__feat
     w calc(50% - 24px)
     mb 65px
+    @media $LandscapeMin
+      w calc(50% - 15px)
+    @media $PortraitMedium
+      w 100%
     &-imgover
       dfv(flex-start, flex-end)
       h 58px
@@ -121,22 +235,48 @@ body.pace-done
       fontify 24px 600 32px
       w 90%
       max-width 372px
+      @media $LandscapeMedium
+        fontify 20px 600 28px
       mark
-        color $blue
+        color white
         bgc transparent
+        transition 1s color
+        ^[0]__feat[visible] &
+          color $blue
   &__projects
     df(center, space-between)
     mt 300px
     color white
     fontify 60px 700 60px
+    @media $lDesktopSmall
+      fontify 48px 700 48px
+    @media $LandscapeMedium
+      mt 120px
+      fontify 32px 700 32px
+    @media $PortraitMedium
+      flex-direction column
     &-count
       w 324px
+      @media $PortraitMedium
+        text-align center
+        w 100%
+        max-width 400px
     &-showreel
       w 324px
+      @media $LandscapeMedium
+        text-align right
+      @media $PortraitMedium
+        text-align center
+        w 100%
+        max-width 400px
     &-href
       pos relative
       z-index 1
       size 56px
+      @media $LandscapeMedium
+        margin 0 30px
+      @media $PortraitMedium
+        margin 30px 0
       &:after
         content ""
         pos absolute
@@ -170,39 +310,69 @@ body.pace-done
     mt 316px
     df(flex-start, center)
     flex-wrap wrap
+    @media $LandscapeMax
+      flex-direction column
+      mt 170px
+    @media $LandscapeMedium
+      mt 120px
     &-text
       w calc(50% - 24px)
       color white
       fontify 24px 600 32px
       pr 50px
+      @media $LandscapeMax
+        w 100%
+        pr 0
+      @media $LandscapeMedium
+        fontify 20px 600 28px
       & + &
         ml 48px
+        @media $LandscapeMax
+          ml 0
+          mt 40px
     &-topage
       mt 93px
+      @media $LandscapeMax
+        mt 40px
 
 .feeds
   bgc $grey
   pt 105px
   pb 120px
+  @media $LandscapeMedium
+    pt 70px
+    pb 80px
+  @media $PortraitMedium
+    bgc white
+  oh()
   .swiper-buttons
     pos absolute
     l 0
     b -90px
   &__car
     mt 70px
+    @media $PortraitMedium
+      mt 40px
     &.swiper-container
       overflow visible
   &__bottom
     mt 60px
     text-align right
+    @media $Mobile370
+      mt 140px
+      text-align left
   &__toall
     ib()
+    &:hover
+      color $dark
 
 .realized
   pos relative
   z-index 1
   color white
   padding 100px 0 120px
+  @media $LandscapeMedium
+    padding 70px 0 80px
   &__bg
     pos absolute
     z-index -1
@@ -214,21 +384,34 @@ body.pace-done
     background-position top center
     background-repeat no-repeat
     background-attachment fixed
+    transition .5s background-image
   &__list
     df()
     flex-wrap wrap
     mt 55px
     ml -48px
     w calc(100% + 48px)
+    @media $LandscapeMin
+      ml -30px
+      w calc(100% + 30px)
   &__item
     w 35.5%
     ml 48px
     mb 65px
+    @media $LandscapeMedium
+      mb 45px
+    @media $LandscapeMin
+      ml 30px
+      w calc(50% - 30px)
+    @media $PortraitMedium
+      w calc(100% - 30px)
   &__href
     color white
     fontify 24px 600 32px
     border-bottom 1px dotted rgba(255, 255, 255, .25)
     transition .7s color, .7s border
+    @media $LandscapeMedium
+      fontify 20px 600 28px
     span
       pos relative
       t 3px
@@ -242,10 +425,16 @@ body.pace-done
       fontify 60px 700 68px
       mt 76px
       ml -2px
+      @media $lDesktopSmall
+        fontify 48px 900 48px
+      @media $LandscapeMedium
+        fontify 40px 900 40px
   &__card
     padding 120px 0 60px
     opacity 0
     transition .7s opacity
+    @media $LandscapeMin
+      padding 0
     &-bg
       pos absolute
       z-index -1
@@ -255,11 +444,17 @@ body.pace-done
       min-height 100%
       opacity 0
       transition 2s transform
+      @media $LandscapeMin
+        dn()
     &-left
       w calc(50% - 24px)
+      @media $LandscapeMin
+        w 100%
     &-title
       fontify 72px 700 72px
       ml -4px
+      @media $lDesktopSmall
+        fontify 60px 700 60px
     &-text
       fontify 24px 600 32px
       mt 70px
@@ -318,21 +513,45 @@ body.pace-done
     transition .7s 2s opacity
   .realized__card-bg
     opacity 1
-    transform translate3d(15%, -14%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.4)
+    @media $LandscapeMin
+      opacity .25
+    @media $lDesktopSmallFrom
+      transform translate3d(15%, -14%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.4)
     transform-style preserve-3d
     transition 2s .5s opacity, 2s .5s transform
-    animation moviePopup 8s 3s infinite ease-in-out
+    @media $LandscapeMinFrom
+      animation moviePopup 8s 3s infinite ease-in-out
+    @media (max-width: 1600px) and (min-width: 1271px)
+      transform translate3d(-4%, -22%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.3)
+    @media (max-width: 1270px) and (min-width: 1001px)
+      transform translate3d(-12%, -22%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.3)
+    @media (max-width:1000px) and (min-width:768px)
+      transform translate3d(-16%, -22%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.3)
 
 .callback
   bgc $grey
   color $dark
   padding 100px 0 120px
+  @media $LandscapeMedium
+    padding 70px 0 80px
+  @media $PortraitMedium
+    bgc white
   &__form
     bgc white
     mt 70px
     padding 32px 50px 37px 50px
-    df(flex-start, space-between)
+    @media $PortraitMedium
+      padding 0
+    &-row
+      df(flex-start, space-between)
+      @media $LandscapeMin
+        flex-direction column
+      & + &
+        mt 35px
   &__send
     align-content flex-end
     &:hover
       color $dark
+  &__spacer
+    @media $LandscapeMin
+      dn()

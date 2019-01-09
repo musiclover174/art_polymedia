@@ -9,7 +9,8 @@ include ../bemto/bemto.pug
       +e.socials-elem(href="#", data-type="fb")
       +e.socials-elem(href="#", data-type="tw")
       +e.socials-elem(href="#", data-type="inst")
-    +e.order.btn(type="button", data-fancybox, data-src="order") Отправить запрос
+    +e.order.btn(type="button", data-fancybox, data-src="order") 
+      span Отправить запрос
     +e.search.js-search(type="button")
   +e('aside').right
     +e.row
@@ -59,3 +60,14 @@ include ../bemto/bemto.pug
                 +e.sublist-href(href="#") Решения для мероприятий
           +e.item
             +e.href(href="#") Контакты
+          +e.item._tablet
+            +e.lang(href="#") ENG
+            +e.tel(href="tel:+74959568587") +7 (495) 956-85-87
+          +e.item._mobile
+            button.header__order.btn(type="button", data-fancybox, data-src="order") 
+              span Отправить запрос
+  +b.burger
+    +e(type="button", aria-label="открыть мобильное меню").button.js-burger
+      +e('span').button-meat
+    +e('span').shadow
+  

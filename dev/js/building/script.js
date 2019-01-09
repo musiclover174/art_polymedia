@@ -1,13 +1,15 @@
-import { resizeWatcher, elemVisCheck, qsAll } from './modules/helpers';
+import {
+  resizeWatcher, elemVisCheck, qsAll, qs,
+} from './modules/helpers';
 
 import Index from './modules/index';
-// import Burger from './modules/burger';
+import Burger from './modules/burger';
 import Contacts from './modules/contacts';
 import Forms from './modules/forms';
 
 document.addEventListener('DOMContentLoaded', () => {
   // const burger = new Burger();
-  const elVisArray = ['.about__img'];
+  const elVisArray = ['.about__feat'];
   if (document.body.classList.contains('index')) {
     const index = new Index(
       {
@@ -23,6 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.js-contacts-map')) {
     const contacts = new Contacts('contacts-map');
     contacts.init();
+  }
+
+  if (qs('.js-burger')) {
+    const burger = new Burger(qs('.js-burger'));
   }
 
   if (qsAll('form').length) Forms.init();

@@ -10,6 +10,14 @@ body
   max-width 1573px
   margin 0 auto
   padding 0 180px
+  @media $lDesktopSmall
+    max-width 1366px
+    padding 0 32px
+  @media $desktopMax
+    max-width 1142px
+    padding 0 32px
+  @media $PortraitMedium
+    padding 0 15px
 .main
   h1:not([class])
     color black
@@ -118,11 +126,32 @@ div[class\^="table-scroller"]
   &__title
     fontify 100px 700 100px
     ml -8px
+    @media $lDesktopSmall
+      fontify 72px 900 72px
+    @media $LandscapeMedium
+      fontify 62px 900 62px
+    @media $PortraitMedium
+      fontify 42px 900 42px
+      ml -4px
+    @media $Mobile
+      fontify 34px 900 34px
     &_bigger
       fontify 120px 700 104px
+      @media $lDesktopSmall
+        fontify 100px 700 100px
+      @media $desktopMin
+        fontify 72px 700 72px
+      @media $LandscapeMedium
+        fontify 62px 900 62px
+      @media $PortraitMedium
+        fontify 42px 900 42px
+      @media $Mobile
+        fontify 34px 900 34px
   &__subtitle
     fontify 24px 600 32px
     mt 38px
+    @media $LandscapeMedium
+      fontify 20px 600 28px
   &__input
     w 100%
     h 50px
@@ -190,6 +219,10 @@ div[class\^="table-scroller"]
     pos relative
     z-index 1
     w calc(50% - 24px)
+    @media $LandscapeMin
+      w 100%
+      & + &
+        mt 35px
   &__row
     display flex
     justify-content space-between
@@ -265,13 +298,43 @@ div[class\^="table-scroller"]
 .btn
   font-family $os
   border 1px solid $blue
-  padding 0 24px
   fontify 18px 600 44px
-  bgc $blue
   color white
-  transition .7s background
+  transition .7s color
+  @media $LandscapeMin
+    fontify 14px 600 40px
+  span
+    display block
+    padding 0 24px
+    pos relative
+    z-index 1
+    &:before
+      content ""
+      pos absolute
+      z-index -1
+      bgc $blue
+      l 0
+      t 0
+      w calc(50% + 1px)
+      h 100%
+      transition .7s width
+    &:after
+      content ""
+      pos absolute
+      z-index -1
+      bgc $blue
+      r 0
+      t 0
+      h 100%
+      w calc(50% + 1px)
+      transition .7s width
   &:hover
-    background transparent
+    span
+      &:before
+        w 0
+      &:after
+        w 0
+      
 
 .fakecheckbox
   ib()

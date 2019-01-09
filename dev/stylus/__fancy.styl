@@ -266,6 +266,7 @@ body.compensate-for-scrollbar {
 
 .fancybox-slide--html .fancybox-content {
 	margin-bottom: 0;
+	overflow: hidden;
 }
 
 .fancybox-slide--iframe .fancybox-content,
@@ -365,6 +366,11 @@ body.compensate-for-scrollbar {
 	overflow: visible;
 	position: relative;
 	shape-rendering: geometricPrecision;
+}
+
+.fancybox-button--thumbs svg,
+.fancybox-button--zoom svg{
+	display: none;
 }
 
 .fancybox-button svg path {

@@ -17,7 +17,7 @@
                                   <div class="header__left"><a class="header__logo" href="#"><img class="header__logo-img" src="img/logo.png" alt="" role="presentation"/></a>
                                                     <div class="header__socials"><a class="header__socials-elem" href="#" data-type="yt"></a><a class="header__socials-elem" href="#" data-type="fb"></a><a class="header__socials-elem" href="#" data-type="tw"></a><a class="header__socials-elem" href="#" data-type="inst"></a>
                                                     </div>
-                                                    <button class="header__order btn" type="button" data-fancybox data-src="order">Отправить запрос
+                                                    <button class="header__order btn" type="button" data-fancybox data-src="order"> <span>Отправить запрос</span>
                                                     </button>
                                                     <button class="header__search js-search" type="button">
                                                     </button>
@@ -72,10 +72,19 @@
                                                                                                       </li>
                                                                                                       <li class="menu__item"><a class="menu__href" href="#">Контакты</a>
                                                                                                       </li>
+                                                                                                      <li class="menu__item menu__item_tablet"><a class="menu__lang" href="#">ENG</a><a class="menu__tel" href="tel:+74959568587">+7 (495) 956-85-87</a>
+                                                                                                      </li>
+                                                                                                      <li class="menu__item menu__item_mobile">
+                                                                                                        <button class="header__order btn" type="button" data-fancybox data-src="order"> <span>Отправить запрос</span></button>
+                                                                                                      </li>
                                                                                     </ul>
                                                                   </nav>
                                                     </div>
                                   </aside>
+                              <div class="burger">
+                                                <button class="burger__button js-burger" type="button" aria-label="открыть мобильное меню"><span class="burger__button-meat"></span>
+                                                </button><span class="burger__shadow"></span>
+                              </div>
                 </header>
                 <main class="main" role="main">
                               <section class="banner">
@@ -100,7 +109,7 @@
                                   <div class="swiper-button-next"></div>
                                 </div>
                               </section>
-                              <section class="about">
+                              <section class="about" style="background-image: url('img/about-mobile.png');">
                                                 <div class="about__sticky-parent js-sticky-parent">
                                                                   <div class="about__sticky js-sticky">
                                                                                     <video class="about__video" preload="" autoplay muted loop poster="img/video.jpg">
@@ -110,7 +119,7 @@
                                                   <div class="container">
                                                                     <section class="about__info">
                                                                                       <div class="about__info-col">
-                                                                                        <h4 class="about__info-title">Более 15&nbsp;лет в&nbsp;деле</h4>
+                                                                                        <h4 class="about__info-title">Более <br>15 лет <br>в деле</h4>
                                                                                       </div>
                                                                                       <div class="about__info-col">
                                                                                         <p>Успех любого мероприятия зависит от того, насколько ярко, оригинально и качественно оно будет представлено публике. Не важно, идет ли речь о деловой конференции, спортивном соревновании или творческом шоу - именно видеопрезентации задают тон и настроение в ходе происходящего действия, надолго оставаясь в памяти зрителей.</p>
@@ -167,7 +176,7 @@
                                                                     <p class="about__bottom-text">За время работы компанией было успешно реализовано свыше 12 000 крупных проектов как в Москве, так и в других городах России и странах СНГ.
                                                                     </p>
                                                                     <p class="about__bottom-text">Компания ART Polymedia не раз завоевывала престижные награды, такие как EMEA InAVation Awards 2009 и 2014 в Амстердаме, Golden Puzzle ‘09 и PRO Integration Awards 2010-2013.
-                                                                    </p><a class="about__bottom-topage btn" href="#">Еще больше о компании</a>
+                                                                    </p><a class="about__bottom-topage btn" href="#"> <span>Еще больше о компании</span></a>
                                                   </div>
                                 </div>
                               </section>
@@ -177,7 +186,7 @@
                                                   <div class="feeds__car swiper-container js-feeds">
                                                     <div class="swiper-wrapper">
                                                       <div class="swiper-slide">
-                                                                    <article class="review"><a class="review__imgover" href="img/fullrev.jpg"><img class="review__img" src="img/rev1.jpg" alt="" role="presentation"/></a>
+                                                                    <article class="review"><a class="review__imgover" href="img/fullrev.jpg" data-fancybox="data-fancybox"><img class="review__img" src="img/rev1.jpg" alt="" role="presentation"/></a>
                                                                                       <div class="review__content">
                                                                                                         <p class="review__title">Awards Party 2013
                                                                                                         </p>
@@ -192,7 +201,7 @@
                                                                     </article>
                                                       </div>
                                                       <div class="swiper-slide">
-                                                                    <article class="review"><a class="review__imgover" href="img/fullrev.jpg"><img class="review__img" src="img/rev1.jpg" alt="" role="presentation"/></a>
+                                                                    <article class="review"><a class="review__imgover" href="img/fullrev.jpg" data-fancybox="data-fancybox"><img class="review__img" src="img/rev1.jpg" alt="" role="presentation"/></a>
                                                                                       <div class="review__content">
                                                                                                         <p class="review__title">1С-Софт
                                                                                                         </p>
@@ -206,7 +215,7 @@
                                                                     </article>
                                                       </div>
                                                       <div class="swiper-slide">
-                                                                    <article class="review"><a class="review__imgover" href="img/fullrev.jpg"><img class="review__img" src="img/rev2.jpg" alt="" role="presentation"/></a>
+                                                                    <article class="review"><a class="review__imgover" href="img/fullrev.jpg" data-fancybox="data-fancybox"><img class="review__img" src="img/rev2.jpg" alt="" role="presentation"/></a>
                                                                                       <div class="review__content">
                                                                                                         <p class="review__title">Awards Party 2013
                                                                                                         </p>
@@ -226,37 +235,37 @@
                                                       <div class="swiper-button-next swiper-button-next_dark"></div>
                                                     </div>
                                                   </div>
-                                                  <div class="feeds__bottom"><a class="feeds__toall btn" href="#">Полный список отзывов</a>
+                                                  <div class="feeds__bottom"><a class="feeds__toall btn" href="#"> <span>Полный список отзывов</span></a>
                                                   </div>
                                 </div>
                               </section>
-                              <section class="realized"><span class="realized__bg" style="background-image: url('img/video.jpg')"></span>
+                              <section class="realized"><span class="realized__bg js-realized-bg" style="background-image: url('img/video.jpg')"></span>
                                 <div class="container">
                                   <h4 class="common__title">Реализованные<br>проекты</h4>
                                                   <ul class="realized__list">
-                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html"> <span>Владимирский Экономический Форум&nbsp;2018</span></a>
+                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html" data-img="img/video.jpg"> <span>Владимирский Экономический Форум&nbsp;2018</span></a>
                                                                     </li>
-                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html"> <span>Цикл Открытых уроков «ПроеКТОриЯ»</span></a>
+                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html" data-img="img/banner1.jpg"> <span>Цикл Открытых уроков «ПроеКТОриЯ»</span></a>
                                                                     </li>
-                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html"> <span>Выставка TransRussia 2018</span></a>
+                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html" data-img="img/video.jpg"> <span>Выставка TransRussia 2018</span></a>
                                                                     </li>
-                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html"> <span>Презентация седана Genesis G70</span></a>
+                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html" data-img="img/banner1.jpg"> <span>Презентация седана Genesis G70</span></a>
                                                                     </li>
-                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html"> <span>SAP Forum Москва 2018</span></a>
+                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html" data-img="img/video.jpg"> <span>SAP Forum Москва 2018</span></a>
                                                                     </li>
-                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html"> <span>Гала-ужины для гостей выставки METRO EXPO 2018</span></a>
+                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html" data-img="img/banner1.jpg"> <span>Гала-ужины для гостей выставки METRO EXPO 2018</span></a>
                                                                     </li>
-                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html"> <span>Владимирский Экономический Форум 2018</span></a>
+                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html" data-img="img/banner1.jpg"> <span>Владимирский Экономический Форум 2018</span></a>
                                                                     </li>
-                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html"> <span>Цикл Открытых уроков «ПроеКТОриЯ»</span></a>
+                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html" data-img="img/video.jpg"> <span>Цикл Открытых уроков «ПроеКТОриЯ»</span></a>
                                                                     </li>
-                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html"> <span>Шоу братьев Запашных «АнгелЫ»</span></a>
+                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html" data-img="img/video.jpg"> <span>Шоу братьев Запашных «АнгелЫ»</span></a>
                                                                     </li>
-                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html"> <span>Презентация седана Genesis G70</span></a>
+                                                                    <li class="realized__item"><a class="realized__href js-realized-elem" href="__index-card.html" data-img="img/video.jpg"> <span>Презентация седана Genesis G70</span></a>
                                                                     </li>
                                                   </ul>
                                                   <p class="realized__toall-title">И это лишь малая часть
-                                                  </p><a class="realized__toall btn" href="#">Полный список проектов</a>
+                                                  </p><a class="realized__toall btn" href="#"> <span>Полный список проектов</span></a>
                                 </div>
                               </section>
                               <section class="callback">
@@ -264,32 +273,40 @@
                                   <h4 class="common__title">У вас есть проект?</h4>
                                   <p class="common__subtitle">Давайте обсудим его. Продумаем и сделаем!</p>
                                                   <form class="callback__form">
-                                                    <div class="common__col">
-                                                      <div class="common__row">
-                                                        <input class="common__input" type="text" data-req="req">
-                                                        <label class="common__placeholder">Представьтесь, пожалуйста</label>
-                                                      </div>
-                                                      <div class="common__row">
-                                                        <input class="common__input" type="text" data-req="req">
-                                                        <label class="common__placeholder">Как с вами связаться?</label>
-                                                      </div>
-                                                      <div class="common__row">
-                                                        <div class="common__fileover">
-                                                          <label class="common__filename js-common-file" for="file1">Прикрепите файл</label>
-                                                          <input class="common__file js-common-fileinput" type="file" name="" id="file1">
-                                                          <button class="common__filedelete js-common-filedelete" type="button"></button>
-                                                        </div>
-                                                      </div>
-                                                    </div>
-                                                    <div class="common__col">
-                                                      <div class="common__row">
-                                                        <textarea class="common__textarea" data-req="req"></textarea>
-                                                        <label class="common__placeholder">Расскажите о вашем проекте</label>
-                                                      </div>
-                                                      <div class="common__row"><span class="callback__spacer"></span>
-                                                        <button class="callback__send btn common__sbm" type="submit">Отправить</button>
-                                                      </div>
-                                                    </div>
+                                                                    <div class="callback__form-row">
+                                                                      <div class="common__col">
+                                                                        <div class="common__row">
+                                                                          <input class="common__input" type="text" data-req="req">
+                                                                          <label class="common__placeholder">Представьтесь, пожалуйста</label>
+                                                                        </div>
+                                                                        <div class="common__row">
+                                                                          <input class="common__input" type="text" data-req="req">
+                                                                          <label class="common__placeholder">Как с вами связаться?</label>
+                                                                        </div>
+                                                                      </div>
+                                                                      <div class="common__col">
+                                                                        <div class="common__row">
+                                                                          <textarea class="common__textarea" data-req="req"></textarea>
+                                                                          <label class="common__placeholder">Расскажите о вашем проекте</label>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
+                                                                    <div class="callback__form-row">
+                                                                      <div class="common__col">
+                                                                        <div class="common__row">
+                                                                          <div class="common__fileover">
+                                                                            <label class="common__filename js-common-file" for="file1">Прикрепите файл</label>
+                                                                            <input class="common__file js-common-fileinput" type="file" name="" id="file1">
+                                                                            <button class="common__filedelete js-common-filedelete" type="button"></button>
+                                                                          </div>
+                                                                        </div>
+                                                                      </div>
+                                                                      <div class="common__col">
+                                                                        <div class="common__row"><span class="callback__spacer"></span>
+                                                                          <button class="callback__send btn common__sbm" type="submit"> <span>Отправить</span></button>
+                                                                        </div>
+                                                                      </div>
+                                                                    </div>
                                                   </form>
                                 </div>
                               </section>

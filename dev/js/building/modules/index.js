@@ -45,6 +45,7 @@ export default class Index {
       slidesPerView: 1,
       spaceBetween: 48,
       loop: true,
+      autoHeight: true,
       navigation: {
         nextEl: `${this.feedsClass} .swiper-button-next`,
         prevEl: `${this.feedsClass} .swiper-button-prev`,
@@ -78,6 +79,10 @@ export default class Index {
 
   realizedOpen() {
     qsAll(this.realizedElem).forEach((item) => {
+      item.addEventListener('mouseenter', () => {
+        qs('.js-realized-bg').style.backgroundImage = `url('${item.getAttribute('data-img')}')`;
+      });
+
       item.addEventListener('click', (e) => {
         $.fancybox.open({
           src: item.getAttribute('href'),

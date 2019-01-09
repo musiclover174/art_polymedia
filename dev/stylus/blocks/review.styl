@@ -4,15 +4,24 @@
   df()
   flex-direction row-reverse
   color $dark
+  @media $LandscapeMin
+    flex-direction column
+  @media $PortraitMedium
+    padding 0
   &__imgover
     w 198px
     border 1px solid #f1f1f1
     ml 40px
+    @media $LandscapeMin
+      ml 0
+      mb 40px
   &__img
     max-width 100%
     max-height 100%
   &__content
     w calc(100% - 238px)
+    @media $LandscapeMin
+      w 100%
   &__title
     fontify 24px 600 32px
     mt -6px

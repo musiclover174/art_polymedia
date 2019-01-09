@@ -1,6 +1,6 @@
 export default class Burger {
-  constructor() {
-    this.burgerEl = document.querySelector('.js-burger');
+  constructor(burgerEl) {
+    this.burgerEl = burgerEl;
     this.init();
   }
 
