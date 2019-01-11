@@ -21,49 +21,59 @@ body
 .main
   h1:not([class])
     color black
-    fontify 96px 700 100px
-    margin 63px 0 35px
+    fontify 60px 900 60px
+    margin 25px 0 45px
     text-align center
+    @media $LandscapeMedium
+      fontify 48px 900 48px
+    @media $PortraitMax
+      fontify 42px 900 42px
+    @media $Mobile370
+      fontify 40px 900 40px
   h2:not([class])
     color black
-    fontify 48px 400 56px
-    margin 63px 0 -3px
+    fontify 48px 900 48px
+    margin 63px 0 39px -2px
+    @media $LandscapeMedium
+      fontify 40px 900 40px
+    @media $PortraitMax
+      fontify 36px 900 36px
   h3:not([class]),
   h4:not([class])
     color black
-    fontify 36px 400 44px
-    margin 63px 0 20px
+    fontify 36px 600 36px
+    margin 68px 0 38px
+    @media $PortraitMax
+      fontify 30px 600 30px
   img:not([class])
-    margin 4px 0
+    margin 14px 0
     max-width 100%
   ul:not([class])
     list-style  none
-    margin  18px 0
+    margin 28px 0
   ul:not([class]) li
-    pl 30px
+    pl 40px
     pos relative
     fontify 18px 400 26px
   ul:not([class]) li + li
-    mt 24px
+    mt 0
   ul:not([class]) > li:before
     content ""
     pos absolute
     l 0
     t 14px
-    size 20px 1px
+    size 26px 1px
     bgc $blue
   ol:not([class])
     list-style none
-    margin 18px 0 30px
+    margin 28px 0
     counter-reset myCounter
   ol:not([class]) li
-    pl 30px
+    pl 40px
     pos relative
     fontify 18px 400 26px
-    @media $desktopMedium
-      fontify 17px 400 25px
   ol:not([class]) li + li
-    mt 16px
+    mt 0
   ol:not([class]) > li:before
     counter-increment myCounter
     content counter(myCounter)"."	
@@ -72,17 +82,17 @@ body
     t 0
     w 30px
     pr 9px
-    color $blue
-    fontify 18px 700 26px
+    color $dark
+    fontify 18px 400 26px
   p:not([class])
     fontify 18px 400 26px
     margin 20px 0
   a:not([class])
     color $blue
-    border-bottom 1px solid alpha($blue, .4)
+    border-bottom 1px solid transparent
     transition .5s border
     &:hover
-      border-color transparent
+      border-color alpha($blue, .4)
  
   *:not([class]):not(span):first-child
     mt 0 !important
@@ -90,13 +100,18 @@ body
     margin-bottom 0 !important
 
   table
-    border 2px solid $blue
     margin 30px 0
+    th
+      color white
+      bgc $blue
+      font-weight 400
+      padding 16px 20px 18px
+      text-align left
     td
-      padding 20px 24px
+      padding 13px 20px 16px
       color $dark
       fontify 15px 400 21px
-      border 1px solid #e9f1e6
+      border 1px solid #f5f5f5
 
 input::-webkit-input-placeholder
   color alpha(white, .5)
@@ -109,18 +124,26 @@ div[class\^="table-scroller"]
   overflow auto
   pos relative
   pl 1px
+  &:not(:first-child)
+    mt 35px
   &:not(:last-child)
-    mb 36px
+    mb 33px
   @media $desktopMax
     w 100%
 
 .text
-  max-width 876px
+  max-width 1192px
+  padding 75px 151px 124px
   margin 0 auto
-  @media $desktopMax
-    max-width 764px
-  @media $desktopTablet
-    max-width 100%
+  bgc white
+  @media $dekstop1142
+    w calc(100% + 64px)
+    ml -32px
+    padding 75px 33px 70px
+  @media $PortraitMedium
+    w calc(100% + 30px)
+    ml -15px
+    padding 50px 15px 50px
     
 .common
   &__title
@@ -173,7 +196,7 @@ div[class\^="table-scroller"]
       line-height 12px
   &__textarea
     w 100%
-    h 135px
+    h 133px
     overflow hidden
     resize none
     padding 12px 0
@@ -189,6 +212,8 @@ div[class\^="table-scroller"]
     &.notempty, 
     &:focus
       border-bottom 1px solid $blue
+    & + ^[0]__placeholder
+      t 12px
     &:focus + ^[0]__placeholder,
     &.notempty + ^[0]__placeholder
       opacity .35
@@ -229,7 +254,7 @@ div[class\^="table-scroller"]
     pos relative
     w 100%
     & + &
-      mt 35px
+      mt 33px
   &__fileover
     w 100%
     pos relative
@@ -386,25 +411,22 @@ div[class\^="table-scroller"]
       border-color #ff0f37
 
 .breadcrumbs
-  font-family $sans
   text-align center
   pl 18px
-  mb 70px
   color black
-  @media $LandscapeMin
-    mb 40px
   &__href
     color black
-    fontify 11px 700 14px
-    text-transform uppercase
-    letter-spacing .12em
+    fontify 14px 600 18px
     border-bottom 1px solid alpha(black, .25)
     transition .5s border
     &:hover
       border-color transparent
   &__delim
-    fontify 11px 700 14px
-    margin 0 5px
+    size 4px
+    display inline-block
+    vertical-align middle
+    bgc $blue
+    margin 0 8px
 
 h1:not([class]) + .breadcrumbs
   mt -6px

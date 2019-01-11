@@ -267,75 +267,111 @@ body {
 }
 .main h1:not([class]) {
   color: #000;
-  font-size: 96px;
-  font-weight: 700;
-  line-height: 100px;
-  margin: 63px 0 35px;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 60px;
+  margin: 25px 0 45px;
   text-align: center;
+}
+@media (max-width: 900px) {
+  .main h1:not([class]) {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 48px;
+  }
+}
+@media (max-width: 670px) {
+  .main h1:not([class]) {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 42px;
+  }
+}
+@media (max-width: 370px) {
+  .main h1:not([class]) {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 40px;
+  }
 }
 .main h2:not([class]) {
   color: #000;
   font-size: 48px;
-  font-weight: 400;
-  line-height: 56px;
-  margin: 63px 0 -3px;
+  font-weight: 900;
+  line-height: 48px;
+  margin: 63px 0 39px -2px;
+}
+@media (max-width: 900px) {
+  .main h2:not([class]) {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 40px;
+  }
+}
+@media (max-width: 670px) {
+  .main h2:not([class]) {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 36px;
+  }
 }
 .main h3:not([class]),
 .main h4:not([class]) {
   color: #000;
   font-size: 36px;
-  font-weight: 400;
-  line-height: 44px;
-  margin: 63px 0 20px;
+  font-weight: 600;
+  line-height: 36px;
+  margin: 68px 0 38px;
+}
+@media (max-width: 670px) {
+  .main h3:not([class]),
+  .main h4:not([class]) {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 30px;
+  }
 }
 .main img:not([class]) {
-  margin: 4px 0;
+  margin: 14px 0;
   max-width: 100%;
 }
 .main ul:not([class]) {
   list-style: none;
-  margin: 18px 0;
+  margin: 28px 0;
 }
 .main ul:not([class]) li {
-  padding-left: 30px;
+  padding-left: 40px;
   position: relative;
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
 }
 .main ul:not([class]) li + li {
-  margin-top: 24px;
+  margin-top: 0;
 }
 .main ul:not([class]) > li:before {
   content: "";
   position: absolute;
   left: 0;
   top: 14px;
-  width: 20px;
+  width: 26px;
   height: 1px;
   background-color: #0b5fbc;
 }
 .main ol:not([class]) {
   list-style: none;
-  margin: 18px 0 30px;
+  margin: 28px 0;
   counter-reset: myCounter;
 }
 .main ol:not([class]) li {
-  padding-left: 30px;
+  padding-left: 40px;
   position: relative;
   font-size: 18px;
   font-weight: 400;
   line-height: 26px;
 }
-@media (max-width: 1270px) {
-  .main ol:not([class]) li {
-    font-size: 17px;
-    font-weight: 400;
-    line-height: 25px;
-  }
-}
 .main ol:not([class]) li + li {
-  margin-top: 16px;
+  margin-top: 0;
 }
 .main ol:not([class]) > li:before {
   counter-increment: myCounter;
@@ -345,9 +381,9 @@ body {
   top: 0;
   width: 30px;
   padding-right: 9px;
-  color: #0b5fbc;
+  color: #141414;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 26px;
 }
 .main p:not([class]) {
@@ -358,12 +394,12 @@ body {
 }
 .main a:not([class]) {
   color: #0b5fbc;
-  border-bottom: 1px solid rgba(11,95,188,0.4);
+  border-bottom: 1px solid transparent;
   -webkit-transition: 0.5s border;
   transition: 0.5s border;
 }
 .main a:not([class]):hover {
-  border-color: transparent;
+  border-color: rgba(11,95,188,0.4);
 }
 .main *:not([class]):not(span):first-child {
   margin-top: 0;
@@ -372,16 +408,22 @@ body {
   margin-bottom: 0 !important;
 }
 .main table {
-  border: 2px solid #0b5fbc;
   margin: 30px 0;
 }
+.main table th {
+  color: #fff;
+  background-color: #0b5fbc;
+  font-weight: 400;
+  padding: 16px 20px 18px;
+  text-align: left;
+}
 .main table td {
-  padding: 20px 24px;
+  padding: 13px 20px 16px;
   color: #141414;
   font-size: 15px;
   font-weight: 400;
   line-height: 21px;
-  border: 1px solid #e9f1e6;
+  border: 1px solid #f5f5f5;
 }
 input::-webkit-input-placeholder {
   color: rgba(255,255,255,0.5);
@@ -397,8 +439,11 @@ div[class^="table-scroller"] {
   position: relative;
   padding-left: 1px;
 }
+div[class^="table-scroller"]:not(:first-child) {
+  margin-top: 35px;
+}
 div[class^="table-scroller"]:not(:last-child) {
-  margin-bottom: 36px;
+  margin-bottom: 33px;
 }
 @media (max-width: 1400px) {
   div[class^="table-scroller"] {
@@ -406,17 +451,23 @@ div[class^="table-scroller"]:not(:last-child) {
   }
 }
 .text {
-  max-width: 876px;
+  max-width: 1192px;
+  padding: 75px 151px 124px;
   margin: 0 auto;
+  background-color: #fff;
 }
-@media (max-width: 1400px) {
+@media (max-width: 1142px) {
   .text {
-    max-width: 764px;
+    width: calc(100% + 64px);
+    margin-left: -32px;
+    padding: 75px 33px 70px;
   }
 }
-@media (max-width: 1050px) {
+@media (max-width: 500px) {
   .text {
-    max-width: 100%;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    padding: 50px 15px 50px;
   }
 }
 .common__title {
@@ -532,7 +583,7 @@ div[class^="table-scroller"]:not(:last-child) {
 }
 .common__textarea {
   width: 100%;
-  height: 135px;
+  height: 133px;
   overflow: hidden;
   resize: none;
   padding: 12px 0;
@@ -553,6 +604,9 @@ div[class^="table-scroller"]:not(:last-child) {
 .common__textarea.notempty,
 .common__textarea:focus {
   border-bottom: 1px solid #0b5fbc;
+}
+.common__textarea + .common__placeholder {
+  top: 12px;
 }
 .common__textarea:focus + .common__placeholder,
 .common__textarea.notempty + .common__placeholder {
@@ -612,7 +666,7 @@ div[class^="table-scroller"]:not(:last-child) {
   width: 100%;
 }
 .common__row + .common__row {
-  margin-top: 35px;
+  margin-top: 33px;
 }
 .common__fileover {
   width: 100%;
@@ -822,24 +876,15 @@ div[class^="table-scroller"]:not(:last-child) {
   border-color: #ff0f37;
 }
 .breadcrumbs {
-  font-family: $sans;
   text-align: center;
   padding-left: 18px;
-  margin-bottom: 70px;
   color: #000;
-}
-@media (max-width: 767px) {
-  .breadcrumbs {
-    margin-bottom: 40px;
-  }
 }
 .breadcrumbs__href {
   color: #000;
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
   border-bottom: 1px solid rgba(0,0,0,0.25);
   -webkit-transition: 0.5s border;
   transition: 0.5s border;
@@ -848,10 +893,12 @@ div[class^="table-scroller"]:not(:last-child) {
   border-color: transparent;
 }
 .breadcrumbs__delim {
-  font-size: 11px;
-  font-weight: 700;
-  line-height: 14px;
-  margin: 0 5px;
+  width: 4px;
+  height: 4px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #0b5fbc;
+  margin: 0 8px;
 }
 h1:not([class]) + .breadcrumbs {
   margin-top: -6px;
@@ -2438,13 +2485,17 @@ body.compensate-for-scrollbar {
     }
 }
 }
-.header {
+body.index .header {
   position: absolute;
   left: 0;
   top: 0;
-  width: 100%;
   z-index: 2;
+  margin-bottom: 0;
+}
+.header {
+  width: 100%;
   padding: 19px 33px;
+  margin-bottom: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
