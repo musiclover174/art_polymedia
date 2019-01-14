@@ -6,6 +6,7 @@ import Index from './modules/index';
 import Burger from './modules/burger';
 import Contacts from './modules/contacts';
 import Forms from './modules/forms';
+import Share from './modules/share';
 
 document.addEventListener('DOMContentLoaded', () => {
   // const burger = new Burger();
@@ -33,6 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (qsAll('form').length) Forms.init();
 
+  if (qsAll('.js-share').length) {
+    qsAll('.js-share').forEach((shBtn) => {
+      shBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+      });
+    });
+    window.share = new Share();
+  }
+
   if (qsAll('[data-fancybox]')) { // позор моей седой башке
     $('[data-fancybox]').fancybox({ 
       i18n: {
@@ -43,6 +53,20 @@ document.addEventListener('DOMContentLoaded', () => {
       clickOutside: '',
       clickSlide: '',
       touch: 0,
+    });
+  }
+
+  if (qsAll('.js-typecar')) {
+    const typeCar = new Swiper('.js-typecar', {
+      speed: 800,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      autoHeight: true,
+      navigation: {
+        nextEl: '.js-typecar .swiper-button-next',
+        prevEl: '.js-typecar .swiper-button-prev',
+      },
     });
   }
 

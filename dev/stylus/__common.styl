@@ -165,6 +165,31 @@ div[class\^="table-scroller"]
     text-align center
     
 .common
+  &__car
+    mb 35px
+    &-img
+      max-width 100%
+    .swiper-buttons
+      mt 28px
+      text-align center
+  &__back
+    ib()
+    pos relative
+    mt 71px
+    ml 33px
+    color $dark
+    fontify 18px 400 20px
+    border-bottom 1px solid alpha($dark, .25)
+    transition .7s border
+    &:hover
+      border-color transparent
+    &:before
+      content ""
+      pos absolute
+      l -33px
+      t 3px
+      size 23px 15px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAQAAAClppzdAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAQ4MERNfxgalAAAAtElEQVQoz43QsUqCYRSA4edXJ2cvQXBxaHCRoLUrKAcbanFSXLykBhNpCEESDQSpoaklECxwERS8ASeHn9Lp+7/3LGd4eTmcpOSMKx03AhTO9rqBhiC5/63m2Z15WP+rXxh5MJVBWq8aaRlnyWm94lXXS7ZMTtlEzzBGJiktXMapaf3eWlMSNwUr194c4s7JF9mbePRjGaezM9P3bRWnszX35MtvnM7Gu4FP6/BnTny41Q7Xj2+dJHR4jxECAAAAAElFTkSuQmCC') no-repeat center
   &__title
     fontify 100px 700 100px
     ml -8px
