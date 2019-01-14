@@ -1,0 +1,46 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      +e('section').top
+        .container
+          +b('section').breadcrumbs
+              +e.href(href="#") Главная
+              +e('span').delim 
+              +e.href(href="#") О компании
+              +e('span').delim 
+          +e('h1').title Новости
+
+          include blocks/sider
+
+          include blocks/shower
+
+          article.news__big
+            span.news__big-bg(style="background-image: url('img/news-full.jpg')")
+            p.news__big-date 01 ноября 2018
+            .news__big-hrefover
+              a(href="#").news__big-href 
+                span Искусственный интеллект в новой версии аналитической платформы Visiology
+
+        +e('section').bottom
+          .container
+            +b('section').news
+              - var n = 1;
+              while n < 7
+                +e('article').item
+                  +e(href="#").item-imgover
+                    +e.item-img(src="img/news" + n + ".jpg")
+                  +e.item-content
+                    +e('p').item-date 25 октября 2018
+                    +e.item-href(href="#") Art Polymedia завоевали две награды Prointegration Awards 2018 
+                - n++
+
+            include blocks/pagination
+    include layout/__footer
+    include layout/__scripts

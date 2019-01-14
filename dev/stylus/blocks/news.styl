@@ -1,4 +1,113 @@
 .news
+  df()
+  flex-wrap wrap
+  margin 0 -124px -26px -172px
+  @media $lDesktopSmall
+    margin 0 -30px -26px -78px
+  @media $desktopMax
+    margin 0 -60px -26px -108px
+  @media $desktopMedium
+    margin 0 0 -26px -48px
+  @media $LandscapeMin
+    margin 0 0 -26px -30px
+  &__big
+    dfv(flex-start, flex-end)
+    pos relative
+    z-index 1
+    h 730px
+    margin 0 -124px 48px
+    padding 47px 48px
+    overflow hidden
+    @media $lDesktopSmall
+      margin 0 -30px 48px
+    @media $desktopMax
+      margin 0 -60px 48px
+    @media $desktopMedium
+      margin 0 0 48px
+    @media $LandscapeMedium
+      h 580px
+    @media $LandscapeMin
+      padding 28px 29px
+      h auto
+      pt 50%
+    @media $PortraitMedium
+      margin 0 -15px
+      padding 50% 15px 30px
+    &-bg
+      pos absolute
+      z-index -1
+      t 0
+      r 0
+      b 0
+      l 0
+      background-position center
+      background-repeat no-repeat
+      background-size cover
+      opacity .5
+      transition .7s opacity 
+    &:hover &-bg
+      opacity .65
+    &-date
+      fontify 14px 600 14px
+      mb 6px
+    &-hrefover
+      max-width 500px
+    &-href
+      c white
+      fontify 48px 600 56px
+      border-bottom 1px solid alpha(white, .25)
+      transition .7s border
+      @media $LandscapeMedium
+        fontify 40px 900 40px
+      @media $PortraitMax
+        fontify 36px 900 36px
+      span
+        pos relative
+        t 8px
+      &:hover
+        border-color transparent
+  &__item
+    w calc(100% / 3 - 48px)
+    ml 48px
+    mb 53px
+    @media $LandscapeMax
+      w calc(50% - 48px)
+    @media $LandscapeMin
+      w calc(50% - 30px)
+      ml 30px
+      mb 40px
+    @media $PortraitMax
+      w calc(100% - 30px)
+    &-imgover
+      pos relative
+      db()
+      pt 51%
+      overflow hidden
+    &-img
+      pos absolute
+      l 0
+      t 0
+      size 100%
+      object-fit cover
+      font-family 'object-fit: cover;'
+      transition .7s transform
+      will-change transform
+      -webkit-backface-visibility hidden
+      transform scale(1.017) translateZ(0)
+    &:hover &-img
+      transform scale(1) translateZ(0)
+    &-content
+      mt 20px
+    &-date
+      fontify 14px 600 14px
+      mb 10px
+    &-href
+      color inherit
+      fontify 24px 600 32px
+      border-bottom 1px solid rgba(132,132,132,0.4)
+      transition .7s border
+      &:hover
+        border-color transparent
   &__elem
     &-bottom
       df(flex-start, space-between)
