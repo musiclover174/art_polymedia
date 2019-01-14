@@ -1,0 +1,40 @@
+.shower
+  df()
+  color inherit
+  fontify 18px 400 26px
+  mb 53px
+  @media $PortraitMedium
+    flex-direction column
+  &__text
+    mr 20px
+    @media $PortraitMedium
+      mr 0
+      mb 10px
+  &__list
+    df()
+  &__item
+    & + &
+      ml 15px
+  &__href
+    ib()
+    color inherit
+    fontify 18px 400 26px
+    pos relative
+    padding 0 7px
+    transition .7s color
+    &:before
+      content ""
+      pos absolute
+      l 7px
+      r 7px
+      b 3px
+      h 1px
+      bgc rgba(132,132,132,0.4)
+      transition .7s background
+    &:not(&_active):hover
+      color $blue
+      &:before
+        bgc transparent
+    &_active
+      color white
+      bgc $blue

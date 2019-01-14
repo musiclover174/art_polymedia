@@ -19,11 +19,26 @@ body
   @media $PortraitMedium
     padding 0 15px
 .main
+  color white
+  &__top
+    pt 36px
+  &__bottom
+    bgc $grey
+    color $dark
+    pt 53px 
+  &__title
+    fontify 72px 900 72px
+    margin 22px 0 42px -3px
+    @media $LandscapeMedium
+      fontify 62px 900 62px
+    @media $PortraitMedium
+      fontify 42px 900 42px
+      ml -2px
+    @media $Mobile
+      fontify 34px 900 34px
   h1:not([class])
-    color black
     fontify 60px 900 60px
     margin 25px 0 45px
-    text-align center
     @media $LandscapeMedium
       fontify 48px 900 48px
     @media $PortraitMax
@@ -31,7 +46,6 @@ body
     @media $Mobile370
       fontify 40px 900 40px
   h2:not([class])
-    color black
     fontify 48px 900 48px
     margin 63px 0 39px -2px
     @media $LandscapeMedium
@@ -40,7 +54,6 @@ body
       fontify 36px 900 36px
   h3:not([class]),
   h4:not([class])
-    color black
     fontify 36px 600 36px
     margin 68px 0 38px
     @media $PortraitMax
@@ -135,6 +148,7 @@ div[class\^="table-scroller"]
   max-width 1192px
   padding 75px 151px 124px
   margin 0 auto
+  color $dark
   bgc white
   @media $dekstop1142
     w calc(100% + 64px)
@@ -144,6 +158,11 @@ div[class\^="table-scroller"]
     w calc(100% + 30px)
     ml -15px
     padding 50px 15px 50px
+  .breadcrumbs
+    pl 18px
+  .breadcrumbs,
+  h1:not([class])
+    text-align center
     
 .common
   &__title
@@ -411,13 +430,10 @@ div[class\^="table-scroller"]
       border-color #ff0f37
 
 .breadcrumbs
-  text-align center
-  pl 18px
-  color black
   &__href
-    color black
+    color inherit
     fontify 14px 600 18px
-    border-bottom 1px solid alpha(black, .25)
+    border-bottom 1px solid alpha(#848484, .4)
     transition .5s border
     &:hover
       border-color transparent

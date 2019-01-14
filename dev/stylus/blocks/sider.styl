@@ -1,0 +1,24 @@
+.sider
+  df()
+  border-bottom 1px solid $blue
+  pb 19px
+  @media $LandscapeMin
+    flex-direction column
+  &__href
+    color inherit
+    fontify 18px 400 26px
+    transition .7s color
+    @media $LandscapeMedium
+      fontify 16px 400 24px
+    @media $LandscapeMin
+      fontify 20px 400 24px
+    &:hover,
+    &_active
+      color $blue
+    & + &
+      ml 28px
+      @media $LandscapeMax
+        ml 14px
+      @media $LandscapeMin
+        ml 0
+        mt 8px

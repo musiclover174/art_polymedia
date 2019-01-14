@@ -1,3 +1,41 @@
+.reviews
+  &__info
+    df()
+    mt 93px
+    mb 21px
+    @media $LandscapeMax
+      flex-direction column
+      mt 55px
+  &__side
+    w 37%
+    fontify 24px 600 32px
+    mb 73px
+    @media $LandscapeMax
+      w 100%
+    @media $LandscapeMedium
+      fontify 20px 600 28px
+  &__logos
+    w 63%
+    df(stretch, flex-start)
+    flex-wrap wrap
+    @media $LandscapeMax
+      w calc(100% + 48px)
+      ml -48px
+    @media $PortraitMedium
+      w calc(100% + 30px)
+      ml -30px
+    &-item
+      df(center, center)
+      w calc(100% / 3 - 48px)
+      ml 48px
+      mb 73px
+      @media $PortraitMedium
+        w calc(100% / 3 - 30px)
+        ml 30px
+        mb 53px
+      @media $PortraitMin
+        w calc(50% - 30px)
+
 .review
   bgc white
   padding 48px
@@ -7,7 +45,9 @@
   @media $LandscapeMin
     flex-direction column
   @media $PortraitMedium
-    padding 0
+    padding 30px
+  & + &
+    mt 10px
   &__imgover
     w 198px
     border 1px solid #f1f1f1
@@ -31,3 +71,8 @@
     mt 53px
     color #b8b8b8
     fontify 18px 400 26px
+
+.swiper-slide
+  .review
+    @media $PortraitMedium
+      padding 0

@@ -1,0 +1,14 @@
++b('nav').pagination
+  +e('span').prev.disabled
+  +e('ul').list
+    +e.item._active
+      +e('span').item-href 1
+    +e.item
+      +e.item-href(href="#") 2
+    +e.item
+      +e.item-href(href="#") 3
+    +e.item
+      +e('span').item-href ...
+    +e.item
+      +e.item-href(href="#") 99
+  +e.next(href="#")

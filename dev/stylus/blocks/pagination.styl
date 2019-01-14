@@ -1,0 +1,80 @@
+.pagination
+  display flex
+  justify-content center
+  align-items flex-start
+  mt 60px
+  transition .7s background
+  &__prev,
+  &__next
+    ib()
+    pos relative
+    size 120px
+    bgc white
+    outline none
+    transition .7s background
+    @media $LandscapeMax
+      size 70px
+    @media $LandscapeMin
+      size 50px
+    @media $PortraitMin
+      size 35px
+      bgc transparent
+    &:after
+      content ""
+      pos absolute
+      size 33px 31px
+      l 43px
+      t 44px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAfCAQAAADDnWw5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAQ4KHg6/1QoBAAABU0lEQVRIx53STUvUURQH4GdGV679BoWIRIQEESKt5hOEQpsyVy7UaNHGVZ+klTQ0MwiCozg5ig5E4kJQxERNzPCFCL+AiQuRybf5z//cu7lwuA+/e+7JtGuwXhjWJ2G1Nqj1KnqZBJC9t9KjpE8tTjxX8spiMnAf8cyE1+abAe7uxVOT3vjaHHAX0a1swGyzwO2HPFE2aKZ54CbxWNmQchrgOvHItBGT6YD/e9Fl1jsTaYF6ik4V75XSA1dEh4oPChHgknioYkw+BpD1wJyPxqMAmfYlvfHrlykG7HsrE98tbaemfPLXWjRFK3bkVP3zOU6wLafqLPatV9O5JafqPDJc9QHflFNxnn7EW9rq5z/mjNu1FSc4MS/vh+04wbEFBRt24gRHFhSt240THFn0xZqfcYJD3+St2osT/PZdwYr9OMGBZUXLfiUR2Qa1mn6jySkuAMCMU2sczwLmAAAAAElFTkSuQmCC') no-repeat center
+      background-size cover
+      transition .7s background
+      @media $LandscapeMax
+        l 23px
+        t 27px
+        size 23px 19px
+      @media $LandscapeMin
+        l 14px
+        t 17px
+      @media $PortraitMin
+        l 0
+        t 9px
+    &:not(.disabled):hover
+      bgc $blue
+      &:after
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAfCAQAAADDnWw5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAQ4KIB7jpwEYAAAA70lEQVRIx6XVW0oDQRBG4eNWvN8IISoSwhAQRMQHQYKgKLg/d+FKQpirmzg+SPCWjD1T3Y8FH01T9RfScqe+ttYRaStmvptFiImN0/+B9cTYyosUYB1xbuVlGrCaOLX2KhVYRYxsvE4H/hJDK2+6AL+JgYW33YCfxLG5d12B78ShhbPuwBexb+59H2BJ7LrwoR/wSWw796kvILjl3Jf+gGz4RkbsuBl9xfIvnmME7rjwMUbgXrQvEA8sY92JeGQRmxHEgXlsUhGHlrG8QBxZx1IL8cQmlp2IZ9EERxxbxvYI4sQ6ts0QM5vYTsXEzf4BwBwE7Q8Tzx8AAAAASUVORK5CYII=') no-repeat center
+        background-size cover
+    &.disabled
+      opacity .2
+      @media $desktopMedium
+        dn()
+  &__next
+    transform scaleX(-1)
+  &__list
+    display flex
+  &__item
+    bgc white
+    text-align center
+    fontify 18px 400 26px
+    size 120px
+    display flex
+    align-items center
+    justify-content center
+    transition .7s background
+    @media $LandscapeMax
+      size 70px
+    @media $LandscapeMin
+      size 50px
+    @media $PortraitMin
+      size 35px
+      bgc transparent
+    &:hover,
+    &_active
+      bgc $blue
+      & ^[-1]-href
+        c white
+    &-href
+      size 120px
+      pos relative
+      c black
+      fontify 18px 400 120px
+      transition .7s border

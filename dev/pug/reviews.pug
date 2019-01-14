@@ -1,0 +1,58 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      +e('section').top
+        .container
+          +b('section').breadcrumbs
+              +e.href(href="#") Главная
+              +e('span').delim 
+              +e.href(href="#") О компании
+              +e('span').delim 
+          +e('h1').title Отзывы
+
+          include blocks/sider
+
+          .reviews__info
+            aside.reviews__side За время работы компанией было успешно реализовано свыше 12 000 крупных проектов как в Москве, так и в других городах России и странах СНГ.
+            ul.reviews__logos
+              li.reviews__logos-item
+                img(src="img/revlogo1.png")
+              li.reviews__logos-item
+                img(src="img/revlogo2.png")
+              li.reviews__logos-item
+                img(src="img/revlogo3.png")
+              li.reviews__logos-item
+                img(src="img/revlogo4.png")
+              li.reviews__logos-item
+                img(src="img/revlogo5.png")
+              li.reviews__logos-item
+                img(src="img/revlogo6.png")
+
+        +e('section').bottom
+          .container
+            include blocks/shower
+            
+            - var n = 0;
+            while n < 5
+              +b('article').review
+                +e(href="img/fullrev.jpg", data-fancybox).imgover
+                  +e.img(src="img/rev1.jpg")
+                +e.content
+                  +e('p').title Awards Party 2013
+                  +e.text
+                    p Уважаемая Виктория Михайловна! 
+                    p Позвольте поблагодарить Вас лично и коллектив компании ART Polymedia за профессионализм, исключительную компетентность сотрудников, оперативность в решении поставленных задач и ответственное отношение к работе, которые позволили успешно реализовать более 60 мероприятий компании и стали залогом нашего 17-летнего сотрудничества. 
+                    p Желаю вам успехов в работе и дальнейшего профессионального развития!
+                  +e('p').from Генеральный директор Ульянова И. А. 
+              - n++
+
+            include blocks/pagination
+    include layout/__footer
+    include layout/__scripts
