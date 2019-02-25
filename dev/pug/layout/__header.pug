@@ -22,7 +22,7 @@ include ../bemto/bemto.pug
           +e.item
             +e.href._active(href="#") Главная
           +e.item
-            +e.href(href="#") О компании
+            +e.href._havesub(href="#") О компании
             +e('ul').sublist
               +e.sublist-item
                 +e.sublist-href(href="#") Генеральный директор
@@ -48,7 +48,7 @@ include ../bemto/bemto.pug
               +e.sublist-item
                 +e.sublist-href(href="#") Видео
           +e.item
-            +e.href(href="#") Услуги
+            +e.href._havesub(href="#") Услуги
             +e('ul').sublist
               +e.sublist-item
                 +e.sublist-href(href="#") Парк арендного оборудования

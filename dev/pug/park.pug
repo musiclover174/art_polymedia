@@ -1,0 +1,93 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      +e('section').top
+        .container
+          +b('section').breadcrumbs
+              +e.href(href="#") Главная
+              +e('span').delim 
+              +e.href(href="#") Услуги
+              +e('span').delim 
+          +e('h1').title Парк арендного оборудования
+
+          include blocks/sider-park
+
+          +b('section').park
+            +e.text
+              p Оборудование для выставок, выставочных стендов, конференц-залов, мероприятий подбирается специалистами компании ART Polymedia в полном соответствии с требованиями и пожеланиями заказчика.
+              p Широкий спектр продукции и различных моделей для создания яркого и высокотехнологичного решения обеспечит успех технической организации любого мероприятия.
+
+            +e('section').list-wrapper
+              +e('ul').list
+                +e.item
+                  +e.item-hrefover(href="#")
+                    +e('span').item-name Светодиодные<br>экраны
+                    +e.item-img(src="img/park1.png")
+                +e.item
+                  +e.item-hrefover(href="#")
+                    +e('span').item-name Проекционное<br>оборудование
+                    +e.item-img(src="img/park2.png")
+                +e.item
+                  +e.item-hrefover(href="#")
+                    +e('span').item-name Бесшовные<br>видеостены
+                    +e.item-img(src="img/park3.png")
+                +e.item
+                  +e.item-hrefover(href="#")
+                    +e('span').item-name Профессиональные<br>LCD-дисплеи
+                    +e.item-img(src="img/park4.png")
+                +e.item
+                  +e.item-hrefover(href="#")
+                    +e('span').item-name Системы<br>управления
+                    +e.item-img(src="img/park5.png")
+                +e.item
+                  +e.item-hrefover(href="#")
+                    +e('span').item-name Видеосъемка<br>и трансляция
+                    +e.item-img(src="img/park6.png")
+
+    +b('section').realized
+        +e('span').bg.js-realized-bg(style="background-image: url('img/video.jpg')")
+        .container
+          +e.title._inner Примеры реализованных проектов
+          +e('ul').list
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Владимирский Экономический Форум&nbsp;2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Цикл Открытых уроков «ПроеКТОриЯ»
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Выставка TransRussia 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Презентация седана Genesis G70
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span SAP Forum Москва 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Гала-ужины для гостей выставки METRO EXPO 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Владимирский Экономический Форум 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Цикл Открытых уроков «ПроеКТОриЯ»
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Шоу братьев Запашных «АнгелЫ»
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Презентация седана Genesis G70
+          +e.toall.btn(href="#") 
+            span Полный список проектов
+
+    include layout/__footer
+    include layout/__scripts

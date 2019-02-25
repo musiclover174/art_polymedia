@@ -59,10 +59,22 @@
     transition .7s color
     @media $LandscapeMedium
       fontify 24px 600 32px
+    @media $LandscapeMediumMin
+      &_havesub:after
+        content ""
+        ib()
+        ml 7px
+        mt 7px
+        size 9px 5px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAQAAAA9Wg7gAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhkOEDEaV7eYAAAARUlEQVQI1z3JqxGAQADE0C0Gg0MhwYG73uji2qAU4Pp4CD4Tk0mimuVnUmPUrG9YNGPE4FREcRnkub3D5tDLl6Kz6x6/AYwqN9FMsBeKAAAAAElFTkSuQmCC') no-repeat center
+        transition .7s background
     &_active,
     &:hover
       color $blue
-    &_active:after
+      @media $LandscapeMediumMin
+        &:after
+          background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAMAAACgjTZZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEULX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7z///84MlZ2AAAAEXRSTlMAqD8+NuRHRjDiTuMp4ZEkwase6RcAAAABYktHRBHitT26AAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wIZDhMwRn3UzQAAAC9JREFUCNdjYGRiAAFmRgYWVjYgg52VhYGBg5OLgYubAyTBw8vHywNWwsAvwA8kAQ+/AM1+0uqiAAAAAElFTkSuQmCC') no-repeat center
+    &_active:before
       content ""
       pos absolute
       b -30px

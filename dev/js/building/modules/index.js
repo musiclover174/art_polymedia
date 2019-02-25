@@ -1,4 +1,4 @@
-import { qs, qsAll } from './helpers';
+import { qs } from './helpers';
 
 export default class Index {
   constructor(
@@ -7,19 +7,16 @@ export default class Index {
       feedsClass,
       stickyParent,
       stickyEl,
-      realizedElem,
     },
   ) {
     this.bannerClass = bannerClass;
     this.feedsClass = feedsClass;
     this.stickyParent = stickyParent;
     this.stickyEl = stickyEl;
-    this.realizedElem = realizedElem;
 
     if (qs(bannerClass)) this.bannerInit();
     if (qs(feedsClass)) this.feedsInit();
     if (qs(stickyParent)) this.aboutInit();
-    if (qs(realizedElem)) this.realizedOpen();
   }
 
   bannerInit() {
@@ -74,35 +71,6 @@ export default class Index {
         positioner.classList.remove('fixed', 'bottom');
         positioner.removeAttribute('style');
       }
-    });
-  }
-
-  realizedOpen() {
-    qsAll(this.realizedElem).forEach((item) => {
-      item.addEventListener('mouseenter', () => {
-        qs('.js-realized-bg').style.backgroundImage = `url('${item.getAttribute('data-img')}')`;
-      });
-
-      item.addEventListener('click', (e) => {
-        if (window.innerWidth >= 768) {
-          $.fancybox.open({
-            src: item.getAttribute('data-href'),
-            type: 'ajax',
-            opts: {
-              i18n: {
-                en: {
-                  CLOSE: 'Закрыть',
-                },
-              },
-              clickOutside: '',
-              clickSlide: '',
-              touch: 0,
-              afterShow: () => qs('.popup_realized').classList.add('show'),
-            },
-          });
-          e.preventDefault();
-        }
-      });
     });
   }
 }

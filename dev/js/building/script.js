@@ -8,6 +8,7 @@ import Contacts from './modules/contacts';
 import Forms from './modules/forms';
 import Share from './modules/share';
 import Sticky from './modules/sticky';
+import Realized from './modules/realized';
 
 document.addEventListener('DOMContentLoaded', () => {
   // const burger = new Burger();
@@ -22,6 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
         realizedElem: '.js-realized-elem',
       },
     );
+  }
+
+  if (qs('.js-realized-elem')) {
+    const realized = new Realized('.js-realized-elem');
   }
 
   if (qs('.js-contacts-map')) {

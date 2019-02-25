@@ -1,24 +1,80 @@
 .sider
+  pos relative
   df()
-  border-bottom 1px solid $blue
-  pb 19px
-  @media $LandscapeMin
-    flex-direction column
+  flex-wrap wrap
+  ml -20px
+  w calc(100% + 20px)
+  pb 12px
+  &:after
+    content ""
+    pos absolute
+    l 20px
+    r 0
+    b 0
+    h 1px 
+    bgc $blue
+  &__item
+    ml 20px
+    pos relative
+    mb 7px
+    &:hover
+      z-index 1
   &__href
     color inherit
     fontify 18px 400 26px
     transition .7s color
     @media $LandscapeMedium
       fontify 16px 400 24px
-    @media $LandscapeMin
-      fontify 20px 400 24px
-    &:hover,
-    &_active
+    @media $LandscapeMediumMin
+      &_havesub:after
+        content ""
+        ib()
+        ml 7px
+        mt 11px
+        size 9px 5px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAQAAAA9Wg7gAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhkOEDEaV7eYAAAARUlEQVQI1z3JqxGAQADE0C0Gg0MhwYG73uji2qAU4Pp4CD4Tk0mimuVnUmPUrG9YNGPE4FREcRnkub3D5tDLl6Kz6x6/AYwqN9FMsBeKAAAAAElFTkSuQmCC') no-repeat center
+        transition .7s background
+    &_active,
+    &:hover
       color $blue
-    & + &
-      ml 28px
-      @media $LandscapeMax
-        ml 14px
-      @media $LandscapeMin
-        ml 0
-        mt 8px
+      @media $LandscapeMediumMin
+        &:after
+          background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAMAAACgjTZZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEULX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7z///84MlZ2AAAAEXRSTlMAqD8+NuRHRjDiTuMp4ZEkwase6RcAAAABYktHRBHitT26AAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wIZDhMwRn3UzQAAAC9JREFUCNdjYGRiAAFmRgYWVjYgg52VhYGBg5OLgYubAyTBw8vHywNWwsAvwA8kAQ+/AM1+0uqiAAAAAElFTkSuQmCC') no-repeat center
+  &__sublist
+    visibility hidden
+    opacity 0
+    pos absolute
+    t 30px
+    r -24px
+    padding 22px 24px
+    bgc $blue
+    transition .3s visibility, .3s opacity, .3s top
+    @media $LandscapeMedium
+      dn()
+    &:before
+      content ""
+      pos absolute
+      l 0
+      t -21px
+      h 21px
+      w 100%
+      @media $LandscapeMedium
+        dn()
+    @media $LandscapeMediumMin
+      ^[0]__item:hover &
+        t 44px
+        opacity 1
+        visibility visible
+    &-item
+      & + &
+        mt 16px
+    &-href
+      pos relative
+      color white
+      fontify 14px 600 18px
+      transition .7s opacity
+      @media $LandscapeMedium
+        fontify 18px 600 24px
+      &:hover,
+      &_active
+        opacity .7

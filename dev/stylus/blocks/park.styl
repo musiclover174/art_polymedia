@@ -1,0 +1,73 @@
+.park
+  &__text
+    mt 92px
+    @media $LandscapeMedium
+      mt 50px
+    p:not([class])
+      fontify 24px 600 32px
+      margin 28px 0
+      @media $LandscapeMedium
+        fontify 20px 600 28px
+  &__list
+    df(stretch, flex-start)
+    flex-wrap wrap
+    ml -48px
+    w calc(100% + 48px)
+    mb -48px
+    @media $desktopMax
+      ml -32px
+      w calc(100% + 32px)
+      mb -32px
+    &-wrapper
+      margin 90px -124px 100px
+      @media $lDesktopSmall
+        margin 90px -30px 100px
+      @media $desktopMax
+        margin 90px -60px 100px
+      @media $desktopMedium
+        margin 90px 0 100px
+      @media $LandscapeMedium
+        margin 50px 0
+  &__item
+    pos relative
+    overflow hidden
+    w calc(100% / 3 - 48px)
+    ml 48px
+    mb 48px
+    border-top 1px solid $dark
+    border-bottom 1px solid $dark
+    bgc $blue
+    transition .7s background-color, .7s border-color
+    @media $desktopMax
+      ml 32px
+      mb 32px
+      w calc(100% / 3 - 32px)
+    @media $LandscapeMedium
+      w calc(50% - 32px)
+    @media $PortraitMax
+      w calc(100% - 32px)
+    &:hover
+      border-color $blue
+      bgc $dark
+      & ^[-1]-img
+        b 0
+    &-hrefover
+      db()
+      padding 29px 48px
+      min-height 330px
+      @media $LandscapeMedium
+        padding 29px 30px
+    &-name
+      c white
+      fontify 24px 600 32px
+      white-space pre-wrap
+      @media $LandscapeMedium
+        fontify 20px 600 28px
+    &-img
+      pos absolute
+      b -10px
+      r 48px
+      transition .7s bottom
+      @media $desktopMedium
+        max-width 90%
+        r 5%
