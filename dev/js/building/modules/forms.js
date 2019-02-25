@@ -31,8 +31,8 @@ export default class Forms {
           const path = fileInp.value.split('\\');
           let pathName = path[path.length - 1].split('');
 
-          if (pathName.length >= 30) {
-            pathName = `${pathName.slice(0, 28).join('')}...`;
+          if (pathName.length >= 20) {
+            pathName = `${pathName.slice(0, 18).join('')}...`;
           } else {
             pathName = pathName.join('');
           }

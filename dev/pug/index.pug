@@ -29,8 +29,8 @@ html
             .swiper-button-next
 
       +b('section').about(style="background-image: url('img/about-mobile.png');")
-        +e.sticky-parent.js-sticky-parent
-          +e.sticky.js-sticky
+        +e.sticky-parent.js-isticky-parent
+          +e.sticky.js-isticky
             +e('video').video(preload="", autoplay, muted, loop, poster="img/video.jpg")
               source(src="video/about.mp4" type="video/mp4")
           .container
@@ -185,8 +185,8 @@ html
               .common__col
                 .common__row
                   .common__fileover
-                    label(for="file1").common__filename.js-common-file Прикрепите файл
                     input(type="file", name="").common__file#file1.js-common-fileinput
+                    label(for="file1", data-default="Прикрепите файл").common__filename.js-common-file Прикрепите файл
                     button(type="button").common__filedelete.js-common-filedelete
               .common__col
                 .common__row

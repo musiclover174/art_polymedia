@@ -57,14 +57,14 @@ body.index .header
   &__search
     ml 37px
     size 21px
-    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAQAAAADHm0dAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsJEiJ39ScOAAABGElEQVQoz42SP0oDQRjF326SFWKhBxCEYBFiQLTwApoFC+9gY2IjgueIGmOxgqD3EJt4BiGFpBDstE2R3aw/iyzZ2ewOyfuK4c38+ObPG6GkGvQYEjLmgz7N+fy8ZkOFB2KuqFOhyi6XxASs5VGPV+4pZRZc7ninuoj26eW3Q3R5yaINppQLUYc/DlPvqqNrTVUkdK626YfUC3sKUWOUOodQ64pULFeRSqkJ5cmmsnk0V1/atqJb+jbRNx1b0SMNzGs1iXGtj7WfjSCwRHDDUz7YAd2Fzg63/HJqzrmSQp1oU5EutCNPnmrqKNaGzvQsPxNJUnsEfDJhwohHDhDC5wc/+wntZcDLUANejorWDF4FTWAHraSW2v+W3WEu8LR8cQAAAABJRU5ErkJggg==') no-repeat center
+    background url('../i/search_seq.png') no-repeat 0 -1029px
     transition .7s opacity
     @media $LandscapeMedium
       ml 30px
     @media $PortraitMedium
       dn()
     &:hover
-      opacity .6
+      animation searchAnimation 1s steps(49)
   &__right
     ml 40px
     dfv()

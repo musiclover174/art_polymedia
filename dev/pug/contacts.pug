@@ -1,0 +1,80 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      +e('section').top
+        .container
+          +b('section').breadcrumbs
+              +e.href(href="#") Главная
+              +e('span').delim 
+          +e('h1').title Контакты
+
+          +b('section').contacts
+            +e('section').wrapper.js-sticky-parent
+              +e.main
+                +e.info
+                  +e.info-row(data-type="addr") Москва, улица Кржижановского, дом 29, корпус 1
+                  +e.info-row(data-type="phone") 
+                    +e.info-phone(href="tel:+74959568587") +7 (495) 956-85-87
+                  +e.info-row(data-type="mail") 
+                    +e.info-mail(href="mailto:arenda@polymedia.ru") arenda@polymedia.ru
+                +e.props
+                  +e.props-row
+                    +e('p').props-title Полное наименование
+                    +e('p').props-text Общество с ограниченной ответственностью «Арендные решения и технологии Полимедиа»
+                  +e.props-row
+                    +e('p').props-title Краткое наименование
+                    +e('p').props-text ООО «АРТ Полимедиа»
+                  +e.props-row
+                    +e('p').props-title ИНН
+                    +e('p').props-text 7705670293
+                  +e.props-row
+                    +e('p').props-title ОГРН
+                    +e('p').props-text 1057747303690
+                  +e.props-row
+                    +e('p').props-title Дата регистрации
+                    +e('p').props-text 23.06.2005
+                  +e.props-row
+                    +e('p').props-title Юридический адрес
+                    +e('p').props-text 115114, город Москва, улица Летниковская, дом 5
+                  +e.props-row
+                    +e('p').props-title Адрес для корреспонденции
+                    +e('p').props-text Москва, улица Кржижановского, дом 29, корпус 1 
+
+              +e('aside').sidebar.js-sticky
+                +e('form').form.js-sticky-inner
+                  +e('p').form-title У вас есть проект? Давайте обсудим его и воплотим в жизнь!
+                  .common__row
+                    input(type="text", data-req="req").common__input
+                    label.common__placeholder Представьтесь, пожалуйста
+                  .common__row
+                    input(type="text", data-req="req").common__input
+                    label.common__placeholder Как с вами связаться?
+                  .common__row
+                    textarea(data-req="req").common__textarea
+                    label.common__placeholder Расскажите о вашем проекте
+                  +e.form-bottom
+                    .common__col
+                      .common__row
+                        .common__fileover
+                          input(type="file", name="").common__file#file1.js-common-fileinput
+                          label(for="file1", data-default="Прикрепите файл").common__filename.js-common-file Прикрепите файл
+                          button(type="button").common__filedelete.js-common-filedelete
+                    .common__col
+                      .common__row
+                        +e('span').spacer
+                        button(type="submit").callback__send.btn.common__sbm 
+                          span Отправить
+
+      +b('section').map
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+        +e.yandex#map.js-contacts-map(data-coords="55.675352, 37.580957")
+
+    include layout/__footer
+    include layout/__scripts

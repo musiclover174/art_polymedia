@@ -18,9 +18,9 @@ export default class Contacts {
 
       const PMitem = new ymaps.Placemark([parseFloat(pinCoord[0]), parseFloat(pinCoord[1])], {}, {
         iconLayout: 'default#image',
-        iconImageSize: [54, 67],
+        iconImageSize: [19, 32],
         iconImageHref: '/static/i/pin.png',
-        iconImageOffset: [-32, -42],
+        // iconImageOffset: [0, -42],
       });
 
       myMap.behaviors.disable('scrollZoom');

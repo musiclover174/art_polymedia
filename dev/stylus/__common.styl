@@ -139,8 +139,6 @@ div[class\^="table-scroller"]
   pl 1px
   &:not(:first-child)
     mt 35px
-  &:not(:last-child)
-    mb 33px
   @media $desktopMax
     w 100%
 
@@ -187,9 +185,11 @@ div[class\^="table-scroller"]
       content ""
       pos absolute
       l -33px
-      t 3px
-      size 23px 15px
-      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAQAAAClppzdAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAQ4MERNfxgalAAAAtElEQVQoz43QsUqCYRSA4edXJ2cvQXBxaHCRoLUrKAcbanFSXLykBhNpCEESDQSpoaklECxwERS8ASeHn9Lp+7/3LGd4eTmcpOSMKx03AhTO9rqBhiC5/63m2Z15WP+rXxh5MJVBWq8aaRlnyWm94lXXS7ZMTtlEzzBGJiktXMapaf3eWlMSNwUr194c4s7JF9mbePRjGaezM9P3bRWnszX35MtvnM7Gu4FP6/BnTny41Q7Xj2+dJHR4jxECAAAAAElFTkSuQmCC') no-repeat center
+      t -1px
+      size 23px 23px
+      background url('../i/back_seq.png') no-repeat 0 -897px
+    &:hover:before
+      animation backAnimation 1s steps(39)
   &__title
     fontify 100px 700 100px
     ml -8px
@@ -297,12 +297,14 @@ div[class\^="table-scroller"]
     justify-content space-between
     pos relative
     w 100%
+    z-index 1
     & + &
       mt 33px
   &__fileover
     w 100%
     pos relative
     mt 13px
+    white-space nowrap
     transition .5s border
     &.warning
       border-color #ed1c24
@@ -325,17 +327,18 @@ div[class\^="table-scroller"]
       ib()
       pos relative
       l 23px
-      mr 23px
+      mr 46px
       cursor pointer
       color $dark
       fontify 18px 400 18px
       border-bottom 1px dotted $dark
       transition .5s border
       &.choosed
-        color white
-        text-transform none
-        letter-spacing 0
-        font-weight 300
+        border-color transparent
+        white-space nowrap
+        & + ^[0]__filedelete
+          visibility visible
+          cursor pointer
       &.choosed,
       &:hover
         border-color transparent
@@ -347,22 +350,12 @@ div[class\^="table-scroller"]
         size 16px 15px
         background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAQAAABHeoekAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsOCAb+lC+BAAABGElEQVQY02WROUsDURRGz8tMY7D8QMEy09i4oEhAMQiCFmJhKZigiII/wEaQ2IiNRqMEJEia2FqoDAoulUUUN4xVWiEYsLBW0MI3Mknube7Hee+uRjSYwzK7iH2GKTEXacIHjNDBNecIn4Kpy2DIE2MRn232gFbenGgY5+hkHp8cWQBStLmh/xm6SXFCngwAU6QZQ4Fv6laeylq1ekJV9YgAr+tBMT1pzepx1dQnggdpPcvTvTYsHlVV8b8YoRWV5amkLYsTetdgUBpNq6J2XSkrI4SGVFPivzOMXlnghi5e+AHiHJHkIjS7vmjh26p+fJKchXcXocKAjXs5ZbYegxP9ZIc7PpjkkCWOG2/nUsSlgMcjM1zSZL/0qUObwFqRwAAAAABJRU5ErkJggg==') no-repeat center
     &delete
-      ib()
+      display inline-block
+      vertical-align middle
       visibility hidden
       pos relative
-      ml 35px
-      pl 22px
-      color $dark
-      fontify 18px 400 18px
-      &.choosed
-        visibility visible
-        cursor pointer
-      &:before
-        content ""
-        pos absolute
-        l 0
-        size 15px
-        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsOCzeEZ3x4AAAAl0lEQVQY03XRwQ3CIBSA4b9yaMK5MzGExhk6gfHgoYlLaNrAEHYJOgBM4QAeKD4qleP7fhLIa7qJkZm9Yzgr/cbhiTtouSod8TgWQoUnXkpDHawISsNv8MXMZVCgcA5a7oIlQ6TlxsBDRofNa3su9BgZyW2D5ciTBSu/yJxwBkIZJBZkDRyekHiLKfApULrGImi6ken/xj4ByUdmLURzEAAAAABJRU5ErkJggg==') no-repeat center
+      size 15px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsOCzeEZ3x4AAAAl0lEQVQY03XRwQ3CIBSA4b9yaMK5MzGExhk6gfHgoYlLaNrAEHYJOgBM4QAeKD4qleP7fhLIa7qJkZm9Yzgr/cbhiTtouSod8TgWQoUnXkpDHawISsNv8MXMZVCgcA5a7oIlQ6TlxsBDRofNa3su9BgZyW2D5ciTBSu/yJxwBkIZJBZkDRyekHiLKfApULrGImi6ken/xj4ByUdmLURzEAAAAABJRU5ErkJggg==') no-repeat center
 
 .btn
   font-family $os

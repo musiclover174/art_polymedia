@@ -7,6 +7,7 @@ import Burger from './modules/burger';
 import Contacts from './modules/contacts';
 import Forms from './modules/forms';
 import Share from './modules/share';
+import Sticky from './modules/sticky';
 
 document.addEventListener('DOMContentLoaded', () => {
   // const burger = new Burger();
@@ -16,15 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
       {
         bannerClass: '.js-banner',
         feedsClass: '.js-feeds',
-        stickyEl: '.js-sticky',
-        stickyParent: '.js-sticky-parent',
+        stickyEl: '.js-isticky',
+        stickyParent: '.js-isticky-parent',
         realizedElem: '.js-realized-elem',
       },
     );
   }
 
-  if (document.querySelector('.js-contacts-map')) {
-    const contacts = new Contacts('contacts-map');
+  if (qs('.js-contacts-map')) {
+    const contacts = new Contacts('map');
     contacts.init();
   }
 
@@ -68,6 +69,10 @@ document.addEventListener('DOMContentLoaded', () => {
         prevEl: '.js-typecar .swiper-button-prev',
       },
     });
+  }
+
+  if (qs('.js-sticky')) {
+    const sticky = new Sticky();
   }
 
   resizeWatcher();

@@ -1,0 +1,112 @@
+.contacts
+  pt 25px
+  &__wrapper
+    df(flex-start, space-between)
+    @media $dekstop1142
+      flex-direction column
+  &__main
+  &__sidebar
+    w calc(50% - 24px)
+  &__sidebar
+    @media $dekstop1142
+      w 100%
+      mt 80px
+      height auto !important
+  &__main
+    mt -8px
+    @media $dekstop1142
+      w 100%
+      mt 0
+  &__form
+    bgc white
+    padding 45px 50px 50px
+    @media $dekstop1142
+      width 100% !important
+      position initial !important
+      transform none !important
+    @media $PortraitMedium
+      padding 45px 15px 50px
+      ml -15px
+      width calc(100% + 30px) !important
+    &-title
+      c $dark
+      fontify 24px 600 32px
+      mb 34px
+      @media $LandscapeMedium
+        fontify 20px 600 28px
+    &-bottom
+      df(flex-start, space-between)
+      mt 35px
+      @media $LandscapeMin
+        flex-direction column
+  &__info
+    pb 70px
+    border-bottom 1px solid $blue
+    &-row
+      pos relative
+      pl 48px
+      fontify 24px 600 32px
+      max-width 440px
+      @media $LandscapeMedium
+        fontify 20px 600 28px
+      &:before
+        content ""
+        pos absolute
+        background-position center
+        background-repeat no-repeat
+      &[data-type="addr"]:before
+        t 7px
+        l 12px
+        size 17px 24px
+        background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAYCAMAAAArvOYAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABBVBMVEULX7z///8LX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7z///9iePe7AAAAVXRSTlMAABBzv+1o74xAEpGXLnGWBRv1JSP4Hod7VtT5eM4xVKsGqTDPQgn2+usUQT/IN1WqqFc2yZhn1g30C5x0nSL7BHzuGmCfrImIrdJyDiTmaS3qbSnFWfNr0gAAAAFiS0dEAf8CLd4AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhkKADe+/6ggAAABAUlEQVQY002Q61aCUBCFNyIqqIndVKiMrmCUJqkopuat0ryU9f6v0owgsn/s2es7s+asGYAUE+PSnxQXY5QFBolkSlagyKlkwifpTBa+spk0k4Ocip3UnCggf3iEvY5PTlEocippulbicFbA+QXV8qVsyFeMrm8gKVS1WzJZI7u7h8lzdYPM0Hm2CavCPQ9kNvdULDw+Ua3WbNV+rlNyXtBo8hf1ltligGaDnhFVrQq33YmATtsFvG6EdF9pr15/EIJBv8e7e8WQvHnba+SHTgCc4ci/2HgSkMk4uCGm79vy8bm7KtzZnHw++woJFssVVssF9gTr7x9rjSjB5nfjB+EfnXcZJNNl4VQAAAAASUVORK5CYII=')
+        @media $LandscapeMedium
+          t 3px
+      &[data-type="phone"]:before
+        t 4px
+        l 13px
+        size 15px 24px
+        background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAYAgMAAABYa0/6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADFBMVEX///8LX7wLX7z///+WlCfHAAAAAnRSTlMAAHaTzTgAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wIZCgEMFu9wRQAAACtJREFUCNdjWLVq1QqGBgYGDsqJqaGhERACbCiY1RAaAJSNmsABZYHUgWQB5psYfFgm2kkAAAAASUVORK5CYII=')
+      &[data-type="mail"]:before
+        l 9px
+        t 9px
+        size 23px 15px
+        background-image url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAMAAAA4caRkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAARVBMVEULX7z///8LX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7z////Yv5nqAAAAFXRSTlMAAMyyEweP4z9M6X8DTRvARQFw5W9/zg3UAAAAAWJLR0QB/wIt3gAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+MCGQoDG6cKlwAAAABfSURBVBjTnc7bEoAQFIXhlXOIVN7/VROGMblo+q/MNxsbcR4ioQxjjJLkXEg1sJKCJwdWbWxTa/QGZIfz3lWux+J1CP1q9fIo+lfNnyX2vlp3hOO8At4+9N2X3A+fdwMYcQgWfbK5GgAAAABJRU5ErkJggg==')
+      & + &
+        mt 46px
+    &-phone
+      c white
+    &-mail
+      c white
+      border-bottom 1px solid rgba(255, 255, 255, .25)
+      transition .7s border-color
+      &:hover
+        border-color transparent
+  &__props
+    mt 77px
+    &-row
+      & + &
+        mt 21px
+    &-title
+      c $blue
+      fontify 14px 400 18px
+      mb 4px
+    &-text
+      c white
+      fontify 18px 400 26px
+      max-width 450px
+  &__spacer
+    @media $LandscapeMin
+      dn()
+
+.map
+  h 500px
+  max-height 80vh
+  &:not(:first-child)
+    mt 70px
+    @media $PortraitMedium
+      mt 0
+  &__yandex
+    size 100%
+
+ymaps[class$="ground-pane"]
+  filter grayscale(100%)

@@ -138,14 +138,14 @@ body.compensate-for-scrollbar {
 	z-index: 99994;
 }
 
-/*.fancybox-slide:before {
+.fancybox-slide:before {
 	content: "";
 	display: inline-block;
 	height: 100%;
 	margin-right: -.25em;
 	vertical-align: middle;
 	width: 0;
-}*/
+}
 
 .fancybox-is-sliding .fancybox-slide,
 .fancybox-slide--current,
@@ -339,7 +339,11 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-button--close{
-	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAQAAAD97QrkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBwLCA8cVG13AAAA0klEQVRIx6XWxxHEIAwFUJrjV0U16/LYHv4eHJagAPL4hNE8EySNEw9mpvADHomZNYyAlUiMI2AlmM5BBLmAm9hHHuBPnAj2gZZYR9DH9ZMrCMaYMcBDMM/PQRYCaU4K1BDI7+WvSQi01Wl7HhHo29MPrkVgHbJ1fTcC+5bsHMisLF6ueJlYSBY7xs/EV6vAVb3hs0BT/qEbwdA/tvMCQgPayk4oHWy5RmC0wKVKhdND3X7hAWfMV+9aK4CA7AMTEgEGJAZ0SBRokDjwIImft/8XPwp4mj46v3xfAAAAAElFTkSuQmCC') no-repeat center
+	background url('../i/close_seq.png') no-repeat 0 -1617px;
+}
+
+.fancybox-button--close:hover{
+	animation closeAnimation 1s steps(49)
 }
 
 .fancybox-button,
@@ -366,6 +370,7 @@ body.compensate-for-scrollbar {
 	overflow: visible;
 	position: relative;
 	shape-rendering: geometricPrecision;
+	dn();
 }
 
 .fancybox-button--thumbs svg,
@@ -425,7 +430,6 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-close-small {
-	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAQAAAD97QrkAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBwLCA8cVG13AAAA0klEQVRIx6XWxxHEIAwFUJrjV0U16/LYHv4eHJagAPL4hNE8EySNEw9mpvADHomZNYyAlUiMI2AlmM5BBLmAm9hHHuBPnAj2gZZYR9DH9ZMrCMaYMcBDMM/PQRYCaU4K1BDI7+WvSQi01Wl7HhHo29MPrkVgHbJ1fTcC+5bsHMisLF6ueJlYSBY7xs/EV6vAVb3hs0BT/qEbwdA/tvMCQgPayk4oHWy5RmC0wKVKhdND3X7hAWfMV+9aK4CA7AMTEgEGJAZ0SBRokDjwIImft/8XPwp4mj46v3xfAAAAAElFTkSuQmCC') no-repeat center;
 	border: 0;
 	font-size 0;
 	cursor: pointer;
@@ -433,9 +437,14 @@ body.compensate-for-scrollbar {
   color: $blue;
 	right: 33px;
 	top: 33px;
-	size 33px
+	size 33px;
+	background url('../i/close_seq.png') no-repeat 0 -1617px;
 	z-index: 10;
 	transition: .7s opacity;
+}
+
+.fancybox-close-small:hover {
+	animation closeAnimation 1s steps(49)
 }
     
 @media (max-width: 900px) {
