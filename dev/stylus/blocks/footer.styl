@@ -147,7 +147,10 @@
 
 .popup
   font-family $os
-  &:not(.popup_realized)
+  &_search
+    max-width 900px
+    w 95%
+  &:not(.popup_realized):not(.popup_search)
     bgc white
     w 95%
     max-width 523px
@@ -168,7 +171,10 @@
     span
       c $red
   &__form
-    mt 66px
+    &:not(&_search)
+      mt 66px
+    &_search
+      pos relative
     &.warning ^[0]__warning
       db()
     &-title
@@ -204,3 +210,23 @@
   .common__filename
     display inline
     max-width calc(100% - 23px)
+  &__search
+    &-input
+      width 100%
+      bgc transparent
+      border 0
+      border-bottom 1px solid white
+      fontify 24px 400 26px
+      c white
+      h 75px
+      pr 40px
+    &-sbm
+      pos absolute
+      r 0
+      t 50%
+      mt -10px
+      size 21px
+      background url('../i/search_seq.png') no-repeat 0 -1029px
+      transition .7s opacity
+      &:hover
+        animation searchAnimation 1s steps(49)

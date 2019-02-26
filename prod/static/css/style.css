@@ -4277,14 +4277,18 @@ body.burgeropen .menu {
 .popup {
   font-family: SourceSansPro;
 }
-.popup:not(.popup_realized) {
+.popup_search {
+  max-width: 900px;
+  width: 95%;
+}
+.popup:not(.popup_realized):not(.popup_search) {
   background-color: #fff;
   width: 95%;
   max-width: 523px;
   padding: 24px 48px;
 }
 @media (max-width: 670px) {
-  .popup:not(.popup_realized) {
+  .popup:not(.popup_realized):not(.popup_search) {
     padding: 24px 28px;
   }
 }
@@ -4318,8 +4322,11 @@ body.burgeropen .menu {
 .popup__subtitle span {
   color: #ed1845;
 }
-.popup__form {
+.popup__form:not(.popup__form_search) {
   margin-top: 66px;
+}
+.popup__form_search {
+  position: relative;
 }
 .popup__form.warning .popup__warning {
   display: block;
@@ -4387,6 +4394,33 @@ body.burgeropen .menu {
 .popup .common__filename {
   display: inline;
   max-width: calc(100% - 23px);
+}
+.popup__search-input {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #fff;
+  height: 75px;
+  padding-right: 40px;
+}
+.popup__search-sbm {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -10px;
+  width: 21px;
+  height: 21px;
+  background: url("../i/search_seq.png") no-repeat 0 -1029px;
+  -webkit-transition: 0.7s opacity;
+  transition: 0.7s opacity;
+}
+.popup__search-sbm:hover {
+  -webkit-animation: searchAnimation 1s steps(49);
+  animation: searchAnimation 1s steps(49);
 }
 .banner {
   opacity: 0;
