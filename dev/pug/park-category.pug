@@ -1,0 +1,94 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      +e('section').top
+        .container
+          +b('section').breadcrumbs
+              +e.href(href="#") Главная
+              +e('span').delim 
+              +e.href(href="#") Услуги
+              +e('span').delim 
+          +e('h1').title Проекционное оборудование
+
+          include blocks/sider-category
+
+          +b('section').park
+            +e.text
+              p В нашем арендном парке представлены проекторы ведущих мировых производителей Christie, Panasonic и Mitsubishi со световым потоком от 6 000 до 20 000 ANSI люмен и разрешением Full HD. Все модели укомплектованы линейкой сменных объективов с переменным фокусным расстоянием.
+
+    +b('section').cats
+      .container
+        +e('section').list-wrapper
+          +e('ul').list
+            +e.item._wide
+              +e('span').item-name Проектор Panasonic PT-DZ21KE, WUXGA, Real Full HD, мощностью 20 000 ANSI Lm, 3-chip DLP-проектор
+              +e.item-img(src="img/park-cat1.png")
+            +e.item
+              +e('span').item-name Проектор Christie Roadster HD20k-J, Real Full HD, мощностью 20 000 ANSI Lm, 3-chip DLP-проектор
+              +e.item-img(src="img/park-cat2.png")
+            +e.item
+              +e('span').item-name Проектор Christie Roadster HD18K, Real Full HD, мощностью 18 000 ANSI Lm, 3-chip DLP-проектор
+              +e.item-img(src="img/park-cat2.png")
+            +e.item
+              +e('span').item-name Проектор Panasonic PT-DZ13KE, WUXGA, Real Full HD, мощностью 12 000 ANSI Lm, 3-chip DLP-проектор
+              +e.item-img(src="img/park-cat2.png")
+            +e.item
+              +e('span').item-name Проектор Panasonic PT-DZ110XE, WUXGA, Real Full HD, мощностью 10 600 ANSI Lm, 3-chip DLP-проектор
+              +e.item-img(src="img/park-cat3.png")
+            +e.item._wide
+              +e('span').item-name Проектор Mitsubishi UD8400U, WUXGA, Real Full HD, мощностью 6 500 ANSI Lm, 3-chip DLP-проектор
+              +e.item-img(src="img/park-cat4.png")
+            +e.item._wide
+              +e('span').item-name Проектор Mitsubishi XD8100U, XGA, мощностью 7 000 ANSI Lm
+              +e.item-img(src="img/park-cat1.png")
+            +e.item
+              +e('span').item-name Проектор Mitsubishi UL7400U, WUXGA, мощностью 5 000 ANSI Lm
+              +e.item-img(src="img/park-cat3.png")
+
+    +b('section').realized
+        +e('span').bg.js-realized-bg(style="background-image: url('img/video.jpg')")
+        .container
+          +e.title._inner Примеры проектов с применением данного оборудования
+          +e('ul').list
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Владимирский Экономический Форум&nbsp;2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Цикл Открытых уроков «ПроеКТОриЯ»
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Выставка TransRussia 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Презентация седана Genesis G70
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span SAP Forum Москва 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Гала-ужины для гостей выставки METRO EXPO 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Владимирский Экономический Форум 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Цикл Открытых уроков «ПроеКТОриЯ»
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Шоу братьев Запашных «АнгелЫ»
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Презентация седана Genesis G70
+          +e.toall.btn(href="#") 
+            span Полный список проектов
+
+    include layout/__footer
+    include layout/__scripts

@@ -71,3 +71,68 @@
       @media $desktopMedium
         max-width 90%
         r 5%
+
+.cats
+  padding 48px 0
+  bgc $grey
+  mt 90px
+  @media $LandscapeMedium
+    mt 50px
+  &__list
+    df(stretch, flex-start)
+    flex-wrap wrap
+    ml -48px
+    w calc(100% + 48px)
+    mb -48px
+    @media $desktopMax
+      ml -32px
+      w calc(100% + 32px)
+      mb -32px
+    &-wrapper
+      margin 0 -124px
+      @media $lDesktopSmall
+        margin 0 -30px
+      @media $desktopMax
+        margin 0 -60px
+      @media $desktopMedium
+        margin 0
+  &__item
+    pos relative
+    dfv(flex-start, space-between)
+    oh()
+    w calc(25% - 48px)
+    ml 48px
+    mb 48px
+    bgc white
+    padding 45px 48px 63px
+    min-height 434px
+    @media $desktopMax
+      ml 32px
+      mb 32px
+      w calc(25% - 32px)
+    @media $desktopMinFrom
+      &_wide
+        w calc(50% - 48px)
+        @media $desktopMax
+          w calc(50% - 32px)
+        & ^[-1]-img
+          pos absolute
+          b 13%
+          r -15px
+          max-width 480px
+    @media $desktopMin
+      w calc(100% / 3 - 32px)
+    @media $LandscapeMedium
+      padding 29px 30px
+      w calc(50% - 32px)
+    @media $PortraitMax
+      w calc(100% - 32px)
+      min-height inherit
+    &-name
+      c $dark
+      fontify 18px 400 26px
+      max-width 250px
+    &-img
+      mt 40px
+      align-self center
+      max-width 210px
