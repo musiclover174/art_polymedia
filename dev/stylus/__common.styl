@@ -272,7 +272,7 @@ div[class\^="table-scroller"]
     cursor pointer
     transition .5s border
     &.warning
-      border-color #ed1c24
+      border-color $red
   &__placeholder
     pos absolute
     z-index -1
@@ -283,7 +283,9 @@ div[class\^="table-scroller"]
     white-space nowrap
     overflow hidden
     max-width 100%
-    transition .7s top, .7s line-height, .7s font-size, .7s opacity
+    transition .7s top, .7s line-height, .7s font-size, .7s opacity, .7s color
+    span
+      c $red
   &__col
     pos relative
     z-index 1
@@ -307,7 +309,7 @@ div[class\^="table-scroller"]
     white-space nowrap
     transition .5s border
     &.warning
-      border-color #ed1c24
+      border-color $red
     & + &
       mt 20px
   &__file
@@ -333,6 +335,7 @@ div[class\^="table-scroller"]
       fontify 18px 400 18px
       border-bottom 1px dotted $dark
       transition .5s border
+      max-width calc(100% - 23px)
       &.choosed
         border-color transparent
         white-space nowrap
@@ -448,7 +451,7 @@ div[class\^="table-scroller"]
       &:after
         opacity 1
     &.warning + ^[0]__label:before 
-      border-color #ff0f37
+      border-color $red
 
 .breadcrumbs
   &__href
@@ -470,7 +473,9 @@ h1:not([class]) + .breadcrumbs
       
 input.warning,
 textarea.warning
-  border-color #ff0f37
+  border-color $red
+  & + .common__placeholder
+    c $red
 
 .hidden-block
   display none

@@ -1,10 +1,11 @@
-import { qsAll } from './helpers';
+import { qsAll, qs } from './helpers';
 
 export default class Forms {
   static init() {
     const inputs = qsAll('.common__input, .common__textarea');
     const forms = qsAll('form');
     const digitsInput = qsAll('.js-digits');
+    const phones = qsAll('.js-phone');
 
     function emptyCheck(event) {
       if (event.target.value.trim() === '') {
@@ -20,6 +21,20 @@ export default class Forms {
         item.addEventListener('blur', emptyCheck);
       });
     }
+
+    const phoneMasks = [];
+    phones.forEach((phone) => {
+      phoneMasks.push(new IMask(phone, {
+        mask: '+{7}(000)000-00-00',
+      }));
+    });
+
+    const date = qs('.js-date');
+    const dateMask = new IMask(date, {
+      mask: Date,
+      min: new Date(),
+      max: new Date(2030, 0, 1),
+    });
 
     if (qsAll('.js-common-file').length) {
       const commonFile = qsAll('.js-common-fileinput');
@@ -57,9 +72,11 @@ export default class Forms {
     if (forms.length) {
       forms.forEach((form) => {
         form.addEventListener('submit', (e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          Forms.checkForm(form);
+          if (!Forms.checkForm(form)) {
+            e.preventDefault();
+            e.stopPropagation();
+            form.classList.add('warning');
+          }
         });
       });
     }
@@ -92,6 +109,8 @@ export default class Forms {
     const warningElems = form.querySelectorAll('.warning');
     const formElems = qsAll('input, textarea, select', form);
     const agreementElems = qsAll('input[name^=agreement]', form);
+
+    form.classList.remove('warning');
 
     if (warningElems.length) {
       warningElems.forEach(warningElem => warningElem.classList.remove('warning'));

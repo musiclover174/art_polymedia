@@ -144,3 +144,63 @@
       transition 0.7s background
     &:hover span
       background-color $blue
+
+.popup
+  font-family $os
+  &:not(.popup_realized)
+    bgc white
+    w 95%
+    max-width 523px
+    padding 24px 48px
+    @media $PortraitMax
+      padding 24px 28px
+  &__title
+    c $dark
+    fontify 48px 900 48px
+    mb 36px
+    @media $LandscapeMedium
+      fontify 40px 900 40px
+    @media $PortraitMax
+      fontify 36px 900 36px
+  &__subtitle
+    c $dark
+    fontify 18px 400 26px
+    span
+      c $red
+  &__form
+    mt 66px
+    &.warning ^[0]__warning
+      db()
+    &-title
+      c $dark
+      fontify 24px 600 32px
+      mb 25px
+    &-block
+      & + &
+        mt 70px
+      &_bottom
+        df(flex-start, space-between)
+        @media $PortraitMax
+          flex-direction column
+  &__agreement
+    c $dark
+    fontify 18px 400 26px
+    max-width 240px
+    mt -6px
+    @media $PortraitMax
+      max-width none
+      mb 20px
+  @media $PortraitMax
+    .callback__send
+      w 100%
+      text-align center
+  &__warning
+    dn()
+    c $red
+    fontify 18px 400 26px
+    mt 38px
+  .common__fileover
+    white-space normal
+  .common__filename
+    display inline
+    max-width calc(100% - 23px)

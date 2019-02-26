@@ -44,3 +44,58 @@ include ../bemto/bemto.pug
         +e.dextra(href="https://www.dextra.ru/", target="_blank")
           span dextra
           | Разработка<br>сайта
+
+.hidden-block
+  +b.popup._search#search
+    +e.close.js-popclose(type="button", title="Закрыть")
+    +e('form').form._search
+      input.popup__search-input(type="text", data-req="req", placeholder="Что будем искать?")
+      button.popup__search-sbm(type="submit", title="Найти")
+  +b.popup#order
+    +e.close.js-popclose(type="button", title="Закрыть")
+    +e('p').title Заявка на аренду оборудования
+    +e('p').subtitle Поля, отмеченные звездочкой 
+      span *
+      | – обязательны для заполнения.
+    +e('form').form
+      +e.form-block
+        +e('p').form-title О вашей организации
+        .common__row
+          input(type="text", data-req="req").common__input
+          label.common__placeholder Название
+            span *
+        .common__row
+          input(type="text", data-req="req").common__input
+          label.common__placeholder Контактное лицо
+            span *
+        .common__row
+          input(type="text", data-req="req").common__input.js-phone
+          label.common__placeholder Телефон
+            span *
+        .common__row
+          input(type="text", data-req="req", data-type="email").common__input
+          label.common__placeholder Электронная почта
+            span *
+      +e.form-block
+        +e('p').form-title О мероприятии
+        .common__row
+          input(type="text").common__input
+          label.common__placeholder Место проведения
+        .common__row
+          input(type="text").common__input.js-date
+          label.common__placeholder Дата проведения
+        .common__row
+          .common__fileover
+            input(type="file", name="").common__file#file_tz.js-common-fileinput
+            label(for="file_tz", data-default="Прикрепить файл с техническим заданием").common__filename.js-common-file Прикрепить файл с техническим заданием
+            button(type="button").common__filedelete.js-common-filedelete
+      +e.form-block._bottom
+        +e('span').agreement Нажимая кнопку «Отправить», я даю согласие на обработку персональных данных.
+        button(type="submit").callback__send.btn.common__sbm 
+          span Отправить
+      +e('p').warning Некоторые обязательные поля не заполнены или заполнены с ошибками.
+  +b.popup#text
+    +e.close.js-popclose(type="button", title="Закрыть")
+    +e('p').title Заявка на аренду оборудования
+    +e('p').subtitle Ваша заявка успешно отправлена. Мы свяжемся с вами по указанному номеру телефона.
+    +e.btn-exit.btn.js-popclose(type="button") Закрыть

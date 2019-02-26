@@ -969,7 +969,7 @@ body.compensate-for-scrollbar {
   display: none;
 }
 .fancybox-slide--html {
-  padding: 0;
+  padding: 6px 0;
 }
 .fancybox-slide--iframe {
   padding: 44px 44px 0;
@@ -2094,7 +2094,7 @@ div[class^="table-scroller"]:not(:first-child) {
   transition: 0.5s border;
 }
 .common__select.warning {
-  border-color: #ed1c24;
+  border-color: #ed1845;
 }
 .common__placeholder {
   position: absolute;
@@ -2108,8 +2108,11 @@ div[class^="table-scroller"]:not(:first-child) {
   white-space: nowrap;
   overflow: hidden;
   max-width: 100%;
-  -webkit-transition: 0.7s top, 0.7s line-height, 0.7s font-size, 0.7s opacity;
-  transition: 0.7s top, 0.7s line-height, 0.7s font-size, 0.7s opacity;
+  -webkit-transition: 0.7s top, 0.7s line-height, 0.7s font-size, 0.7s opacity, 0.7s color;
+  transition: 0.7s top, 0.7s line-height, 0.7s font-size, 0.7s opacity, 0.7s color;
+}
+.common__placeholder span {
+  color: #ed1845;
 }
 .common__col {
   position: relative;
@@ -2147,7 +2150,7 @@ div[class^="table-scroller"]:not(:first-child) {
   transition: 0.5s border;
 }
 .common__fileover.warning {
-  border-color: #ed1c24;
+  border-color: #ed1845;
 }
 .common__fileover + .common__fileover {
   margin-top: 20px;
@@ -2183,6 +2186,7 @@ div[class^="table-scroller"]:not(:first-child) {
   border-bottom: 1px dotted #141414;
   -webkit-transition: 0.5s border;
   transition: 0.5s border;
+  max-width: calc(100% - 23px);
 }
 .common__filename.choosed {
   border-color: transparent;
@@ -2334,7 +2338,7 @@ div[class^="table-scroller"]:not(:first-child) {
   opacity: 1;
 }
 .fakecheckbox__truecheck.warning + .fakecheckbox__label:before {
-  border-color: #ff0f37;
+  border-color: #ed1845;
 }
 .breadcrumbs__href {
   color: inherit;
@@ -2361,7 +2365,11 @@ h1:not([class]) + .breadcrumbs {
 }
 input.warning,
 textarea.warning {
-  border-color: #ff0f37;
+  border-color: #ed1845;
+}
+input.warning + .common__placeholder,
+textarea.warning + .common__placeholder {
+  color: #ed1845;
 }
 .hidden-block {
   display: none;
@@ -4265,6 +4273,120 @@ body.burgeropen .menu {
 }
 .footer__dextra:hover span {
   background-color: #0b5fbc;
+}
+.popup {
+  font-family: SourceSansPro;
+}
+.popup:not(.popup_realized) {
+  background-color: #fff;
+  width: 95%;
+  max-width: 523px;
+  padding: 24px 48px;
+}
+@media (max-width: 670px) {
+  .popup:not(.popup_realized) {
+    padding: 24px 28px;
+  }
+}
+.popup__title {
+  color: #141414;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 48px;
+  margin-bottom: 36px;
+}
+@media (max-width: 900px) {
+  .popup__title {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 40px;
+  }
+}
+@media (max-width: 670px) {
+  .popup__title {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 36px;
+  }
+}
+.popup__subtitle {
+  color: #141414;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.popup__subtitle span {
+  color: #ed1845;
+}
+.popup__form {
+  margin-top: 66px;
+}
+.popup__form.warning .popup__warning {
+  display: block;
+}
+.popup__form-title {
+  color: #141414;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 25px;
+}
+.popup__form-block + .popup__form-block {
+  margin-top: 70px;
+}
+.popup__form-block_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+@media (max-width: 670px) {
+  .popup__form-block_bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+.popup__agreement {
+  color: #141414;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  max-width: 240px;
+  margin-top: -6px;
+}
+@media (max-width: 670px) {
+  .popup__agreement {
+    max-width: none;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 670px) {
+  .popup .callback__send {
+    width: 100%;
+    text-align: center;
+  }
+}
+.popup__warning {
+  display: none;
+  color: #ed1845;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-top: 38px;
+}
+.popup .common__fileover {
+  white-space: normal;
+}
+.popup .common__filename {
+  display: inline;
+  max-width: calc(100% - 23px);
 }
 .banner {
   opacity: 0;

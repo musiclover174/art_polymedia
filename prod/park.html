@@ -17,7 +17,7 @@
                                   <div class="header__left"><a class="header__logo" href="#"><img class="header__logo-img" src="img/logo.png" alt="" role="presentation"/></a>
                                                     <div class="header__socials"><a class="header__socials-elem" href="#" data-type="yt"></a><a class="header__socials-elem" href="#" data-type="fb"></a><a class="header__socials-elem" href="#" data-type="tw"></a><a class="header__socials-elem" href="#" data-type="inst"></a>
                                                     </div>
-                                                    <button class="header__order btn" type="button" data-fancybox data-src="order"> <span>Отправить запрос</span>
+                                                    <button class="header__order btn" type="button" data-fancybox data-src="#order"> <span>Отправить запрос</span>
                                                     </button>
                                                     <button class="header__search js-search" type="button">
                                                     </button>
@@ -210,6 +210,80 @@
                                                     </div>
                                   </section>
                 </footer>
+    <div class="hidden-block">
+                  <div class="popup popup_search" id="search">
+                                    <button class="popup__close js-popclose" type="button" title="Закрыть">
+                                    </button>
+                                    <form class="popup__form popup__form_search">
+                                      <input class="popup__search-input" type="text" data-req="req" placeholder="Что будем искать?">
+                                      <button class="popup__search-sbm" type="submit" title="Найти"></button>
+                                    </form>
+                  </div>
+                  <div class="popup" id="order">
+                                    <button class="popup__close js-popclose" type="button" title="Закрыть">
+                                    </button>
+                                    <p class="popup__title">Заявка на аренду оборудования
+                                    </p>
+                                    <p class="popup__subtitle">Поля, отмеченные звездочкой <span>*</span>– обязательны для заполнения.
+                                    </p>
+                                    <form class="popup__form">
+                                                      <div class="popup__form-block">
+                                                                        <p class="popup__form-title">О вашей организации
+                                                                        </p>
+                                                        <div class="common__row">
+                                                          <input class="common__input" type="text" data-req="req">
+                                                          <label class="common__placeholder">Название<span>*</span></label>
+                                                        </div>
+                                                        <div class="common__row">
+                                                          <input class="common__input" type="text" data-req="req">
+                                                          <label class="common__placeholder">Контактное лицо<span>*</span></label>
+                                                        </div>
+                                                        <div class="common__row">
+                                                          <input class="common__input js-phone" type="text" data-req="req">
+                                                          <label class="common__placeholder">Телефон<span>*</span></label>
+                                                        </div>
+                                                        <div class="common__row">
+                                                          <input class="common__input" type="text" data-req="req" data-type="email">
+                                                          <label class="common__placeholder">Электронная почта<span>*</span></label>
+                                                        </div>
+                                                      </div>
+                                                      <div class="popup__form-block">
+                                                                        <p class="popup__form-title">О мероприятии
+                                                                        </p>
+                                                        <div class="common__row">
+                                                          <input class="common__input" type="text">
+                                                          <label class="common__placeholder">Место проведения</label>
+                                                        </div>
+                                                        <div class="common__row">
+                                                          <input class="common__input js-date" type="text">
+                                                          <label class="common__placeholder">Дата проведения</label>
+                                                        </div>
+                                                        <div class="common__row">
+                                                          <div class="common__fileover">
+                                                            <input class="common__file js-common-fileinput" type="file" name="" id="file_tz">
+                                                            <label class="common__filename js-common-file" for="file_tz" data-default="Прикрепить файл с техническим заданием">Прикрепить файл с техническим заданием</label>
+                                                            <button class="common__filedelete js-common-filedelete" type="button"></button>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="popup__form-block popup__form-block_bottom"><span class="popup__agreement">Нажимая кнопку «Отправить», я даю согласие на обработку персональных данных.</span>
+                                                        <button class="callback__send btn common__sbm" type="submit"> <span>Отправить</span></button>
+                                                      </div>
+                                                      <p class="popup__warning">Некоторые обязательные поля не заполнены или заполнены с ошибками.
+                                                      </p>
+                                    </form>
+                  </div>
+                  <div class="popup" id="text">
+                                    <button class="popup__close js-popclose" type="button" title="Закрыть">
+                                    </button>
+                                    <p class="popup__title">Заявка на аренду оборудования
+                                    </p>
+                                    <p class="popup__subtitle">Ваша заявка успешно отправлена. Мы свяжемся с вами по указанному номеру телефона.
+                                    </p>
+                                    <button class="popup__btn-exit btn js-popclose" type="button">Закрыть
+                                    </button>
+                  </div>
+    </div>
     <script type="text/javascript" src="static/js/polyfill.js"></script>
     <script type="text/javascript" src="static/js/vendor.js"></script>
     <script type="text/javascript" src="static/js/script.js"></script>
