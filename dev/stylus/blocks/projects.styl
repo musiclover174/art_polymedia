@@ -1,0 +1,145 @@
+.projects
+  df()
+  flex-wrap wrap
+  margin 0 -124px -26px -172px
+  @media $lDesktopSmall
+    margin 0 -30px -26px -78px
+  @media $desktopMax
+    margin 0 -60px -26px -92px
+  @media $desktopMedium
+    margin 0 0 -26px -32px
+  @media $LandscapeMin
+    margin 0 0 -26px -32px
+  &__big
+    dfv(flex-start, flex-end)
+    pos relative
+    z-index 1
+    h 730px
+    margin 0 -124px 48px
+    padding 47px 48px
+    overflow hidden
+    @media $lDesktopSmall
+      margin 0 -30px 48px
+    @media $desktopMax
+      margin 0 -60px 48px
+    @media $desktopMedium
+      margin 0 0 48px
+    @media $LandscapeMedium
+      h 580px
+    @media $LandscapeMin
+      padding 28px 29px
+      h auto
+      pt 50%
+    @media $PortraitMedium
+      margin 0 -15px
+      padding 50% 15px 30px
+    &-bg
+      pos absolute
+      z-index -1
+      t 0
+      r 0
+      b 0
+      l 0
+      background-position center
+      background-repeat no-repeat
+      background-size cover
+      opacity .5
+      transition .7s opacity 
+    &:hover &-bg
+      opacity .65
+    &-date
+      fontify 14px 600 14px
+      mb 6px
+    &-hrefover
+      max-width 500px
+    &-href
+      c white
+      fontify 48px 600 56px
+      border-bottom 1px solid alpha(white, .25)
+      transition .7s border
+      @media $LandscapeMedium
+        fontify 40px 900 40px
+      @media $PortraitMax
+        fontify 36px 900 36px
+      span
+        pos relative
+        t 8px
+      &:hover
+        border-color transparent
+    & ^[0]__hashs
+      mt 30px
+      max-width 400px
+  &__hashs
+    df()
+    mt 20px
+    ml -4px
+    w calc(100% + 4px)
+    flex-wrap wrap
+  &__hash
+    ml 4px
+    mb 4px
+    bgc $blue
+    white-space nowrap
+    padding 2px 4px 2px
+    fontify 13px 400 14px
+    c white
+  &__item
+    w calc(25% - 48px)
+    ml 48px
+    mb 48px
+    @media $desktopMax
+      ml 32px
+      mb 32px
+      w calc(25% - 32px)
+    @media $desktopMin
+      w calc(100% / 3 - 32px)
+    @media $LandscapeMax
+      w calc(50% - 32px)
+    @media $PortraitMax
+      w calc(100% - 32px)
+    @media $desktopMinFrom
+      &_wide
+        pos relative
+        w calc(50% - 48px)
+        @media $desktopMax
+          w calc(50% - 32px)  
+        bgc $dark
+        & ^[-1]-imgover
+          opacity .5
+        & ^[-1]-content
+          pos absolute
+          b 43px
+          l 62px
+          r 62px
+        & ^[-1]-href
+          c white
+          border-color rgba(255, 255, 255, .4)
+          &:hover
+            border-color transparent
+    &-imgover
+      pos relative
+      db()
+      pt 51%
+      overflow hidden
+    &-img
+      pos absolute
+      l 0
+      t 0
+      size 100%
+      object-fit cover
+      font-family 'object-fit: cover;'
+      transition .7s transform
+      will-change transform
+      -webkit-backface-visibility hidden
+      transform scale(1.017) translateZ(0)
+    &:hover &-img
+      transform scale(1) translateZ(0)
+    &-content
+      mt 20px
+    &-href
+      color inherit
+      fontify 24px 600 32px
+      border-bottom 1px solid rgba(132,132,132,0.4)
+      transition .7s border
+      &:hover
+        border-color transparent

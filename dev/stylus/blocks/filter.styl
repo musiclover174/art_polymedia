@@ -1,0 +1,103 @@
+.filter
+  pos fixed
+  t 50%
+  r 0
+  bgc $blue
+  padding 60px 30px
+  z-index 5
+  w calc(100% - 217px)
+  max-width 1340px
+  transform translateY(-50%)
+  transition 1s right
+  @media $lDesktopSmall
+    w 90vw
+    max-width none
+  @media $desktopTablet
+    w calc(100vw - 50px)
+  @media $desktopTablet
+    padding 30px 40px 30px 0
+  @media $LandscapeMin
+    t 150px
+    transform none
+    w 300px
+    pr 20px
+  @media $Mobile370
+    w 260px
+  &:not(.open)
+    r -1340px
+    @media $lDesktopSmall
+      r -90vw
+    @media $desktopTablet
+      r -calc(100vw - 50px)
+    @media $LandscapeMin
+      r -300px
+    @media $Mobile370
+      r -260px
+  &__btn
+    w 205px
+    c white
+    fontify 12px 700 45px
+    text-transform uppercase
+    letter-spacing .18em
+    pl 45px
+    pr 20px
+    pos absolute
+    t 205px
+    l -45px
+    bgc $blue
+    transform rotate(-90deg)
+    transform-origin 0 0
+    transition .7s background-color
+    &:hover
+      bgc #0955a9
+    &:before
+      content ""
+      pos absolute
+      l 12px
+      t 14px
+      size 21px 18px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAASCAQAAAAeG12lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhoKGCykNFZ7AAAAsUlEQVQoz42SrQ3CcBTErw0C3wSBghUoA1RCAkgGoKyARjAClWCQDIAtA5QVqCQkRVeRH6oESPn33amX3Lvc+/CQCW1thYU9MvANjiNlOkpNfj5rnswQtJx+gQ7K1dVdcrsOuLJ5Vw7hgpLlR41Iqcee4VcrIiI1LQxfZ0lz0xkQUW2AHeFvgH+MKYltUhGS25YlRMCJhE41lgsPTVTopmnTtSqOKVg1BajY5wKe+bWTF/vTOPsEn9amAAAAAElFTkSuQmCC') no-repeat center
+  &__wrapper
+    df(flex-start, space-between)
+    flex-wrap wrap
+    @media $LandscapeMin
+      w 100%
+      flex-direction column
+      justify-content flex-start
+      max-height calc(100vh - 240px)
+      overflow-y scroll
+      flex-wrap nowrap
+  &__themes,
+  &__types
+    w 25%
+    ml 48px
+    @media $desktopMax
+      ml 32px
+    @media $desktopTablet
+      w calc(40% - 32px)
+    @media $LandscapeMin
+      w calc(100% - 32px)
+      mb 30px
+  &__years
+    df()
+    flex-wrap wrap
+    w calc(25% + 48px)
+    @media $desktopMax
+      w calc(25% + 32px)
+    @media $desktopTablet
+      w 20%
+    @media $LandscapeMin
+      w 100%
+  &__elem
+    & + &
+      mt 8px
+  &__year
+    w calc(100% / 3 - 48px)
+    ml 48px
+    mb 8px
+    @media $desktopMax
+      w calc(100% / 3 - 32px)
+      ml 32px
+    @media $desktopTablet
+      w calc(50% - 32px)
+  

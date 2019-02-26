@@ -9,6 +9,7 @@ import Forms from './modules/forms';
 import Share from './modules/share';
 import Sticky from './modules/sticky';
 import Realized from './modules/realized';
+import Filter from './modules/filter';
 
 document.addEventListener('DOMContentLoaded', () => {
   // const burger = new Burger();
@@ -78,6 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (qs('.js-sticky')) {
     const sticky = new Sticky();
+  }
+
+  if (qs('.js-filter')) {
+    const filter = new Filter('.js-filter', '.js-filter-open');
   }
 
   resizeWatcher();

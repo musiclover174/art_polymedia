@@ -5,11 +5,11 @@
   @media $lDesktopSmall
     margin 0 -30px -26px -78px
   @media $desktopMax
-    margin 0 -60px -26px -108px
+    margin 0 -60px -26px -92px
   @media $desktopMedium
-    margin 0 0 -26px -48px
+    margin 0 0 -26px -32px
   @media $LandscapeMin
-    margin 0 0 -26px -30px
+    margin 0 0 -26px -32px
   &__big
     dfv(flex-start, flex-end)
     pos relative
@@ -70,14 +70,15 @@
     w calc(100% / 3 - 48px)
     ml 48px
     mb 53px
+    @media $desktopMax
+      ml 32px
+      mb 32px
+      w calc(100% / 3 - 32px)
     @media $LandscapeMax
-      w calc(50% - 48px)
-    @media $LandscapeMin
-      w calc(50% - 30px)
-      ml 30px
+      w calc(50% - 32px)
       mb 40px
     @media $PortraitMax
-      w calc(100% - 30px)
+      w calc(100% - 32px)
     &-imgover
       pos relative
       db()

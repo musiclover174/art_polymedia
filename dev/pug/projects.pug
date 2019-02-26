@@ -1,0 +1,92 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    include blocks/filter
+
+    +b('main').main
+      +e('section').top
+        .container
+          +b('section').breadcrumbs
+              +e.href(href="#") Главная
+              +e('span').delim 
+          +e('h1').title Реализованные проекты
+
+          include blocks/shower
+
+          article.projects__big
+            span.projects__big-bg(style="background-image: url('img/news-full.jpg')")
+            .projects__big-hrefover
+              a(href="#").projects__big-href 
+                span Детский фестиваль художественной гимнастики «Алина-2017»
+              .projects__hashs
+                span.projects__hash 2017
+                span.projects__hash Концерты, шоу
+                span.projects__hash Проекционные системы
+                span.projects__hash Светодиодные экраны
+
+        +e('section').bottom
+          .container
+            +b('section').projects
+              +e('article').item._wide
+                +e(href="#").item-imgover
+                  +e.item-img(src="img/projects1.jpg")
+                +e.item-content
+                  +e.item-href(href="#") 20-летие компании «Азбука Вкуса»
+                  +e.hashs
+                    +e('span').hash 2017
+                    +e('span').hash Концерты, шоу
+                    +e('span').hash Проекционные системы
+                    +e('span').hash Светодиодные экраны
+              +e('article').item
+                +e(href="#").item-imgover
+                  +e.item-img(src="img/projects2.jpg")
+                +e.item-content
+                  +e.item-href(href="#") Празднование 20-летия Faberlic 2017
+                  +e.hashs
+                    +e('span').hash 2017
+                    +e('span').hash Концерты, шоу
+              +e('article').item
+                +e(href="#").item-imgover
+                  +e.item-img(src="img/projects3.jpg")
+                +e.item-content
+                  +e.item-href(href="#") Примаковские чтения 2016
+                  +e.hashs
+                    +e('span').hash 2017
+                    +e('span').hash Концерты, шоу
+                    +e('span').hash Проекционные системы
+              +e('article').item
+                +e(href="#").item-imgover
+                  +e.item-img(src="img/projects4.jpg")
+                +e.item-content
+                  +e.item-href(href="#") Шоу «Хозяйка мертвого озера»
+                  +e.hashs
+                    +e('span').hash Концерты, шоу
+                    +e('span').hash Проекционные системы
+                    +e('span').hash Светодиодные экраны
+              +e('article').item
+                +e(href="#").item-imgover
+                  +e.item-img(src="img/projects5.jpg")
+                +e.item-content
+                  +e.item-href(href="#") Шоу The Event
+                  +e.hashs
+                    +e('span').hash 2017
+                    +e('span').hash Проекционные системы
+                    +e('span').hash Светодиодные экраны
+              +e('article').item._wide
+                +e(href="#").item-imgover
+                  +e.item-img(src="img/projects6.jpg")
+                +e.item-content
+                  +e.item-href(href="#") Презентация нового сезона телеканала ТНТ
+                  +e.hashs
+                    +e('span').hash Проекционные системы
+                    +e('span').hash Светодиодные экраны
+
+            include blocks/pagination
+    include layout/__footer
+    include layout/__scripts

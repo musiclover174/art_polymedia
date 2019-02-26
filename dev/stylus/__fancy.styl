@@ -1,6 +1,5 @@
 body.compensate-for-scrollbar {
-	overflow-y: scroll;
-	margin-right: 0 !important;
+	overflow: hidden;
 }
 
 .fancybox-active {
@@ -125,7 +124,8 @@ body.compensate-for-scrollbar {
 	height: 100%;
 	left: 0;
 	outline: none;
-	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: scroll;
 	-webkit-overflow-scrolling: touch;
 	padding: 44px;
 	position: absolute;

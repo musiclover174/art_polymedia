@@ -25,7 +25,7 @@ body
   &__bottom
     bgc $grey
     color $dark
-    pt 53px 
+    pt 48px 
   &__title
     fontify 72px 900 72px
     margin 22px 0 42px -3px
@@ -403,31 +403,31 @@ div[class\^="table-scroller"]
   pos relative
   &__label
     ib()
-    color alpha(white, .5)
-    fontify 14px 300 20px
+    color white
+    fontify 19px 400 26px
     pos relative
-    pl 30px
-    pt 9px
+    pl 23px
+    pt 0
+    cursor pointer
     &:before 
       content ""
       pos absolute
-      l 0px
-      t 8px
-      size 16px
-      border 2px solid alpha(white, .5)
-      border-radius 4px
+      l 0
+      t 6px
+      size 13px
+      border 1px solid alpha(white, .5)
       cursor pointer
-      transition .5s border
+      transition .7s border, .7s background-color
     &:after
       content ""
       pos absolute
-      size 10px 7px
-      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAHCAMAAAAGcixRAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAaVBMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9tAe1xAAAAInRSTlMAMeJ2BDvvyIHoKkb1ww/H6StU+bkKEs70/K4GE6IDzZQB32lQYAAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABCSURBVAjXJYvFEcAwAMNUZoYUUvL+Q/Zy8Ud6yOAXhBHEzpJUGXlRQlWraenUD+OkeYHVaNt1nC6zRrpuf7bP+zn+aAUDdRP9KA0AAAAASUVORK5CYII=') no-repeat center
-      l 5px
-      t 15px
+      size 11px 8px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAICAMAAAAY5vW6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAYFBMVEULX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7z////plDS+AAAAH3RSTlMASKdJ7kA+IgFL7T24m03sPA/HnQJP6zvFu+o6DrU5KBeqdgAAAAFiS0dEHwUNEL0AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhoKISCjBpfqAAAAPElEQVQI12NggAFGJjiTmYUVwWRjYGDnADE5ubiBJA8vkMPHLwASERQSFhEVE4eoFJSQlJKGaZORlYMwADv+AfJbpATYAAAAAElFTkSuQmCC') no-repeat center
+      l 2px
+      t 9px
       opacity 0
       cursor pointer
-      transition .5s opacity
+      transition .7s opacity
     a
       color inherit
       border-bottom 1px solid alpha(white, .2)
@@ -442,8 +442,11 @@ div[class\^="table-scroller"]
     h 0
     border 0
     opacity 0
-    &:checked + ^[0]__label:after
-      opacity 1
+    &:checked + ^[0]__label
+      &:before
+        bgc white
+      &:after
+        opacity 1
     &.warning + ^[0]__label:before 
       border-color #ff0f37
 
