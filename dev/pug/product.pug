@@ -1,0 +1,170 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      +e('section').top
+        .container
+          +b('section').breadcrumbs
+              +e.href(href="#") Главная
+              +e('span').delim 
+              +e.href(href="#") Услуги
+              +e('span').delim 
+              +e.href(href="#") Парк арендного оборудования
+              +e('span').delim 
+          +e('h1').title Светодиодные экраны
+
+          include blocks/sider-category
+
+          +b('section').slider
+            +e('section').main.swiper-container.js-slider
+              .swiper-wrapper
+                .swiper-slide(style="background-image: url('img/slider.jpg')")
+                  +e.main-href(href="img/slider.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/banner1.jpg')")
+                  +e.main-href(href="img/banner1.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/slider.jpg')")
+                  +e.main-href(href="img/slider.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/banner1.jpg')")
+                  +e.main-href(href="img/banner1.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/slider.jpg')")
+                  +e.main-href(href="img/slider.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/banner1.jpg')")
+                  +e.main-href(href="img/banner1.jpg", data-fancybox)
+            +e('section').thumbs.swiper-container.js-slider-thumbs
+              .swiper-wrapper
+                .swiper-slide(style="background-image: url('img/thumbs1.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs2.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs3.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs4.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs5.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs3.jpg')")
+              .swiper-buttons
+                button(type="button").swiper-button-prev.js-slider-prev
+                button(type="button").swiper-button-next.js-slider-next
+
+      +e('section').bottom
+        .container
+          section.product__prevtext
+            p Мы предлагаем в аренду светодиодные экраны ведущих мировых производителей, позволяющие обеспечить надежность в эксплуатации и качественное отображение видеоконтента. 
+            p Наши LED-экраны одинаково хорошо подходят как для установки на крупномасштабных деловых, спортивных, развлекательных и рекламных мероприятиях, так и для креативного декорирования больших выставочных экспозиций, шоу и концертных залов.
+          section.product__info
+            .product__info-text
+              p Они отличаются яркостью изображения и отсутствием швов. Модульная структура и наличие гибких светодиодных позволяет собирать их в любой конфигурации - от прямых экранов любого размера и формата до нестандартных форм: цилиндрической, волнообразной, “рваной”, сложных фигур, таких как макет гостиницы Four Seasons Hotel Moscow для церемонии открытия. 
+            .product__info-imgover
+              img(src="img/product.png").product__info-img
+          +b('section').slider._white
+            +e('section').main.swiper-container.js-slider
+              .swiper-wrapper
+                .swiper-slide(style="background-image: url('img/slider.jpg')")
+                  +e.main-href(href="img/slider.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/banner1.jpg')")
+                  +e.main-href(href="img/banner1.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/slider.jpg')")
+                  +e.main-href(href="img/slider.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/banner1.jpg')")
+                  +e.main-href(href="img/banner1.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/slider.jpg')")
+                  +e.main-href(href="img/slider.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/banner1.jpg')")
+                  +e.main-href(href="img/banner1.jpg", data-fancybox)
+            +e('section').thumbs.swiper-container.js-slider-thumbs
+              .swiper-wrapper
+                .swiper-slide(style="background-image: url('img/thumbs1.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs2.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs3.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs4.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs5.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs3.jpg')")
+              .swiper-buttons
+                button(type="button").swiper-button-prev.swiper-button-prev_dark.js-slider-prev
+                button(type="button").swiper-button-next.swiper-button-next_dark.js-slider-next
+          section.product__nexttext
+            p Светодиодные экраны обладают высокой контрастностью и идеально подходят для использования в местах с ярким освещением. Они могут использоваться как в помещениях (Indoor), так и для установки на улице в любое время года (Outdoor).
+          section.product__features
+            p.product__features-title Преимущества светодиодных экранов
+            ul.product__features-list
+              li.product__features-item
+                .product__features-iconover
+                  img(src="img/product-feat1.png").product__features-icon
+                p.product__features-text Действительно бесшовное изображение
+              li.product__features-item
+                .product__features-iconover
+                  img(src="img/product-feat2.png").product__features-icon
+                p.product__features-text Гибкие светодиодные экраны
+              li.product__features-item
+                .product__features-iconover
+                  img(src="img/product-feat3.png").product__features-icon
+                p.product__features-text Шаг пикселяот&nbsp;2&nbsp;миллиметров
+              li.product__features-item
+                .product__features-iconover
+                  img(src="img/product-feat4.png").product__features-icon
+                p.product__features-text Модели indoor/outdoor
+              li.product__features-item
+                .product__features-iconover
+                  img(src="img/product-feat5.png").product__features-icon
+                p.product__features-text Модульная конструкция
+              li.product__features-item
+                .product__features-iconover
+                  img(src="img/product-feat6.png").product__features-icon
+                p.product__features-text Установка на напольный конструктив, подвес
+              li.product__features-item
+                .product__features-iconover
+                  img(src="img/product-feat7.png").product__features-icon
+                p.product__features-text Возможность снимать на фото/видеокамеру
+              li.product__features-item
+                .product__features-iconover
+                  img(src="img/product-feat8.png").product__features-icon
+                p.product__features-text Облегченный вес модуля
+
+    +b('section').target
+      .container
+        +e('p').title Наши специалисты подберут для вас подходящий светодиодный экран и оптимальную систему управления к нему.
+        +e.btn.btn(type="button", data-fancybox, data-src="#order") 
+          span Запросить коммерческое предложение
+
+    +b('section').realized
+        +e('span').bg.js-realized-bg(style="background-image: url('img/video.jpg')")
+        .container
+          +e.title._inner Примеры проектов с применением светодиодных экранов
+          +e('ul').list
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Владимирский Экономический Форум&nbsp;2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Цикл Открытых уроков «ПроеКТОриЯ»
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Выставка TransRussia 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Презентация седана Genesis G70
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span SAP Forum Москва 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Гала-ужины для гостей выставки METRO EXPO 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Владимирский Экономический Форум 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Цикл Открытых уроков «ПроеКТОриЯ»
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Шоу братьев Запашных «АнгелЫ»
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Презентация седана Genesis G70
+          +e.toall.btn(href="#") 
+            span Полный список проектов
+
+    include layout/__footer
+    include layout/__scripts

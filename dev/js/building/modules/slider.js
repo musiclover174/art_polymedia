@@ -1,3 +1,5 @@
+import { qs, qsAll } from './helpers';
+
 export default class Slider {
   constructor(galleryEl, thumbsEl) {
     this.galleryEl = galleryEl;
@@ -7,34 +9,36 @@ export default class Slider {
   }
 
   init() {
-    const galleryThumbs = new Swiper(this.thumbsEl, {
-      spaceBetween: 5,
-      slidesPerView: 5,
-      freeMode: true,
-      watchSlidesVisibility: true,
-      watchSlidesProgress: true,
-      breakpoints: {
-        500: {
-          slidesPerView: 2,
+    qsAll(this.galleryEl).forEach((gal) => {
+      let galleryThumbs = new Swiper(gal.nextElementSibling, {
+        spaceBetween: 5,
+        slidesPerView: 5,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+          500: {
+            slidesPerView: 2,
+          },
+          767: {
+            slidesPerView: 3,
+          },
+          1366: {
+            slidesPerView: 4,
+          },
         },
-        767: {
-          slidesPerView: 3,
+      });
+      let galleryTop = new Swiper(gal, {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        navigation: {
+          nextEl: qs('.js-slider-next', gal.nextElementSibling),
+          prevEl: qs('.js-slider-prev', gal.nextElementSibling),
         },
-        1366: {
-          slidesPerView: 4,
+        thumbs: {
+          swiper: galleryThumbs,
         },
-      },
-    });
-    const galleryTop = new Swiper(this.galleryEl, {
-      spaceBetween: 10,
-      slidesPerView: 1,
-      navigation: {
-        nextEl: '.js-slider-next',
-        prevEl: '.js-slider-prev',
-      },
-      thumbs: {
-        swiper: galleryThumbs,
-      },
+      });
     });
   }
 }

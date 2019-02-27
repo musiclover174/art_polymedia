@@ -908,12 +908,6 @@
   };
 
   Pace.start = function(_options) {
-    if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
-      window.onload = function() {
-        document.body.className = 'pace-done';
-      }
-      return;
-    }
     extend(options, _options);
     Pace.running = true;
     try {

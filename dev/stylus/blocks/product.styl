@@ -1,0 +1,82 @@
+.product
+  &__prevtext,
+  &__nexttext,
+  &__info-text
+    fontify 24px 600 32px
+    @media $LandscapeMedium
+      fontify 20px 600 28px
+    p:not([class])
+      margin 32px 0
+      @media $LandscapeMedium
+        margin 20px 0
+  &__prevtext
+    mt 42px
+  &__nexttext
+    mt 90px
+  &__info
+    df(center, space-between)
+    mt 30px
+    @media $LandscapeMin
+      flex-direction column-reverse
+      justify-content flex-start
+    &-text,
+    &-imgover
+      w calc(50% - 24px)
+      @media $LandscapeMin
+        w 100%
+    &-text
+      @media $LandscapeMin
+        mt 50px
+    &-imgover
+      text-align right
+      @media $LandscapeMin
+        text-align center
+    &-img
+      max-width 100%
+  &__features
+    mt 72px
+    &:last-child
+      pb 87px
+    &-title
+      c $dark
+      fontify 48px 900 48px
+      mb 72px
+      @media $LandscapeMedium
+        fontify 40px 900 40px
+      @media $PortraitMax
+        fontify 36px 900 36px
+    &-list
+      df()
+      flex-wrap wrap
+      max-width 1114px
+      ml -48px
+      w calc(100% + 48px)
+      mb -71px
+      @media $desktopMax
+        max-width 1000px
+        ml -32px
+        w calc(100% + 32px)
+        mb -68px
+    &-item
+      w calc(100% / 3 - 48px)
+      ml 48px
+      mb 71px
+      @media $desktopMax
+        ml 32px
+        mb 68px
+        w calc(100% / 3 - 32px)
+      @media $LandscapeMedium
+        w calc(50% - 32px)
+      @media $PortraitMax
+        w calc(100% - 32px)
+    &-iconover
+      h 58px
+    &-icon
+      max-width 100%
+      max-height 100%
+    &-text
+      mt 20px
+      c $dark
+      fontify 24px 600 32px
+      @media $LandscapeMedium
+        fontify 20px 600 28px
