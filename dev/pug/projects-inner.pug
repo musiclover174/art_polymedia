@@ -1,0 +1,126 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      +e('section').top
+        .container
+          section.projects__elem-top
+            +b('section').breadcrumbs
+                +e.href(href="#") Главная
+                +e('span').delim 
+                +e.href(href="#") Реализованные проекты
+                +e('span').delim 
+            +e('h1').title Гала-ужины для гостей выставки Metro Expo 2018
+            .projects__hashs
+              span.projects__hash 2017
+              span.projects__hash Концерты, шоу
+              span.projects__hash Проекционные системы
+              span.projects__hash Светодиодные экраны
+
+          +b('section').projects__elem
+            +b('section').slider
+              +e('section').main.swiper-container.js-slider
+                .swiper-wrapper
+                  .swiper-slide(style="background-image: url('img/slider.jpg')")
+                    +e.main-href(href="img/slider.jpg", data-fancybox)
+                  .swiper-slide(style="background-image: url('img/banner1.jpg')")
+                    +e.main-href(href="img/banner1.jpg", data-fancybox)
+                  .swiper-slide(style="background-image: url('img/slider.jpg')")
+                    +e.main-href(href="img/slider.jpg", data-fancybox)
+                  .swiper-slide(style="background-image: url('img/banner1.jpg')")
+                    +e.main-href(href="img/banner1.jpg", data-fancybox)
+                  .swiper-slide(style="background-image: url('img/slider.jpg')")
+                    +e.main-href(href="img/slider.jpg", data-fancybox)
+                  .swiper-slide(style="background-image: url('img/banner1.jpg')")
+                    +e.main-href(href="img/banner1.jpg", data-fancybox)
+                  .swiper-slide(style="background-image: url('img/slider.jpg')")
+                    +e.main-href(href="img/slider.jpg", data-fancybox)
+              +e('section').thumbs.swiper-container.js-slider-thumbs
+                .swiper-wrapper
+                  .swiper-slide(style="background-image: url('img/thumbs1.jpg')")
+                  .swiper-slide(style="background-image: url('img/thumbs2.jpg')")
+                  .swiper-slide(style="background-image: url('img/thumbs3.jpg')")
+                  .swiper-slide(style="background-image: url('img/thumbs4.jpg')")
+                  .swiper-slide(style="background-image: url('img/thumbs5.jpg')")
+                  .swiper-slide(style="background-image: url('img/thumbs3.jpg')")
+                .swiper-buttons
+                  button(type="button").swiper-button-prev.js-slider-prev
+                  button(type="button").swiper-button-next.js-slider-next
+
+            section.projects__elem-text
+              p Компания ART Polymedia оказала техническую поддержку гала-ужинам для гостей выставки METRO EXPO 2018, которые прошли в Крокус Экспо 21-22 марта 2018 года.
+              p В рамках реализованного решения сцену оборудовали светодиодным экраном POLYLED P4X с шагом 4мм и четырьмя экранами POLYLED P8 с шагом 8мм, расположенным по бокам. Воспроизведение контента и управление видеосигналами осуществлялось с помощью двух медиасерверов Catalyst и многооконного процессора Spyder Vista X20.
+              p Для видеосъемки и трансляции на экраны происходящего на сцене было предоставлено четыре оператора с Full HD видеокамерами, управление сигналами с которых осуществлялось посредством видеомикшерного пульта Panasonic. 
+
+            a(href="https://www.youtube.com/watch?v=HEXWRTEbj1I", data-fancybox).projects__elem-video Видео о проекте
+
+            section.projects__elem-bottom
+              a(href="#").common__back.common__back_white Вернуться к списку проектов
+              aside.news__socials
+                a(href="#", data-type="fb", onclick="window.share.facebook(location.href, 'Заголовок', 'урл до картинки', 'текст шэринга')").news__socials-href.js-share
+                a(href="#", data-type="tw", onclick="window.share.twitter(location.href, 'Заголовок')").news__socials-href.js-share
+            
+    +b('section').realized
+        +e('span').bg.js-realized-bg(style="background-image: url('img/video.jpg')")
+        .container
+          +e.title._inner Похожие проекты
+          +e('ul').list
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Владимирский Экономический Форум&nbsp;2018
+              .projects__hashs
+                span.projects__hash 2017
+                span.projects__hash Концерты, шоу
+                span.projects__hash Проекционные системы
+                span.projects__hash Светодиодные экраны
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Цикл Открытых уроков «ПроеКТОриЯ»
+              .projects__hashs
+                span.projects__hash 2017
+                span.projects__hash Концерты, шоу
+                span.projects__hash Проекционные системы
+                span.projects__hash Светодиодные экраны
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Выставка TransRussia 2018
+              .projects__hashs
+                span.projects__hash 2017
+                span.projects__hash Концерты, шоу
+                span.projects__hash Проекционные системы
+                span.projects__hash Светодиодные экраны
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Презентация седана Genesis G70
+              .projects__hashs
+                span.projects__hash 2017
+                span.projects__hash Концерты, шоу
+                span.projects__hash Проекционные системы
+                span.projects__hash Светодиодные экраны
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span SAP Forum Москва 2018
+              .projects__hashs
+                span.projects__hash 2017
+                span.projects__hash Концерты, шоу
+                span.projects__hash Проекционные системы
+                span.projects__hash Светодиодные экраны
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Гала-ужины для гостей выставки METRO EXPO 2018
+              .projects__hashs
+                span.projects__hash 2017
+                span.projects__hash Концерты, шоу
+                span.projects__hash Проекционные системы
+                span.projects__hash Светодиодные экраны
+          +e.toall.btn(href="#") 
+            span Полный список проектов
+
+    include layout/__footer
+    include layout/__scripts

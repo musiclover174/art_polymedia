@@ -141,5 +141,65 @@
       fontify 24px 600 32px
       border-bottom 1px solid rgba(132,132,132,0.4)
       transition .7s border
+      @media $LandscapeMedium
+        fontify 20px 600 28px
       &:hover
         border-color transparent
+  &__elem
+    pb 80px
+    &-top
+      text-align center
+      mb 60px
+      .projects__hashs
+        justify-content center
+    &-bottom
+      df(flex-start, space-between)
+      mt 48px
+      @media $PortraitMin
+        flex-direction column-reverse
+        justify-content flex-start
+      .common__back
+        mt 0
+        @media $PortraitMin
+          mt 40px
+    &-text
+      mt 71px
+      fontify 24px 600 32px
+      @media $LandscapeMedium
+        fontify 20px 600 28px
+      p:not([class])
+        margin 32px 0
+        @media $LandscapeMedium
+          margin 20px 0
+    &-video
+      ib()
+      pos relative
+      mt 57px
+      color white
+      fontify 18px 600 46px
+      ml 60px
+      &:before
+        content ""
+        pos absolute
+        l -60px
+        size 46px
+        t 0
+        bgc $blue
+        border-radius 50%
+        transition .7s top, .7s left, .7s width, .7s height  
+      &:after
+        content ""
+        pos absolute
+        l -41px
+        t 50%
+        mt -8px
+        size 11px 17px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAARCAQAAACh6J5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsMIwkb3xsXAAAAl0lEQVQY03WQsQ2CYBBGP0QTCxIbtdY4AoUGN5DERSx0Bgodw8YGNrBxACnsqAkNJg7xKKSQ4/eu+l4uX3JPXBkjuwJerFz4wJt9H4s1JRd8i8WUOw/mFosBCRVbi4XYUXPqY7EgJyPwQJ5+Z6JCT3u9JCcl6OKYmmO32yehIvqmYds4000jhfq0GRAbSs72yz9OnAadvhvc0cv72fj0UgAAAABJRU5ErkJggg==') no-repeat center
+        transition .7s background
+      &:hover
+        &:before
+          size 57px
+          l -67px
+          t -5px
+        &:after
+          background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAARCAQAAACh6J5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsMJQ7T4SkyAAAAZ0lEQVQY023QoRHCYBBE4Z/BRMRCA+ki6YFWQhVQRnRQVEALNBGPR+TDc3vn3tzc7L5m0Wn/2/A2JMzHJWF2d8eK4eWcMJspYb6uCcNDf6DVeabrVV9/zynJmHKfastbbRmdRIPR9w+c8wSqdmnVhQAAAABJRU5ErkJggg==') no-repeat center

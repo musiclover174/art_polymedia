@@ -1,0 +1,46 @@
+.slider
+  margin 0 -124px
+  @media $lDesktopSmall
+    margin 0 -30px
+  @media $desktopMax
+    margin 0 -60px
+  @media $desktopMedium
+    margin 0
+  &__main
+    .swiper-slide
+      h 600px
+      @media $desktopMax
+        h 500px
+      @media $PortraitMax
+        h 300px
+    &-href
+      db()
+      h 100%
+  &__thumbs
+    mt 5px
+    .swiper-buttons
+      margin 48px auto 0
+      w 100px
+      z-index 1
+      justify-content space-between
+    .swiper-slide
+      cursor pointer
+      pt 8%
+      background-size cover
+      @media $desktopMax
+        pt 10%
+      @media $LandscapeMin
+        pt 18%
+      @media $PortraitMedium
+        pt 28%
+      &:after
+        content ""
+        pos absolute
+        l 0
+        r 0
+        b 0
+        t 0
+        border 1px solid transparent
+        transition .7s border-color
+      &-thumb-active:after
+        border-color $blue

@@ -10,6 +10,7 @@ import Share from './modules/share';
 import Sticky from './modules/sticky';
 import Realized from './modules/realized';
 import Filter from './modules/filter';
+import Slider from './modules/slider';
 
 document.addEventListener('DOMContentLoaded', () => {
   // const burger = new Burger();
@@ -57,9 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
           CLOSE: 'Закрыть',
         },
       },
-      clickOutside: '',
-      clickSlide: '',
-      touch: 0,
     });
   }
 
@@ -83,6 +81,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (qs('.js-filter')) {
     const filter = new Filter('.js-filter', '.js-filter-open');
+  }
+
+  if (qs('.js-slider')) {
+    const slider = new Slider('.js-slider', '.js-slider-thumbs');
   }
 
   resizeWatcher();
