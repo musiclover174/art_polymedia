@@ -167,7 +167,8 @@
   z-index 1
   transition .7s opacity, .7s background
   &:hover
-    animation arrAnimation 1s steps(49)
+    @supports not (-webkit-overflow-scrolling: touch)
+      animation arrAnimation 1s steps(49)
   
 .swiper-button-prev_dark
 .swiper-button-next_dark

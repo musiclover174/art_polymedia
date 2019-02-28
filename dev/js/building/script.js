@@ -52,12 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
     window.share = new Share();
   }
 
-  if (qsAll('[data-fancybox]')) { // позор моей седой башке
+  if (qsAll('[data-fancybox]')) {
     $('[data-fancybox]').fancybox({ 
-      transitionEffect: "slide",
+      transitionEffect: 'slide',
       i18n: {
         en: {
           CLOSE: 'Закрыть',
+          PREV: 'Предыдудщий',
+          NEXT: 'Следующий',
         },
       },
     });

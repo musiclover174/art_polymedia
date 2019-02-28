@@ -27,7 +27,12 @@ export default class Realized {
               clickOutside: '',
               clickSlide: '',
               touch: 0,
-              afterShow: () => qs('.popup_realized').classList.add('show'),
+              afterShow: () => {
+                qs('.popup_realized').classList.add('show');
+                setTimeout(() => {
+                  qs('.popup_realized').classList.add('animation');
+                }, 2000);
+              },
             },
           });
           e.preventDefault();

@@ -20,6 +20,8 @@ export default class Index {
   }
 
   bannerInit() {
+    const el = qs(this.bannerClass);
+    el.classList.add('show');
     const bannerCarousel = new Swiper(this.bannerClass, {
       speed: 1500,
       slidesPerView: 1,
@@ -34,6 +36,9 @@ export default class Index {
         delay: 8000,
       },
     });
+    setTimeout(() => {
+      el.classList.add('animation');
+    }, 2000);
   }
 
   feedsInit() {

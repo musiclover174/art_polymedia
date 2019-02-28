@@ -1,14 +1,31 @@
 .banner
-  opacity 0
-  transition 2s opacity
   pos relative
   &__car
+    opacity 0
+    transition 2s opacity
     min-height 100vh
     @media $LandscapeMedium
       min-height 580px
       h 100vh
     @media $PortraitMedium
-      min-height 530px
+      min-height 500px
+      h auto
+    &.show
+      opacity 1
+      & ^[0]__img
+        opacity 1
+        transform-style preserve-3d
+        @media $lDesktopSmallFrom
+          transform translate3d(5%, -4%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.5)
+        @media (max-width: 1600px) and (min-width: 1271px)
+          transform translate3d(5%, -12%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.4)
+        @media (max-width: 1270px) and (min-width: 1001px)
+          transform translate3d(-5%, -12%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.4)
+        @media $LandscapeMax
+          opacity .2
+    &.animation
+      & ^[0]__img
+        animation movie 8s infinite ease-in-out
   .swiper-slide
     overflow hidden
     z-index 1
@@ -22,7 +39,8 @@
       min-height 580px
       h 100vh
     @media $PortraitMedium
-      min-height 530px
+      min-height 500px
+      h auto
   .swiper-buttons
     pos absolute
     z-index 1
@@ -39,6 +57,9 @@
       max-width 1142px
     @media $LandscapeMax
       b 37px
+    @media $PortraitMedium
+      padding 0 15px
+    
   &__container
     w 100%
     max-width 1573px
@@ -58,6 +79,7 @@
     min-width 100%
     min-height 100%
     z-index -1
+    transform translate3d(0, 0, 0) rotate3d(0, 0, 0, 0) scale(1)
     transition 2s transform
     will-change transform
     @media $LandscapeMax
@@ -99,22 +121,6 @@
         t 14px
       @media $PortraitMedium
         t 8px
-
-body.pace-done
-  .banner
-    opacity 1
-  .banner__img
-    opacity 1
-    transform-style preserve-3d
-    animation movie 8s 2s infinite ease-in-out
-    @media $lDesktopSmallFrom
-      transform translate3d(5%, -4%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.5)
-    @media (max-width: 1600px) and (min-width: 1271px)
-      transform translate3d(5%, -12%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.4)
-    @media (max-width: 1270px) and (min-width: 1001px)
-      transform translate3d(-5%, -12%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.4)
-    @media $LandscapeMax
-      opacity .2
 
 .callback
   bgc $grey
