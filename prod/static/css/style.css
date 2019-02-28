@@ -4376,7 +4376,7 @@ body.burgeropen .menu {
 .footer__dextra {
   position: relative;
   color: #c0c0c0;
-  font-family: Verdana, Geneva, sans-serif;
+  font-family: Arial;
   font-size: 9px;
   font-weight: 400;
   line-height: 14px;
@@ -7645,4 +7645,63 @@ ymaps[class$="ground-pane"] {
   .partners .swiper-buttons {
     top: -83px;
   }
+}
+.page404 {
+  max-width: 670px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 56px 0 100px;
+}
+@media (max-width: 500px) {
+  .page404 {
+    padding-bottom: 70px;
+  }
+}
+.page404__img {
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+.page404__title {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 48px;
+  margin-bottom: 67px;
+}
+@media (max-width: 900px) {
+  .page404__title {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 40px;
+  }
+}
+@media (max-width: 670px) {
+  .page404__title {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 36px;
+  }
+}
+@media (max-width: 500px) {
+  .page404__title {
+    margin-bottom: 40px;
+  }
+}
+.page404__text {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+@media (max-width: 900px) {
+  .page404__text {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+}
+.page404__text a:not([class]) {
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+}
+.page404__text a:not([class]):hover {
+  border-color: transparent;
 }

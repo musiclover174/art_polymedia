@@ -1,0 +1,28 @@
+.page404
+  max-width 670px
+  margin 0 auto
+  text-align center
+  padding 56px 0 100px
+  @media $PortraitMedium
+    pb 70px
+  &__img
+    max-width 100%
+    mb 30px
+  &__title
+    fontify 48px 900 48px
+    mb 67px
+    @media $LandscapeMedium
+      fontify 40px 900 40px
+    @media $PortraitMax
+      fontify 36px 900 36px
+    @media $PortraitMedium
+      mb 40px
+  &__text
+    fontify 24px 600 32px
+    @media $LandscapeMedium
+      fontify 20px 600 28px
+    a:not([class])
+      c white
+      border-bottom 1px solid alpha(white, .25)
+      &:hover
+        border-color transparent
