@@ -1,0 +1,173 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      +e('section').top
+        .container
+          +b('section').breadcrumbs
+              +e.href(href="#") Главная
+              +e('span').delim 
+          +e('h1').title О компании
+
+          include blocks/sider
+
+          section.company__top
+            p Компания ART Polymedia уже более 15 лет специализируется на предоставлении и обслуживании профессиональных систем визуализации на крупных форумах и конференциях, а также выставках, корпоративных и спортивных мероприятиях. 
+            p За время работы компанией было успешно реализовано свыше 12 000 крупных проектов для более чем 1800 клиентов как в Москве, так и в других городах России и странах СНГ.
+
+          +b('section').slider
+            +e('section').main.swiper-container.js-slider
+              .swiper-wrapper
+                .swiper-slide(style="background-image: url('img/slider.jpg')")
+                  +e.main-href(href="img/slider.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/banner1.jpg')")
+                  +e.main-href(href="img/banner1.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/slider.jpg')")
+                  +e.main-href(href="img/slider.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/banner1.jpg')")
+                  +e.main-href(href="img/banner1.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/slider.jpg')")
+                  +e.main-href(href="img/slider.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/banner1.jpg')")
+                  +e.main-href(href="img/banner1.jpg", data-fancybox)
+            +e('section').thumbs.swiper-container.js-slider-thumbs
+              .swiper-wrapper
+                .swiper-slide(style="background-image: url('img/thumbs1.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs2.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs3.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs4.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs5.jpg')")
+                .swiper-slide(style="background-image: url('img/thumbs3.jpg')")
+              .swiper-buttons
+                button(type="button").swiper-button-prev.js-slider-prev
+                button(type="button").swiper-button-next.js-slider-next
+          
+          section.company__info
+            .company__info-text
+              p Мы предлагаем в аренду широкий спектр экранов, дисплеев и систем управления:
+              ul
+                li Светодиодные экраны высокого разрешения с шагом от 2 мм, в том числе гибкие и уличные LED экраны;
+                li Проекторы различной мощности и проекционные экраны;
+                li Бесшовные видеостены на основе Full HD LCD-дисплеев;
+                li Профессиональные Full HD и 4k LCD-дисплеи;
+                li Системы управления: медиасерверы Catalyst, Pandoras box и D3, мультиоконные процессоры Spyder X80 и X20, виджеи с программным обеспечением Resolume Arena, видеомикшеры Analog Way, Barco, Kramer, Extron, Panasonic;
+                li Оборудование для видеосъемки и трансляции.
+            .company__info-imgover
+              img(src="img/product.png").company__info-img
+
+          section.company__cols
+            .company__col
+              p Многолетний опыт, высокая квалификация инженерно-технического состава и современное профессиональное оборудование позволяют нам решать самые сложные задачи, начиная от разработки дизайн-проекта до его технического воплощения.
+            .company__col
+              p Клиенты ART Polymedia могут быть уверены, что получат качественное визуальное воплощение своих идей на основе современного оборудования с соблюдением международных стандартов AV-индустрии.
+
+          section.company__awwards
+            img(src="img/awward1.png").company__awward
+            img(src="img/awward2.png").company__awward
+            img(src="img/awward3.png").company__awward
+
+          section.company__bottomtext
+            p Компания не раз завоевывала престижные награды, такие как EMEA InAVation Awards 2009 и 2014 в&nbsp;Амстердаме, Golden Puzzle ‘09 и PRO Integration Awards 2010-2013.
+
+          section.company__paper
+            button(type="button").company__paper-btn.btn.js-company-paper
+              span Смотреть дипломы
+            .company__paper-hidden
+              a(href="img/paper1.jpg", data-fancybox="paper").js-company-openpaper
+              a(href="img/paper2.jpg", data-fancybox="paper").js-company-openpaper
+              a(href="img/paper3.jpg", data-fancybox="paper").js-company-openpaper
+              a(href="img/paper4.jpg", data-fancybox="paper").js-company-openpaper
+              a(href="img/paper5.jpg", data-fancybox="paper").js-company-openpaper
+
+      +e('section').bottom
+        .container
+          section.company__general(style="background-image: url('img/general.jpg')")
+            aside.company__general-side
+              p.company__general-position Генеральный директор
+              p.company__general-name Виктория Щечка
+              .company__general-text
+                p Виктория Щечка искусством визуализации владеет в совершенстве. Почти 18 лет генеральный директор компании ART Polymedia претворяет в жизнь самые смелые фантазии клиентов: крупнейших российских и зарубежных компаний, организаторов престижных премий, бизнес-форумов, событий светской, спортивной и культурной жизни страны.
+                p Глава успешной компании, прекрасная и очаровательная Виктория рассказала LCM о непростых 90-х, вдохновила историей своего пути и показала, как именно клиент может воплотить свои мечты.
+                a(href="#").href 
+                  span Читать интервью
+          section.company__member
+            .company__member-text
+              p Компания ART Polymedia зарегистрирована на Портале поставщиков и является членом Ассоциации «Национальное конгресс-бюро».
+            .company__member-logos
+              img(src="img/pp.png").company__member-logo
+              img(src="img/ncb.png").company__member-logo
+
+    +b('section').partners
+      .container
+        +e('p').title Партнеры
+        +e.slider-wrapper
+          +e.slider.swiper-container.js-partners-carousel
+            .swiper-wrapper
+              .swiper-slide
+                +e.item
+                  +e('aside').item-iconover
+                    +e.item-icon(src="img/partner1.png")
+                  +e.item-content
+                    p Компания «Спин Мьюзик Сервис» специализируется на предоставлении целого комплекса услуг по аренде и обслуживанию самого современного и высокопрофессионального звукового, светового, конференционного, энерготехнического и сценического оборудования мировых брендов для организации культурно-массовых мероприятий различного масштаба была основана в 1998 году. 
+              .swiper-slide
+                +e.item
+                  +e('aside').item-iconover
+                    +e.item-icon(src="img/partner2.png")
+                  +e.item-content
+                    p Event Management Technologies – это крупнейший холдинг на рынке конгресс-услуг в России, имеющий 15-летний опыт успешной работы. EM Technologies является одной из ведущих компаний, осуществляющих комплексное техническое обеспечение мероприятий различного масштаба.
+              .swiper-slide
+                +e.item
+                  +e('aside').item-iconover
+                    +e.item-icon(src="img/partner1.png")
+                  +e.item-content
+                    p Светодиодные экраны обладают высокой контрастностью и идеально подходят для использования в местах с ярким освещением. Они могут использоваться как в помещениях (Indoor), так и для установки на улице в любое время года (Outdoor).
+          .swiper-buttons
+            .swiper-button-prev.js-partners-prev
+            .swiper-button-next.js-partners-next
+
+    +b('section').realized
+        +e('span').bg.js-realized-bg(style="background-image: url('img/video.jpg')")
+        .container
+          +e.title._inner Реализованные проекты
+          +e('ul').list
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Владимирский Экономический Форум&nbsp;2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Цикл Открытых уроков «ПроеКТОриЯ»
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Выставка TransRussia 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Презентация седана Genesis G70
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span SAP Forum Москва 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Гала-ужины для гостей выставки METRO EXPO 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/banner1.jpg") 
+                span Владимирский Экономический Форум 2018
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Цикл Открытых уроков «ПроеКТОриЯ»
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Шоу братьев Запашных «АнгелЫ»
+            +e.item
+              +e.href.js-realized-elem(href="#" data-href="__index-card.html", data-img="img/video.jpg") 
+                span Презентация седана Genesis G70
+          +e.toall.btn(href="#") 
+            span Полный список проектов
+
+    include layout/__footer
+    include layout/__scripts

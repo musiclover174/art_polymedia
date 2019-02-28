@@ -76,3 +76,35 @@
   .review
     @media $PortraitMedium
       padding 0
+
+.feeds
+  bgc $grey
+  pt 105px
+  pb 120px
+  c $dark
+  @media $LandscapeMedium
+    pt 70px
+    pb 80px
+  @media $PortraitMedium
+    bgc white
+  oh()
+  .swiper-buttons
+    pos absolute
+    l 0
+    b -90px
+  &__car
+    mt 70px
+    @media $PortraitMedium
+      mt 40px
+    &.swiper-container
+      overflow visible
+  &__bottom
+    mt 60px
+    text-align right
+    @media $Mobile370
+      mt 140px
+      text-align left
+  &__toall
+    ib()
+    &:hover
+      color $dark

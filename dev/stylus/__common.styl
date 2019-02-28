@@ -68,7 +68,7 @@ body
     pl 40px
     pos relative
   ul:not([class]) li + li
-    mt 0
+    mt 10px
   ul:not([class]) > li:before
     content ""
     pos absolute
@@ -84,7 +84,7 @@ body
     pl 40px
     pos relative
   ol:not([class]) li + li
-    mt 0
+    mt 10px
   ol:not([class]) > li:before
     counter-increment myCounter
     content counter(myCounter)"."	
@@ -364,7 +364,8 @@ div[class\^="table-scroller"]
       size 15px
       background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsOCzeEZ3x4AAAAl0lEQVQY03XRwQ3CIBSA4b9yaMK5MzGExhk6gfHgoYlLaNrAEHYJOgBM4QAeKD4qleP7fhLIa7qJkZm9Yzgr/cbhiTtouSod8TgWQoUnXkpDHawISsNv8MXMZVCgcA5a7oIlQ6TlxsBDRofNa3su9BgZyW2D5ciTBSu/yJxwBkIZJBZkDRyekHiLKfApULrGImi6ken/xj4ByUdmLURzEAAAAABJRU5ErkJggg==') no-repeat center
 
-.btn
+.btn,
+.href
   font-family $os
   border 1px solid $blue
   fontify 18px 600 44px
@@ -403,8 +404,10 @@ div[class\^="table-scroller"]
         w 0
       &:after
         w 0
-      
 
+.href
+  ib()
+      
 .fakecheckbox
   ib()
   pos relative

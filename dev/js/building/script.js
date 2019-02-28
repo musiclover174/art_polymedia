@@ -11,6 +11,7 @@ import Sticky from './modules/sticky';
 import Realized from './modules/realized';
 import Filter from './modules/filter';
 import Slider from './modules/slider';
+import Partners from './modules/partners';
 
 document.addEventListener('DOMContentLoaded', () => {
   // const burger = new Burger();
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (qsAll('[data-fancybox]')) { // позор моей седой башке
     $('[data-fancybox]').fancybox({ 
+      transitionEffect: "slide",
       i18n: {
         en: {
           CLOSE: 'Закрыть',
@@ -85,6 +87,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (qs('.js-slider')) {
     const slider = new Slider('.js-slider', '.js-slider-thumbs');
+  }
+
+  if (qs('.js-partners-carousel')) {
+    const partners = new Partners('.js-partners-carousel', '.js-partners-prev', '.js-partners-next');
+  }
+
+  if (qs('.js-company-paper')) {
+    qs('.js-company-paper').addEventListener('click', () => qs('.js-company-openpaper').click());
   }
 
   resizeWatcher();

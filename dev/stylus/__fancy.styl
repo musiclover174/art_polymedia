@@ -402,12 +402,16 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-navigation .fancybox-button {
-	height: 38px;
+	height: 33px;
 	opacity: 0;
-	padding: 6px;
 	position: absolute;
 	top: 50%;
-	width: 38px;
+	width: 33px;
+	background: url(../i/left_seq.png) no-repeat 0 -1617px;
+	transition: 0.7s opacity, 0.7s background;
+	&:hover{
+    animation: arrAnimation 1s steps(49);
+	}
 }
 
 .fancybox-show-nav .fancybox-navigation .fancybox-button {
@@ -423,11 +427,12 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-navigation .fancybox-button--arrow_left {
-	left: 6px;
+	left: 33px;
 }
 
 .fancybox-navigation .fancybox-button--arrow_right {
-	right: 6px;
+	right: 33px;
+	transform: scaleX(-1);
 }
 
 .fancybox-close-small {
@@ -684,6 +689,20 @@ body.compensate-for-scrollbar {
 .fancybox-fx-tube.fancybox-slide--current {
 	-webkit-transform: translateZ(0) scale(1);
 	transform: translateZ(0) scale(1);
+}
+
+.fancybox-content{
+	perspective 1000px
+}
+
+.fancybox-slide--image .fancybox-image{
+	transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 22deg) scale(1);
+	transition: 2s transform;
+	will-change: transform;
+}
+
+.fancybox-slide--complete .fancybox-image{
+	transform: translate3d(5%, -4%, -60px) rotate3d(0.05, -0.2, 0, 22deg) scale(.8);
 }
 
 .fancybox-share {

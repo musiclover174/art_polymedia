@@ -1,0 +1,366 @@
+.about
+  pb 120px
+  background-size cover
+  background-attachment fixed
+  background-position center
+  background-repeat no-repeat
+  @media $LandscapeMediumMin
+    background-image none !important
+  @media $LandscapeMedium
+    pb 70px
+  &__sticky
+    size 100% 100vh
+    pos absolute
+    l 0
+    t 0
+    z-index -1
+    opacity .35
+    overflow hidden
+    transform scale(1)
+    will-change transform
+    transition .5s transform
+    @media $LandscapeMedium
+      dn()
+    &.fixed
+      pos fixed
+    &.bottom
+      b 0
+      t auto
+      transition 1.4s transform
+      transform scale(.5)
+      transform-origin 50% 130%
+    &-parent
+      pt 156px
+      pos relative
+      @media $LandscapeMedium
+        pt 96px
+  &__video
+    pos absolute
+    l 50%
+    t 50%
+    min-width 100%
+    min-height 100%
+    transform translate(-50%, -50%)
+    @media $LandscapeMedium
+      l 0
+      w 100%
+      min-height auto
+      transform translateY(-50%)
+  &__info
+    df()
+    @media $LandscapeMax
+      flex-direction column
+    &-title
+      color white
+      fontify 120px 700 120px
+      mt -16px
+      ml -8px
+      @media $lDesktopSmall
+        fontify 100px 700 100px
+      @media $desktopMin
+        fontify 72px 700 72px
+      @media $LandscapeMax
+        br
+          dn()
+      @media $LandscapeMedium
+        fontify 62px 900 62px
+      @media $PortraitMedium
+        fontify 42px 900 42px
+        ml -4px
+      @media $Mobile
+        fontify 34px 900 34px
+      &:after
+        content ""
+        display inline-block
+        vertical-align baseline
+        ml 10px
+        size 13px
+        bgc $red
+        @media $PortraitMedium
+          size 8px
+          ml 6px
+    &-col
+      w calc(50% - 24px)
+      color white
+      @media $LandscapeMax
+        w 100%
+      p:not([class])
+        fontify 24px 600 32px
+        @media $LandscapeMedium
+          fontify 20px 600 28px
+      & + &
+        ml 48px
+        @media $LandscapeMax
+          ml 0
+          mt 40px
+  &__feats
+    df(flex-start, space-between)
+    flex-wrap wrap
+    mt 175px
+    mb -65px
+    @media $LandscapeMedium
+      mt 100px
+  &__feat
+    w calc(50% - 24px)
+    mb 65px
+    @media $LandscapeMin
+      w calc(50% - 15px)
+    @media $PortraitMedium
+      w 100%
+    &-imgover
+      dfv(flex-start, flex-end)
+      h 58px
+      mb 20px
+    &-icon
+      max-height 100%
+    &-text
+      color white
+      fontify 24px 600 32px
+      w 90%
+      max-width 372px
+      @media $LandscapeMedium
+        fontify 20px 600 28px
+      mark
+        color white
+        bgc transparent
+        transition 1s color
+        ^[0]__feat[visible] &
+          color $blue
+  &__projects
+    df(center, space-between)
+    mt 300px
+    color white
+    fontify 60px 700 60px
+    @media $lDesktopSmall
+      fontify 48px 700 48px
+    @media $LandscapeMedium
+      mt 120px
+      fontify 32px 700 32px
+    @media $PortraitMedium
+      flex-direction column
+    &-count
+      w 324px
+      @media $PortraitMedium
+        text-align center
+        w 100%
+        max-width 400px
+    &-showreel
+      w 324px
+      @media $LandscapeMedium
+        text-align right
+      @media $PortraitMedium
+        text-align center
+        w 100%
+        max-width 400px
+    &-href
+      pos relative
+      z-index 1
+      size 56px
+      @media $LandscapeMedium
+        margin 0 30px
+      @media $PortraitMedium
+        margin 30px 0
+      &:after
+        content ""
+        pos absolute
+        l 50%
+        t 50%
+        ml -4px
+        mt -8px
+        size 11px 17px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAARCAQAAACh6J5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsMIwkb3xsXAAAAl0lEQVQY03WQsQ2CYBBGP0QTCxIbtdY4AoUGN5DERSx0Bgodw8YGNrBxACnsqAkNJg7xKKSQ4/eu+l4uX3JPXBkjuwJerFz4wJt9H4s1JRd8i8WUOw/mFosBCRVbi4XYUXPqY7EgJyPwQJ5+Z6JCT3u9JCcl6OKYmmO32yehIvqmYds4000jhfq0GRAbSs72yz9OnAadvhvc0cv72fj0UgAAAABJRU5ErkJggg==') no-repeat center
+        transition .7s background
+      &:before
+        content ""
+        size 56px
+        pos absolute
+        z-index -1
+        l 50%
+        t 50%
+        mt -28px
+        ml -28px
+        border-radius 50%
+        bgc $blue
+        transition .7s width, .7s height, .7s margin
+      &:hover
+        &:after
+          background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAARCAQAAACh6J5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsMJQ7T4SkyAAAAZ0lEQVQY023QoRHCYBBE4Z/BRMRCA+ki6YFWQhVQRnRQVEALNBGPR+TDc3vn3tzc7L5m0Wn/2/A2JMzHJWF2d8eK4eWcMJspYb6uCcNDf6DVeabrVV9/zynJmHKfastbbRmdRIPR9w+c8wSqdmnVhQAAAABJRU5ErkJggg==') no-repeat center
+        &:before
+          size 66px
+          ml -33px
+          mt -33px
+  &__bottom
+    mt 316px
+    df(flex-start, center)
+    flex-wrap wrap
+    @media $LandscapeMax
+      flex-direction column
+      mt 170px
+    @media $LandscapeMedium
+      mt 120px
+    &-text
+      w calc(50% - 24px)
+      color white
+      fontify 24px 600 32px
+      pr 50px
+      @media $LandscapeMax
+        w 100%
+        pr 0
+      @media $LandscapeMedium
+        fontify 20px 600 28px
+      & + &
+        ml 48px
+        @media $LandscapeMax
+          ml 0
+          mt 40px
+    &-topage
+      mt 93px
+      @media $LandscapeMax
+        mt 40px
+
+
+.company
+  &__top,
+  &__info-text,
+  &__col,
+  &__bottomtext,
+  &__member-text
+    fontify 24px 600 32px
+    @media $LandscapeMedium
+      fontify 20px 600 28px
+    p:not([class])
+      margin 32px 0
+      @media $LandscapeMedium
+        margin 20px 0
+  &__top
+    mt 90px
+  &__info
+    df(center, space-between)
+    mt 30px
+    @media $LandscapeMin
+      flex-direction column-reverse
+      justify-content flex-start
+    &-text,
+    &-imgover
+      w calc(50% - 24px)
+      @media $LandscapeMin
+        w 100%
+    &-text
+      @media $LandscapeMin
+        mt 50px
+    &-imgover
+      text-align right
+      @media $LandscapeMin
+        text-align center
+    &-img
+      max-width 100%
+  &__cols
+    df(flex-start, space-between)
+    mt 60px
+    @media $LandscapeMin
+      flex-direction column
+      justify-content flex-start
+  &__col
+    w calc(50% - 24px)
+    @media $LandscapeMin
+      w 100%
+      & + &
+        mt 50px
+  &__awwards
+    df(flex-end, space-between)
+    mt 90px
+    @media $LandscapeMedium
+      flex-direction column
+      align-items center
+      justify-content flex-start
+  &__awward
+    @media $LandscapeMedium
+      max-width 80%
+      & + &
+        mt 50px
+  &__bottomtext
+    mt 90px
+  &__paper
+    mt 40px
+    &:last-child
+      mb 100px
+    &-hidden
+      visibility hidden
+      h 0
+      oh()
+  &__general
+    background-size contain
+    background-position right center
+    background-repeat no-repeat
+    bgc white
+    margin 0 -124px
+    padding 74px 124px 102px
+    @media $lDesktopSmall
+      margin 0 -30px
+      padding 74px 30px 102px
+    @media $desktopMax
+      margin 0 -60px
+      padding 60px 60px 82px
+    @media $desktopMedium
+      margin 0
+    @media $desktopMin
+      background-size cover
+      background-position bottom right -230px
+    @media $LandscapeMedium
+      background white !important
+    @media $PortraitMedium
+      margin -48px -15px 0
+      padding 40px 15px
+    &-side
+      max-width 510px
+      @media $LandscapeMedium
+        max-width none
+    &-position
+      c $blue
+      fontify 24px 600 32px
+      mb 4px
+      @media $LandscapeMedium
+        fontify 20px 600 28px
+    &-name
+      c $dark
+      fontify 48px 900 48px
+      mb 36px
+      ml -2px
+      @media $LandscapeMedium
+        fontify 40px 900 40px
+      @media $PortraitMax
+        fontify 36px 900 36px
+    &-text
+      fontify 18px 400 26px
+    .href
+      mt 20px
+      &:hover
+        c $dark
+  &__member
+    df(center, space-between)
+    mt 93px
+    @media $LandscapeMedium
+      flex-direction column
+      align-items flex-start
+      justify-content flex-start
+    @media $PortraitMedium
+      mt 54px
+    &:last-child
+      pb 90px
+      @media $PortraitMedium
+        pb 60px
+    &-text
+      w calc(60% - 24px)
+      @media $LandscapeMedium
+        w 100%
+    &-logos
+      df(center, center)
+      w calc(40% - 24px)
+      @media $LandscapeMedium
+        w 100%
+        mt 40px
+    &-logo
+      & + &
+        ml 130px
+        @media $PortraitMedium
+          ml 30px
