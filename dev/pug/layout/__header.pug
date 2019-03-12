@@ -41,7 +41,7 @@ include ../bemto/bemto.pug
               +e.sublist-item
                 +e.sublist-href(href="#") Отзывы
           +e.item
-            +e.href(href="#") Портфолио
+            +e.href._havesub(href="#") Портфолио
             +e('ul').sublist
               +e.sublist-item
                 +e.sublist-href(href="#") Реализованные проекты
@@ -63,9 +63,9 @@ include ../bemto/bemto.pug
           +e.item._tablet
             +e.lang(href="#") ENG
             +e.tel(href="tel:+74959568587") +7 (495) 956-85-87
-          +e.item._mobile
-            button.header__order.btn(type="button", data-fancybox, data-src="#order") 
-              span Отправить запрос
+          //- +e.item._mobile
+          //-   button.header__order.btn(type="button", data-fancybox, data-src="#order") 
+          //-     span Отправить запрос
   +b.burger
     +e(type="button", aria-label="открыть мобильное меню").button.js-burger
       +e('span').button-meat

@@ -24,18 +24,18 @@ html
           +b('section').slider
             +e('section').main.swiper-container.js-slider
               .swiper-wrapper
-                .swiper-slide(style="background-image: url('img/slider.jpg')")
-                  +e.main-href(href="img/slider.jpg", data-fancybox)
-                .swiper-slide(style="background-image: url('img/banner1.jpg')")
-                  +e.main-href(href="img/banner1.jpg", data-fancybox)
-                .swiper-slide(style="background-image: url('img/slider.jpg')")
-                  +e.main-href(href="img/slider.jpg", data-fancybox)
-                .swiper-slide(style="background-image: url('img/banner1.jpg')")
-                  +e.main-href(href="img/banner1.jpg", data-fancybox)
-                .swiper-slide(style="background-image: url('img/slider.jpg')")
-                  +e.main-href(href="img/slider.jpg", data-fancybox)
-                .swiper-slide(style="background-image: url('img/banner1.jpg')")
-                  +e.main-href(href="img/banner1.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/slider1.jpg')")
+                  +e.main-href(href="img/slider1.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/slider2.jpg')")
+                  +e.main-href(href="img/slider2.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/slider1.jpg')")
+                  +e.main-href(href="img/slider1.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/slider2.jpg')")
+                  +e.main-href(href="img/slider2.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/slider1.jpg')")
+                  +e.main-href(href="img/slider1.jpg", data-fancybox)
+                .swiper-slide(style="background-image: url('img/slider2.jpg')")
+                  +e.main-href(href="img/slider2.jpg", data-fancybox)
             +e('section').thumbs.swiper-container.js-slider-thumbs
               .swiper-wrapper
                 .swiper-slide(style="background-image: url('img/thumbs1.jpg')")
@@ -59,7 +59,9 @@ html
                 li Системы управления: медиасерверы Catalyst, Pandoras box и D3, мультиоконные процессоры Spyder X80 и X20, виджеи с программным обеспечением Resolume Arena, видеомикшеры Analog Way, Barco, Kramer, Extron, Panasonic;
                 li Оборудование для видеосъемки и трансляции.
             .company__info-imgover
-              img(src="img/product.png").company__info-img
+              video.company__info-video(preload="", autoplay, muted, loop, poster="img/product.jpg")
+                source(src="video/screen.mp4" type="video/mp4")
+              //- img(src="img/product.png").company__info-img
 
           section.company__cols
             .company__col
@@ -88,6 +90,7 @@ html
       +e('section').bottom
         .container
           section.company__general(style="background-image: url('img/general.jpg')")
+            img(src="img/general.jpg").company__general-img
             aside.company__general-side
               p.company__general-position Генеральный директор
               p.company__general-name Виктория Щечка

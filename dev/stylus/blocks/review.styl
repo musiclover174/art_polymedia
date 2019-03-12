@@ -42,6 +42,8 @@
   df()
   flex-direction row-reverse
   color $dark
+  @media $LandscapeMedium
+    padding 32px
   @media $LandscapeMin
     flex-direction column
   @media $PortraitMedium
@@ -55,6 +57,8 @@
     @media $LandscapeMin
       ml 0
       mb 40px
+    @media $Mobile370
+      dn()
   &__img
     max-width 100%
     max-height 100%
@@ -93,10 +97,21 @@
     pos absolute
     l 0
     b -90px
+    @media $LandscapeMedium
+      l 32px
+    @media $PortraitMedium
+      l 0
   &__car
     mt 70px
+    @media $LandscapeMedium
+      ml -32px
+      mr -32px
     @media $PortraitMedium
       mt 40px
+      ml 0
+      mr 0
+    @media $Mobile370
+      mt 60px
     &.swiper-container
       overflow visible
   &__bottom

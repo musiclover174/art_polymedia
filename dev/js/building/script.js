@@ -15,7 +15,7 @@ import Partners from './modules/partners';
 
 document.addEventListener('DOMContentLoaded', () => {
   // const burger = new Burger();
-  const elVisArray = ['.about__feat'];
+  const elVisArray = ['.about__feat, .company__general, .about__info-title'];
   if (document.body.classList.contains('index')) {
     const index = new Index(
       {

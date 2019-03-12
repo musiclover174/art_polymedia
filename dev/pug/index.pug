@@ -36,7 +36,13 @@ html
           .container
             +e('section').info
               +e.info-col
-                h4.about__info-title Более <br>15 лет <br>в деле
+                h4.about__info-title 
+                  span 
+                    i Более 
+                  span 
+                    i 15 лет 
+                  span 
+                    i в деле
               +e.info-col
                 p Успех любого мероприятия зависит от того, насколько ярко, оригинально и качественно оно будет представлено публике. Не важно, идет ли речь о деловой конференции, спортивном соревновании или творческом шоу - именно видеопрезентации задают тон и настроение в ходе происходящего действия, надолго оставаясь в памяти зрителей.
                 p Компания ART Polymedia уже более 15 лет специализируется на предоставлении и обслуживании профессиональных систем визуализации на крупных конференциях,  выставках, корпоративных и спортивных мероприятиях. 
@@ -72,7 +78,7 @@ html
                   | в подготовке тендерной документации
             +e('section').projects
               +e('p').projects-count 27 крутых проектов за&nbsp;2018 год
-              +e.projects-href(href="https://www.youtube.com/watch?v=HEXWRTEbj1I", data-fancybox)
+              +e.projects-href(href="https://www.youtube.com/watch?v=HEXWRTEbj1I", data-fancybox="showreel")
               +e('p').projects-showreel Смотрите Showreel
         .container
           +e.bottom
@@ -88,7 +94,7 @@ html
             .swiper-wrapper
               .swiper-slide
                 +b('article').review
-                  +e(href="img/fullrev.jpg", data-fancybox).imgover
+                  +e(href="img/fullrev.jpg", data-fancybox="rev1").imgover
                     +e.img(src="img/rev1.jpg")
                   +e.content
                     +e('p').title Awards Party 2013
@@ -99,7 +105,7 @@ html
                     +e('p').from Генеральный директор Ульянова И. А. 
               .swiper-slide
                 +b('article').review
-                  +e(href="img/fullrev.jpg", data-fancybox).imgover
+                  +e(href="img/fullrev.jpg", data-fancybox="rev2").imgover
                     +e.img(src="img/rev1.jpg")
                   +e.content
                     +e('p').title 1С-Софт
@@ -109,7 +115,7 @@ html
                     +e('p').from Генеральный директор Ульянова И. А.
               .swiper-slide
                 +b('article').review
-                  +e(href="img/fullrev.jpg", data-fancybox).imgover
+                  +e(href="img/fullrev.jpg", data-fancybox="rev3").imgover
                     +e.img(src="img/rev2.jpg")
                   +e.content
                     +e('p').title Awards Party 2013

@@ -46,8 +46,8 @@ export default class Index {
       speed: 800,
       slidesPerView: 1,
       spaceBetween: 48,
-      loop: true,
-      autoHeight: true,
+      // loop: true,
+      // autoHeight: true,
       navigation: {
         nextEl: `${this.feedsClass} .swiper-button-next`,
         prevEl: `${this.feedsClass} .swiper-button-prev`,

@@ -36,7 +36,6 @@
     mb 48px
     border-top 1px solid $dark
     border-bottom 1px solid $dark
-    bgc $blue
     transition .7s background-color, .7s border-color
     @media $desktopMax
       ml 32px
@@ -48,9 +47,19 @@
       w calc(100% - 32px)
     &:hover
       border-color $blue
-      bgc $dark
+      & ^[-1]-bg
+        h 0
       & ^[-1]-img
         b 0
+    &-bg
+      pos absolute
+      z-index -1
+      b 0
+      l 0
+      r 0
+      h 100%
+      bgc $blue
+      transition .7s height
     &-hrefover
       db()
       padding 29px 48px
@@ -66,11 +75,10 @@
     &-img
       pos absolute
       b -10px
-      r 48px
+      l 30%
       transition .7s bottom
       @media $desktopMedium
         max-width 90%
-        r 5%
 
 .cats
   padding 48px 0

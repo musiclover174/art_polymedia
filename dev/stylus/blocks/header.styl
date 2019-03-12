@@ -11,12 +11,17 @@ body.index .header
   mb 30px
   df(center, space-between)
   @media $PortraitMedium
-    padding 10px 15px
+    padding 20px 15px 21px
+    mb 0
   &__left
     df(center, flex-start)
   &__logo
     pos relative
     t 14px
+    @media $PortraitMedium
+      t 0
+      h 48px
+      oh()
     &-img
       @media $LandscapeMedium
         w 110px
@@ -52,7 +57,7 @@ body.index .header
       ml 40px
     @media $LandscapeMax
       ml 22px
-    @media $PortraitMin
+    @media $PortraitMedium
       dn()
   &__search
     ml 37px
@@ -61,10 +66,8 @@ body.index .header
     transition .7s opacity
     @media $LandscapeMax
       ml 22px
-    @media $PortraitMedium
-      dn()
     &:hover
-      animation searchAnimation 1s steps(49)
+      animation searchAnimation .6s steps(49)
   &__right
     ml 40px
     dfv()
@@ -116,8 +119,7 @@ body.index .header
     transform translateY(100%)
     transition 1s transform, .7s opacity
     will-change transform
-    opacity .2
-    bgc $dark
+    bgc $blue
     size 100%
     z-index 10
   &__button

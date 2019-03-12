@@ -46,7 +46,7 @@
       opacity .5
       transition .7s opacity 
     &:hover &-bg
-      opacity .65
+      opacity .85
     &-date
       fontify 14px 600 14px
       mb 6px
@@ -142,9 +142,11 @@
     df()
     mt 4px
     &-href
-      transition .7s opacity
+      transition .7s filter, .7s opacity
       &:hover
-        opacity .7
+        filter brightness(0%)
+        @media $ie
+          opacity .7
       & + &
         ml 28px
       &[data-type="fb"]

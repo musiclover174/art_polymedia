@@ -11,6 +11,7 @@
     h 100%
     transition .7s visibility, .7s left, .7s opacity
     overflow-y auto
+    text-align center
   @media $PortraitMin
     padding 40px 15px
   &__list
@@ -31,7 +32,7 @@
     &_mobile
       @media $PortraitMediumFrom
         dn()
-      @media $PortraitMin
+      @media $PortraitMedium
         .header__order
           db()
           ml 0
@@ -41,7 +42,7 @@
         ml 20px
       @media $LandscapeMedium
         ml 0
-        mt 30px
+        mt 50px
   &__lang
     color white
     fontify 20px 600 20px
@@ -58,7 +59,7 @@
     fontify 14px 600 18px
     transition .7s color
     @media $LandscapeMedium
-      fontify 24px 600 32px
+      fontify 36px 600 40px
     @media $LandscapeMediumMin
       &_havesub:after
         content ""
@@ -71,19 +72,12 @@
     &_active,
     &:hover
       color $blue
+      @media $LandscapeMedium
+        color white
+        opacity .5
       @media $LandscapeMediumMin
         &:after
           background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAMAAACgjTZZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAANlBMVEULX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7wLX7z///84MlZ2AAAAEXRSTlMAqD8+NuRHRjDiTuMp4ZEkwase6RcAAAABYktHRBHitT26AAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4wIZDhMwRn3UzQAAAC9JREFUCNdjYGRiAAFmRgYWVjYgg52VhYGBg5OLgYubAyTBw8vHywNWwsAvwA8kAQ+/AM1+0uqiAAAAAElFTkSuQmCC') no-repeat center
-    &_active:before
-      content ""
-      pos absolute
-      b -30px
-      w 100%
-      h 1px
-      bgc $blue
-      l 0
-      @media $LandscapeMedium
-        dn()
   &__sublist
     visibility hidden
     opacity 0
@@ -124,8 +118,6 @@
       color white
       fontify 14px 600 18px
       transition .7s opacity
-      @media $LandscapeMedium
-        fontify 18px 600 24px
       &:hover,
       &_active
         opacity .7

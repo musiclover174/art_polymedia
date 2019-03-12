@@ -15,7 +15,9 @@ html
           +b('section').breadcrumbs
               +e.href(href="#") Главная
               +e('span').delim 
-          +e('h1').title Реализованные проекты
+              +e.href(href="#") Портфолио
+              +e('span').delim 
+          +e('h1').title Видео
 
           include blocks/sider-projects
 
@@ -24,6 +26,7 @@ html
           article.projects__big
             span.projects__big-bg(style="background-image: url('img/news-full.jpg')")
             .projects__big-hrefover
+              button(data-src="https://www.youtube.com/watch?v=HEXWRTEbj1I", data-fancybox="video1", type="button").projects__item-videoopen.projects__item-videoopen_main
               a(href="#").projects__big-href 
                 span Детский фестиваль художественной гимнастики «Алина-2017»
               .projects__hashs
@@ -38,7 +41,9 @@ html
               +e('article').item._wide
                 +e(href="#").item-imgover
                   +e.item-img(src="img/projects1.jpg")
+                  +e.item-videoopen._tablet(type="button", data-src="https://www.youtube.com/watch?v=HEXWRTEbj1I", data-fancybox="video2")
                 +e.item-content
+                  +e.item-videoopen(type="button", data-src="https://www.youtube.com/watch?v=HEXWRTEbj1I", data-fancybox="video22")
                   +e.item-href(href="#") 20-летие компании «Азбука Вкуса»
                   +e.hashs
                     +e('span').hash 2017
@@ -48,6 +53,7 @@ html
               +e('article').item
                 +e(href="#").item-imgover
                   +e.item-img(src="img/projects2.jpg")
+                  +e.item-videoopen._center(type="button", data-src="https://www.youtube.com/watch?v=HEXWRTEbj1I", data-fancybox="video3")
                 +e.item-content
                   +e.item-href(href="#") Празднование 20-летия Faberlic 2017
                   +e.hashs
@@ -56,6 +62,7 @@ html
               +e('article').item
                 +e(href="#").item-imgover
                   +e.item-img(src="img/projects3.jpg")
+                  +e.item-videoopen._center(type="button", data-src="https://www.youtube.com/watch?v=HEXWRTEbj1I", data-fancybox="video4")
                 +e.item-content
                   +e.item-href(href="#") Примаковские чтения 2016
                   +e.hashs
@@ -65,6 +72,7 @@ html
               +e('article').item
                 +e(href="#").item-imgover
                   +e.item-img(src="img/projects4.jpg")
+                  +e.item-videoopen._center(type="button", data-src="https://www.youtube.com/watch?v=HEXWRTEbj1I", data-fancybox="video5")
                 +e.item-content
                   +e.item-href(href="#") Шоу «Хозяйка мертвого озера»
                   +e.hashs
@@ -74,6 +82,7 @@ html
               +e('article').item
                 +e(href="#").item-imgover
                   +e.item-img(src="img/projects5.jpg")
+                  +e.item-videoopen._center(type="button", data-src="https://www.youtube.com/watch?v=HEXWRTEbj1I", data-fancybox="video6")
                 +e.item-content
                   +e.item-href(href="#") Шоу The Event
                   +e.hashs
@@ -83,7 +92,9 @@ html
               +e('article').item._wide
                 +e(href="#").item-imgover
                   +e.item-img(src="img/projects6.jpg")
+                  +e.item-videoopen._tablet(type="button", data-src="https://www.youtube.com/watch?v=HEXWRTEbj1I", data-fancybox="video7")
                 +e.item-content
+                  +e.item-videoopen(type="button", data-src="https://www.youtube.com/watch?v=HEXWRTEbj1I", data-fancybox="video77")
                   +e.item-href(href="#") Презентация нового сезона телеканала ТНТ
                   +e.hashs
                     +e('span').hash Проекционные системы

@@ -13,11 +13,13 @@
     outline none
     transition .7s background
     @media $LandscapeMax
-      size 70px
+      size 90px
     @media $LandscapeMin
+      size 70px
+    @media $Portrait560
       size 50px
     @media $PortraitMin
-      size 35px
+      size 40px
       bgc transparent
     &:after
       content ""
@@ -29,15 +31,18 @@
       background-size cover
       transition .7s background
       @media $LandscapeMax
-        l 23px
-        t 27px
+        l 35px
+        t 37px
         size 23px 19px
       @media $LandscapeMin
-        l 14px
+        l 23px
+        t 27px
+      @media $Portrait560
+        l 15px
         t 17px
       @media $PortraitMin
         l 0
-        t 9px
+        t 11px
     &:not(.disabled):hover
       bgc $blue
       &:after
@@ -54,18 +59,20 @@
   &__item
     bgc white
     text-align center
-    fontify 18px 400 26px
+    fontify 18px 600 26px
     size 120px
     display flex
     align-items center
     justify-content center
     transition .7s background
     @media $LandscapeMax
-      size 70px
+      size 90px
     @media $LandscapeMin
+      size 70px
+    @media $Portrait560
       size 50px
     @media $PortraitMin
-      size 35px
+      size 40px
       bgc transparent
     &:hover,
     &_active
@@ -76,5 +83,5 @@
       size 120px
       pos relative
       c black
-      fontify 18px 400 120px
+      fontify 18px 600 120px
       transition .7s border

@@ -116,6 +116,59 @@
           border-color rgba(255, 255, 255, .4)
           &:hover
             border-color transparent
+    &-videoopen
+      pos relative
+      db()
+      z-index 1
+      size 56px
+      mb 8px
+      @media $desktopMinFrom
+        &_center
+          pos absolute
+          l 50%
+          t 50%
+          mb 0
+          transform translate(-50%, -50%)
+        &_tablet
+          dn()
+      @media $desktopMin
+        ^[0]__item_wide &:not(&_tablet)
+          dn()
+        &:not(&_main)
+          pos absolute
+          l 50%
+          t 50%
+          mb 0
+          transform translate(-50%, -50%)
+      &:after
+        content ""
+        pos absolute
+        l 50%
+        t 50%
+        ml -4px
+        mt -8px
+        size 11px 17px
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAARCAQAAACh6J5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsMIwkb3xsXAAAAl0lEQVQY03WQsQ2CYBBGP0QTCxIbtdY4AoUGN5DERSx0Bgodw8YGNrBxACnsqAkNJg7xKKSQ4/eu+l4uX3JPXBkjuwJerFz4wJt9H4s1JRd8i8WUOw/mFosBCRVbi4XYUXPqY7EgJyPwQJ5+Z6JCT3u9JCcl6OKYmmO32yehIvqmYds4000jhfq0GRAbSs72yz9OnAadvhvc0cv72fj0UgAAAABJRU5ErkJggg==') no-repeat center
+        transition .7s background
+      &:before
+        content ""
+        size 56px
+        pos absolute
+        z-index -1
+        l 50%
+        t 50%
+        mt -28px
+        ml -28px
+        border-radius 50%
+        bgc $blue
+        transition .7s width, .7s height, .7s margin
+      &:hover
+        &:after
+          background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAARCAQAAACh6J5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsMJQ7T4SkyAAAAZ0lEQVQY023QoRHCYBBE4Z/BRMRCA+ki6YFWQhVQRnRQVEALNBGPR+TDc3vn3tzc7L5m0Wn/2/A2JMzHJWF2d8eK4eWcMJspYb6uCcNDf6DVeabrVV9/zynJmHKfastbbRmdRIPR9w+c8wSqdmnVhQAAAABJRU5ErkJggg==') no-repeat center
+        &:before
+          size 66px
+          ml -33px
+          mt -33px
     &-imgover
       pos relative
       db()

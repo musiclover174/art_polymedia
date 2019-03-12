@@ -59,11 +59,13 @@ body
     @media $PortraitMax
       fontify 30px 600 30px
   img:not([class])
-    margin 14px 0
     max-width 100%
+    @media $PortraitMediumFrom
+      margin 14px 0
   ul:not([class])
-    list-style  none
-    margin 28px 0
+    list-style none
+    @media $PortraitMediumFrom
+      margin 28px 0
   ul:not([class]) li
     pl 40px
     pos relative
@@ -73,13 +75,14 @@ body
     content ""
     pos absolute
     l 0
-    t 14px
+    t 13px
     size 26px 1px
     bgc $blue
   ol:not([class])
     list-style none
-    margin 28px 0
     counter-reset myCounter
+    @media $PortraitMediumFrom
+      margin 28px 0
   ol:not([class]) li
     pl 40px
     pos relative
@@ -134,7 +137,8 @@ div[class\^="table-scroller"]
   pos relative
   pl 1px
   &:not(:first-child)
-    mt 35px
+    @media $PortraitMediumFrom
+      mt 35px
   @media $desktopMax
     w 100%
 
@@ -157,7 +161,8 @@ div[class\^="table-scroller"]
     pl 18px
   .breadcrumbs,
   h1:not([class])
-    text-align center
+    @media $PortraitMediumFrom
+      text-align center
     
 .common
   &__car
@@ -173,7 +178,7 @@ div[class\^="table-scroller"]
     mt 71px
     ml 33px
     color $dark
-    fontify 18px 400 20px
+    fontify 18px 600 20px
     border-bottom 1px solid alpha($dark, .25)
     transition .7s border
     &_white
@@ -294,7 +299,7 @@ div[class\^="table-scroller"]
     pos relative
     z-index 1
     w calc(50% - 24px)
-    @media $LandscapeMin
+    @media $LandscapeMedium
       w 100%
       & + &
         mt 35px
@@ -461,6 +466,10 @@ div[class\^="table-scroller"]
       border-color $red
 
 .breadcrumbs
+  @media $PortraitMedium
+    dn()
+    & + .main__title
+      mt 0
   &__href
     color inherit
     fontify 14px 600 24px

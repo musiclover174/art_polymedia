@@ -10,7 +10,9 @@ html
     +b('main').main
       .container
         +b('section').page404
-          +e.img(src="img/404.png")
+          //- +e.img(src="img/404.png")
+          +e('video').video(preload="", autoplay, muted, loop, poster="img/404.png")
+            source(src="video/404.mp4" type="video/mp4")
           +e('p').title Страница не найдена
           +e.text
             p Вы неправильно набрали адрес. Возможно такой страницы больше не существует. Воспользуйтесь главным меню, чтобы перейти на другую страницу.

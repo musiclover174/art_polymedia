@@ -17,10 +17,12 @@
         transform-style preserve-3d
         @media $lDesktopSmallFrom
           transform translate3d(5%, -4%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.5)
-        @media (max-width: 1600px) and (min-width: 1271px)
+        @media (max-width: 1600px) and (min-width: 1401px)
           transform translate3d(5%, -12%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.4)
+        @media (max-width: 1400px) and (min-width: 1001px)
+          transform translate3d(3%, -17%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.3)
         @media (max-width: 1270px) and (min-width: 1001px)
-          transform translate3d(-5%, -12%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.4)
+          transform translate3d(-5%, -17%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.3)
         @media $LandscapeMax
           opacity .2
     &.animation
@@ -33,6 +35,8 @@
     pb 213px
     min-height 100vh
     perspective 1000px
+    @media $desktopMax
+      pb 126px
     @media $LandscapeMax
       pb 97px
     @media $LandscapeMedium
@@ -55,11 +59,11 @@
       padding 0 32px
     @media $desktopMax
       max-width 1142px
+      b 60px
     @media $LandscapeMax
       b 37px
     @media $PortraitMedium
       padding 0 15px
-    
   &__container
     w 100%
     max-width 1573px
@@ -83,8 +87,10 @@
     transition 2s transform
     will-change transform
     @media $LandscapeMax
-      max-width inherit
-      max-height 100%
+      max-width none
+      height 100%
+      min-height auto
+      min-width auto
       l 50%
       transform translateX(-50%)
   &__hrefover
@@ -98,10 +104,12 @@
     @media $LandscapeMedium
       max-width none
   &__href
+    pos relative
+    t 0
     color white
     fontify 100px 700 100px
     border-bottom 1px solid rgba(255, 255, 255, .25)
-    transition .7s border
+    transition .7s border, .7s top
     @media $lDesktopSmall
       fontify 72px 900 72px
     @media $LandscapeMedium
@@ -109,12 +117,22 @@
     @media $PortraitMedium
       fontify 42px 900 42px
     @media $Mobile
-      fontify 34px 900 34px
+      fontify 36px 900 40px
     &:hover
       border-color transparent
+      t 5px
+      span
+        t 18px
+        @media $lDesktopSmall
+          t 11px
+        @media $LandscapeMedium
+          t 9px
+        @media $PortraitMedium
+          t 3px
     span
       pos relative
       t 23px
+      transition .7s top
       @media $lDesktopSmall
         t 16px
       @media $LandscapeMedium
@@ -138,7 +156,7 @@
       padding 0
     &-row
       df(flex-start, space-between)
-      @media $LandscapeMin
+      @media $LandscapeMedium
         flex-direction column
       & + &
         mt 35px

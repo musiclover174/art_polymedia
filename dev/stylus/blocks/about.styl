@@ -54,13 +54,46 @@
       fontify 120px 700 120px
       mt -16px
       ml -8px
+      span
+        db()
+        h 120px
+        oh()
+        @media $desktopMax
+          h 100px
+        @media $desktopMin
+          h 72px
+        @media $LandscapeMax
+          display inline
+        &:last-child:after
+          content ""
+          display inline-block
+          vertical-align baseline
+          ml 10px
+          size 13px
+          bgc $red
+          opacity 0
+          @media $LandscapeMax
+            opacity 1
+          @media $PortraitMedium
+            size 8px
+            ml 6px
+        i
+          pos relative
+          font-style normal
+          t -130px
+          transition .7s top
+          @media $LandscapeMax
+            t 0
+      &[visible] 
+        span:last-child:after
+          opacity 1
+          transition .7s .7s opacity
+        i
+          t 0
       @media $lDesktopSmall
         fontify 100px 700 100px
       @media $desktopMin
         fontify 72px 700 72px
-      @media $LandscapeMax
-        br
-          dn()
       @media $LandscapeMedium
         fontify 62px 900 62px
       @media $PortraitMedium
@@ -68,16 +101,6 @@
         ml -4px
       @media $Mobile
         fontify 34px 900 34px
-      &:after
-        content ""
-        display inline-block
-        vertical-align baseline
-        ml 10px
-        size 13px
-        bgc $red
-        @media $PortraitMedium
-          size 8px
-          ml 6px
     &-col
       w calc(50% - 24px)
       color white
@@ -133,13 +156,14 @@
     @media $lDesktopSmall
       fontify 48px 700 48px
     @media $LandscapeMedium
+      dn()
       mt 120px
       fontify 32px 700 32px
-    @media $PortraitMedium
       flex-direction column
+    // @media $PortraitMedium
     &-count
       w 324px
-      @media $PortraitMedium
+      @media $LandscapeMedium
         text-align center
         w 100%
         max-width 400px
@@ -196,7 +220,7 @@
       flex-direction column
       mt 170px
     @media $LandscapeMedium
-      mt 120px
+      mt 90px
     &-text
       w calc(50% - 24px)
       color white
@@ -211,7 +235,7 @@
         ml 48px
         @media $LandscapeMax
           ml 0
-          mt 40px
+          mt 20px
     &-topage
       mt 93px
       @media $LandscapeMax
@@ -251,6 +275,10 @@
       text-align right
       @media $LandscapeMin
         text-align center
+    &-video
+      max-width 100%
+      @media $PortraitMedium
+        max-width 75%
     &-img
       max-width 100%
   &__cols
@@ -259,12 +287,15 @@
     @media $LandscapeMin
       flex-direction column
       justify-content flex-start
+      mt 20px
   &__col
     w calc(50% - 24px)
     @media $LandscapeMin
       w 100%
       & + &
         mt 50px
+        @media $LandscapeMin
+          mt 20px
   &__awwards
     df(flex-end, space-between)
     mt 90px
@@ -288,12 +319,19 @@
       h 0
       oh()
   &__general
+    pos relative
+    t 80px
+    opacity 0
     background-size contain
     background-position right center
     background-repeat no-repeat
     bgc white
     margin 0 -124px
     padding 74px 124px 102px
+    transition 1s opacity, 1s top
+    &[visible]
+      t 0
+      opacity 1
     @media $lDesktopSmall
       margin 0 -30px
       padding 74px 30px 102px
@@ -314,6 +352,14 @@
       max-width 510px
       @media $LandscapeMedium
         max-width none
+    &-img
+      w calc(100% + 120px)
+      margin -60px -60px 51px -60px
+      @media $LandscapeMediumMin
+        dn()
+      @media $PortraitMedium
+        margin -40px -15px 30px -15px
+        w calc(100% + 30px)
     &-position
       c $blue
       fontify 24px 600 32px

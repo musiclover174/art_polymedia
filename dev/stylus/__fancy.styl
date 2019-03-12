@@ -51,13 +51,18 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-bg {
-	background: $dark;
-	opacity: 0;
-	transition: .7s opacity;
+	background: $blue;
+	top: auto;
+	height: 0;
+	transition: .7s height;
 }
 
 .fancybox-is-open .fancybox-bg {
-	opacity: 1;
+	height: 100%;
+}
+
+.fancybox-is-open .fancybox-content{
+	animation: popupAnimation .7s .7s forwards;
 }
 
 .fancybox-caption,
@@ -82,7 +87,7 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-infobar {
-	color: #ccc;
+	color: white;
 	font-size: 13px;
 	-webkit-font-smoothing: subpixel-antialiased;
 	height: 44px;
@@ -99,6 +104,7 @@ body.compensate-for-scrollbar {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	dn();
 }
 
 .fancybox-toolbar {
@@ -169,7 +175,10 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-slide--html {
-	padding: 6px 0;
+	padding: 30px 0;
+	@media $PortraitMax {
+		padding: 20px 0;
+	}
 }
 
 .fancybox-slide--iframe {
@@ -185,6 +194,8 @@ body.compensate-for-scrollbar {
 	position: relative;
 	text-align: left;
 	vertical-align: middle;
+	opacity: 0;
+	top: 30px;
 }
 
 @media (max-width: 767px) {
@@ -344,7 +355,7 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-button--close:hover{
-	animation closeAnimation 1s steps(49)
+	animation closeAnimation .6s steps(49)
 }
 
 .fancybox-button,
@@ -409,7 +420,10 @@ body.compensate-for-scrollbar {
 	width: 33px;
 	background: url(../i/left_seq.png) no-repeat 0 -1617px;
 	transition: 0.7s opacity, 0.7s background;
-	&:hover{
+	&.disabled{
+		opacity: .2;
+	}
+	&:not(.disabled):hover{
     animation: arrAnimation 1s steps(49);
 	}
 }
@@ -450,7 +464,7 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-close-small:hover {
-	animation: closeAnimation 1s steps(49);
+	animation: closeAnimation .6s steps(49);
 }
     
 @media (max-width: 900px) {

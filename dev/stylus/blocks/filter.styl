@@ -8,7 +8,7 @@
   w calc(100% - 217px)
   max-width 1340px
   transform translateY(-50%)
-  transition 1s right
+  transition 1s right, 1s bottom
   @media $lDesktopSmall
     w 90vw
     max-width none
@@ -21,18 +21,22 @@
     transform none
     w 300px
     pr 20px
-  @media $Mobile370
-    w 260px
+  @media $PortraitMedium
+    w 100%
+    t auto
+    b 0
+    h 100%
   &:not(.open)
     r -1340px
     @media $lDesktopSmall
       r -90vw
     @media $desktopTablet
-      r -calc(100vw - 50px)
+      r calc(-100vw + 50px)
     @media $LandscapeMin
       r -300px
-    @media $Mobile370
-      r -260px
+    @media $PortraitMedium
+      r 0
+      b -100%
   &__btn
     w 205px
     c white
@@ -48,6 +52,15 @@
     transform rotate(-90deg)
     transform-origin 0 0
     transition .7s background-color
+    @media $PortraitMedium
+      w 100%
+      pos fixed
+      z-index 1
+      b 0
+      l 0
+      t auto
+      transform none
+      padding 0
     &:hover
       bgc #0955a9
     &:before
@@ -57,6 +70,8 @@
       t 14px
       size 21px 18px
       background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAASCAQAAAAeG12lAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhoKGCykNFZ7AAAAsUlEQVQoz42SrQ3CcBTErw0C3wSBghUoA1RCAkgGoKyARjAClWCQDIAtA5QVqCQkRVeRH6oESPn33amX3Lvc+/CQCW1thYU9MvANjiNlOkpNfj5rnswQtJx+gQ7K1dVdcrsOuLJ5Vw7hgpLlR41Iqcee4VcrIiI1LQxfZ0lz0xkQUW2AHeFvgH+MKYltUhGS25YlRMCJhE41lgsPTVTopmnTtSqOKVg1BajY5wKe+bWTF/vTOPsEn9amAAAAAElFTkSuQmCC') no-repeat center
+      @media $PortraitMedium
+        dn()
   &__wrapper
     df(flex-start, space-between)
     flex-wrap wrap
@@ -100,4 +115,3 @@
       ml 32px
     @media $desktopTablet
       w calc(50% - 32px)
-  

@@ -29,8 +29,16 @@ export default class Slider {
         },
       });
       let galleryTop = new Swiper(gal, {
+        effect: 'coverflow',
         spaceBetween: 10,
         slidesPerView: 1,
+        speed: 1000,
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+        },
         navigation: {
           nextEl: qs('.js-slider-next', gal.nextElementSibling),
           prevEl: qs('.js-slider-prev', gal.nextElementSibling),
