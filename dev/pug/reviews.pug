@@ -42,7 +42,7 @@ html
             - var n = 0;
             while n < 5
               +b('article').review
-                +e(href="img/fullrev.jpg", data-fancybox).imgover
+                +e(href="img/fullrev.jpg", data-fancybox="gal#{n}").imgover
                   +e.img(src="img/rev1.jpg")
                 +e.content
                   +e('p').title Awards Party 2013
