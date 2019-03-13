@@ -228,6 +228,8 @@ div[class\^="table-scroller"]
     mt 38px
     @media $LandscapeMedium
       fontify 20px 600 28px
+    @media $PortraitMedium
+      mt 17px
   &__input
     w 100%
     h 50px
@@ -311,12 +313,17 @@ div[class\^="table-scroller"]
     z-index 1
     & + &
       mt 33px
+      @media $PortraitMedium
+        mt 28px
   &__fileover
     w 100%
     pos relative
     mt 13px
     white-space nowrap
     transition .5s border
+    @media $PortraitMedium
+      mt -7px
+      mb 12px
     &.warning
       border-color $red
     & + &

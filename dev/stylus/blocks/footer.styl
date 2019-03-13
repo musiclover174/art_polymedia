@@ -4,6 +4,8 @@
   color white
   @media $desktopMin
     pt 35px
+  @media $PortraitMedium
+    pt 43px
   &__top
     @media $PortraitMedium
       mb -70px
@@ -24,6 +26,9 @@
     bgc $dark
     @media $desktopMin
       pb 13px
+    @media $PortraitMedium
+      pt 17px
+      pb 17px
     & ^[0]__right
       @media $LandscapeMin
         flex-direction column
@@ -126,6 +131,7 @@
     @media $LandscapeMedium
       dn()
     @media $PortraitMedium
+      db()
       mt 0
       mb 10px
   &__dextra

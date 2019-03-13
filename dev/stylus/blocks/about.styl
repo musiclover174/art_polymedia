@@ -7,6 +7,8 @@
   background-image none !important
   @media $LandscapeMedium
     pb 70px
+  @media $PortraitMedium
+    pb 80px
   &__sticky
     size 100% 100vh
     pos absolute
@@ -33,6 +35,8 @@
       pos relative
       @media $LandscapeMedium
         pt 96px
+      @media $PortraitMedium
+        pt 58px
   &__video
     pos absolute
     l 50%
@@ -115,6 +119,8 @@
         @media $LandscapeMax
           ml 0
           mt 40px
+        @media $PortraitMedium
+          mt 29px
   &__feats
     df(flex-start, space-between)
     flex-wrap wrap
@@ -122,6 +128,10 @@
     mb -65px
     @media $LandscapeMedium
       mt 100px
+    @media $PortraitMedium
+      mt 67px
+    @media $PortraitMedium
+      mb -78px
   &__feat
     w calc(50% - 24px)
     mb 65px
@@ -129,10 +139,13 @@
       w calc(50% - 15px)
     @media $PortraitMedium
       w 100%
+      mb 56px
     &-imgover
       dfv(flex-start, flex-end)
       h 58px
       mb 20px
+      @media $PortraitMedium
+        mb 10px
     &-icon
       max-height 100%
     &-text

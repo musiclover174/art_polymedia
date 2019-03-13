@@ -39,6 +39,8 @@
     @media $LandscapeMin
       ml -30px
       w calc(100% + 30px)
+    @media $PortraitMedium
+      mt 33px
   &__item
     w 35.5%
     ml 48px
@@ -50,6 +52,8 @@
       w calc(50% - 30px)
     @media $PortraitMedium
       w calc(100% - 30px)
+    @media $PortraitMedium
+      mb 32px
     .projects__hashs
       max-width 280px
   &__href
@@ -68,6 +72,8 @@
   &__toall
     ib()
     mt 47px
+    @media $PortraitMedium
+      mt 17px
     &-title
       fontify 60px 700 68px
       mt 76px
@@ -76,6 +82,8 @@
         fontify 48px 900 48px
       @media $LandscapeMedium
         fontify 40px 900 40px
+      @media $PortraitMedium
+        dn()
   &__card
     padding 120px 0 60px
     opacity 0
