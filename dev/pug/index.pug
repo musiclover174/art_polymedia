@@ -170,35 +170,7 @@ html
           +e.toall.btn(href="#") 
             span Полный список проектов
 
-      +b('section').callback
-        .container
-          h4.common__title У вас есть проект?
-          p.common__subtitle Давайте обсудим его. Продумаем и сделаем!
-          +e('form').form
-            +e.form-row
-              .common__col
-                .common__row
-                  input(type="text", data-req="req").common__input
-                  label.common__placeholder Представьтесь, пожалуйста
-                .common__row
-                  input(type="text", data-req="req").common__input
-                  label.common__placeholder Как с вами связаться?
-              .common__col
-                .common__row
-                  textarea(data-req="req").common__textarea
-                  label.common__placeholder Расскажите о вашем проекте
-            +e.form-row
-              .common__col
-                .common__row
-                  .common__fileover
-                    input(type="file", name="").common__file#file1.js-common-fileinput
-                    label(for="file1", data-default="Прикрепите файл").common__filename.js-common-file Прикрепите файл
-                    button(type="button").common__filedelete.js-common-filedelete
-              .common__col
-                .common__row
-                  +e('span').spacer
-                  button(type="submit").callback__send.btn.common__sbm 
-                    span Отправить
+      include blocks/callback
 
     include layout/__footer
     include layout/__scripts
