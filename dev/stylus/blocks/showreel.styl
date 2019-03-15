@@ -1,0 +1,78 @@
+.showreel
+  padding 150px 0
+  bgc $dark
+  @media $LandscapeMedium
+    dn()
+  &__wrapper
+    pos relative
+    z-index 1
+    df(center, space-between)
+    padding 150px 0
+    color white
+    fontify 60px 700 60px
+    perspective 1000px
+    @media $lDesktopSmall
+      fontify 48px 700 48px
+    @media $LandscapeMedium
+      fontify 32px 700 32px
+      flex-direction column
+  &__video
+    pos absolute
+    z-index -1
+    l 50%
+    t 50%
+    transform translate(-50%, -50%)
+    opacity .35
+    max-width 750px
+    animation showreel 8s infinite ease-in-out
+  &__count
+    w 324px
+    @media $LandscapeMedium
+      text-align center
+      w 100%
+      max-width 400px
+  &__showreel
+    w 324px
+    @media $LandscapeMedium
+      text-align right
+    @media $PortraitMedium
+      text-align center
+      w 100%
+      max-width 400px
+  &__href
+    pos relative
+    z-index 1
+    size 56px
+    @media $LandscapeMedium
+      margin 0 30px
+    @media $PortraitMedium
+      margin 30px 0
+    &:after
+      content ""
+      pos absolute
+      l 50%
+      t 50%
+      ml -4px
+      mt -8px
+      size 11px 17px
+      background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAARCAQAAACh6J5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsMIwkb3xsXAAAAl0lEQVQY03WQsQ2CYBBGP0QTCxIbtdY4AoUGN5DERSx0Bgodw8YGNrBxACnsqAkNJg7xKKSQ4/eu+l4uX3JPXBkjuwJerFz4wJt9H4s1JRd8i8WUOw/mFosBCRVbi4XYUXPqY7EgJyPwQJ5+Z6JCT3u9JCcl6OKYmmO32yehIvqmYds4000jhfq0GRAbSs72yz9OnAadvhvc0cv72fj0UgAAAABJRU5ErkJggg==') no-repeat center
+      transition .7s background
+    &:before
+      content ""
+      size 56px
+      pos absolute
+      z-index -1
+      l 50%
+      t 50%
+      mt -28px
+      ml -28px
+      border-radius 50%
+      bgc $blue
+      transition .7s width, .7s height, .7s margin
+    &:hover
+      &:after
+        background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAARCAQAAACh6J5QAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiDBsMJQ7T4SkyAAAAZ0lEQVQY023QoRHCYBBE4Z/BRMRCA+ki6YFWQhVQRnRQVEALNBGPR+TDc3vn3tzc7L5m0Wn/2/A2JMzHJWF2d8eK4eWcMJspYb6uCcNDf6DVeabrVV9/zynJmHKfastbbRmdRIPR9w+c8wSqdmnVhQAAAABJRU5ErkJggg==') no-repeat center
+      &:before
+        size 66px
+        ml -33px
+        mt -33px
