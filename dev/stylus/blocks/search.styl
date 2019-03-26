@@ -1,0 +1,62 @@
+.search
+  pb 93px
+  mt -21px
+  @media $LandscapeMin
+    pb 64px
+  &_empty
+    pb 308px
+    @media $lDesktopSmall
+      pb 180px
+    @media $desktopMin
+      pb 120px
+    @media $LandscapeMin
+      pb 100px
+  &__form
+    pos relative
+    max-width 820px
+  &__input
+    width 100%
+    bgc transparent
+    border 0
+    border-bottom 1px solid $blue
+    fontify 24px 600 26px
+    c white
+    h 75px
+    pr 40px
+  &__sbm
+    pos absolute
+    r 0
+    t 50%
+    mt -10px
+    size 21px
+    background url('../i/search_seq.png') no-repeat 0 -1029px
+    transition .7s opacity
+    &:hover
+      animation searchAnimation 1s steps(49)
+  &__request
+    c white
+    mt 54px
+    fontify 18px 400 26px
+    @media $LandscapeMin
+      mt 34px
+    span
+      c $blue
+  &__item
+    pos relative
+    padding 42px 49px
+    bgc white
+    @media $PortraitMedium
+      padding 21px 29px
+    & + &
+      mt 10px
+    &-href
+      c $dark
+      fontify 24px 600 32px
+      border-bottom 1px solid alpha($dark, .25)
+      transition .7s border-color
+      @media $LandscapeMedium
+        fontify 20px 600 28px
+    &-text
+      c $dark
+      fontify 18px 400 26px
+      mt 15px

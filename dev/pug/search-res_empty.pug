@@ -1,0 +1,27 @@
+include bemto/bemto.pug
+
+doctype html
+html
+  head(lang="ru")
+    include layout/__head
+  body
+    include layout/__header
+  
+    +b('main').main
+      +e('section').top
+        .container
+          +b('section').breadcrumbs
+            +e.href(href="#") Главная
+            +e('span').delim 
+          +e('h1').title Ничего не найдено
+
+          +b('section').search._empty
+            +e('form').form._search
+              +e('input').input(type="text", data-req="req", placeholder="Что будем искать?")
+              +e.sbm(type="submit", title="Найти")
+            +e('p').request По вашему запросу «
+              span Светодиодный экран
+              | » ничего не найдено
+
+    include layout/__footer
+    include layout/__scripts

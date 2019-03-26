@@ -1,277 +1,236 @@
 <!DOCTYPE html>
 <html>
-
-<head lang="ru">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="format-detection" content="telephone=no">
-  <meta name="cmsmagazine" content="6a5de8b480a9f417d465ec3935efb0fd">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <title>Главная</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <link rel="stylesheet" href="static/css/style.css">
-</head>
-
-<body>
-  <header class="header">
-    <div class="header__left"><a class="header__logo" href="#"><img class="header__logo-img" src="img/logo.png" alt=""
-          role="presentation" /></a>
-      <div class="header__socials"><a class="header__socials-elem" href="#" data-type="yt"></a><a class="header__socials-elem"
-          href="#" data-type="fb"></a><a class="header__socials-elem" href="#" data-type="tw"></a><a class="header__socials-elem"
-          href="#" data-type="inst"></a>
-      </div>
-      <button class="header__order btn" type="button" data-fancybox data-src="#order"> <span>Отправить запрос</span>
-      </button>
-      <button class="header__search js-search" type="button" data-fancybox data-src="#search">
-      </button>
+  <head lang="ru">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="cmsmagazine" content="6a5de8b480a9f417d465ec3935efb0fd">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Главная</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="static/css/style.css">
+  </head>
+  <body>
+                <header class="header">
+                                  <div class="header__left"><a class="header__logo" href="#"><img class="header__logo-img" src="img/logo.png" alt="" role="presentation"/></a>
+                                                    <div class="header__socials"><a class="header__socials-elem" href="#" data-type="yt"></a><a class="header__socials-elem" href="#" data-type="fb"></a><a class="header__socials-elem" href="#" data-type="tw"></a><a class="header__socials-elem" href="#" data-type="inst"></a>
+                                                    </div>
+                                                    <button class="header__order btn" type="button" data-fancybox data-src="#order"> <span>Отправить запрос</span>
+                                                    </button>
+                                                    <button class="header__search js-search" type="button" data-fancybox data-src="#search">
+                                                    </button>
+                                  </div>
+                                  <aside class="header__right">
+                                                    <div class="header__row"><a class="header__lang" href="#">ENG</a><a class="header__tel" href="tel:+74959568587">+7 (495) 956-85-87</a>
+                                                    </div>
+                                                    <div class="header__row">
+                                                                  <nav class="menu">
+                                                                                    <ul class="menu__list">
+                                                                                                      <li class="menu__item"><a class="menu__href menu__href_active" href="#">Главная</a>
+                                                                                                      </li>
+                                                                                                      <li class="menu__item"><a class="menu__href menu__href_havesub" href="#">О компании</a>
+                                                                                                                        <ul class="menu__sublist">
+                                                                                                                                          <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Генеральный директор</a>
+                                                                                                                                          </li>
+                                                                                                                                          <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">История</a>
+                                                                                                                                          </li>
+                                                                                                                                          <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Награды</a>
+                                                                                                                                          </li>
+                                                                                                                                          <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Партнеры</a>
+                                                                                                                                          </li>
+                                                                                                                                          <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">СМИ о нас</a>
+                                                                                                                                          </li>
+                                                                                                                                          <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Реквизиты</a>
+                                                                                                                                          </li>
+                                                                                                                                          <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Новости</a>
+                                                                                                                                          </li>
+                                                                                                                                          <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Отзывы</a>
+                                                                                                                                          </li>
+                                                                                                                        </ul>
+                                                                                                      </li>
+                                                                                                      <li class="menu__item"><a class="menu__href menu__href_havesub" href="#">Портфолио</a>
+                                                                                                                        <ul class="menu__sublist">
+                                                                                                                                          <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Реализованные проекты</a>
+                                                                                                                                          </li>
+                                                                                                                                          <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Видео</a>
+                                                                                                                                          </li>
+                                                                                                                        </ul>
+                                                                                                      </li>
+                                                                                                      <li class="menu__item"><a class="menu__href menu__href_havesub" href="#">Услуги</a>
+                                                                                                                        <ul class="menu__sublist">
+                                                                                                                                          <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Парк арендного оборудования</a>
+                                                                                                                                          </li>
+                                                                                                                                          <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Комплексное техническое оснащение мероприятий</a>
+                                                                                                                                          </li>
+                                                                                                                                          <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Сервисный центр</a>
+                                                                                                                                          </li>
+                                                                                                                                          <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Решения для мероприятий</a>
+                                                                                                                                          </li>
+                                                                                                                        </ul>
+                                                                                                      </li>
+                                                                                                      <li class="menu__item"><a class="menu__href" href="#">Контакты</a>
+                                                                                                      </li>
+                                                                                                      <li class="menu__item menu__item_tablet"><a class="menu__lang" href="#">ENG</a><a class="menu__tel" href="tel:+74959568587">+7 (495) 956-85-87</a>
+                                                                                                      </li>
+                                                                                    </ul>
+                                                                  </nav>
+                                                    </div>
+                                  </aside>
+                              <div class="burger">
+                                                <button class="burger__button js-burger" type="button" aria-label="открыть мобильное меню"><span class="burger__button-meat"></span>
+                                                </button><span class="burger__shadow"></span>
+                              </div>
+                </header><a class="news__elem-prev" href="#" title="Заголовок предыдущей новости"></a><a class="news__elem-next" href="#" title="Заголовок следующей новости"></a>
+                <main class="main" role="main">
+                  <div class="container">
+                                <section class="text">
+                                              <section class="breadcrumbs"><a class="breadcrumbs__href" href="#">Главная</a><span class="breadcrumbs__delim"> </span><a class="breadcrumbs__href" href="#">О компании</a><span class="breadcrumbs__delim"> </span><a class="breadcrumbs__href" href="#">Новости</a><span class="breadcrumbs__delim"> </span>
+                                              </section>
+                                  <h1>Искусственный интеллект новой версии аналитической платформы Visiology</h1>
+                                  <section class="common__car swiper-container js-typecar">
+                                    <div class="swiper-wrapper">
+                                      <div class="swiper-slide"><img class="common__car-img" src="img/news-img.jpg" alt=""></div>
+                                      <div class="swiper-slide"><img class="common__car-img" src="img/text.jpg" alt=""></div>
+                                    </div>
+                                    <div class="swiper-buttons">
+                                      <div class="swiper-button-prev swiper-button-prev_dark"></div>
+                                      <div class="swiper-button-next swiper-button-next_dark"></div>
+                                    </div>
+                                  </section>
+                                                  <div class="text__content">
+                                                    <p>1 ноября 2018 года на конференции BI 4.0, организаторами которой выступили компании Polymedia и Visiology, была представлена новая версия российской аналитической платформы Visiology.</p>
+                                                    <p>«Сегодня мы анонсируем новую версию аналитической платформы Visiology, в которой реализован целый ряд новых функций, направленных на то, чтобы сделать аналитику более масштабируемой и доступной, – рассказывает Иван Вахмянин, генеральный директор Visiology. Конечно, наиболее интересная из них – это возможность общаться с системой на естественном языке, руководителям теперь не нужно будет изучать вообще никакие инструменты, чтобы получать аналитическую информацию. Но и другие функции не менее важны для наших заказчиков – это новые возможности планирования и бюджетирования, глубоко интегрированного с аналитическим модулем, а также поддержка так называемой эволюционной продвинутой аналитики, т.е. возможности бесшовно переходить между инструментами продвинутой аналитики различной сложности в зависимости от требований задачи и компетенций пользователя – от модели «черного ящика» до использования R и Python».</p>
+                                                    <p>В новой версии появились три новых функциональных блока:</p>
+                                                    <ul>
+                                                      <li>ViPlan. Модуль планирования и бюджетирования, тесно интегрированный с ядром аналитической системы. ViPlan позволит финансовой службе предприятия автоматизировать процесс планирования с минимальным привлечением разработчиков.</li>
+                                                      <li>ViTrend. Продвинутая аналитика в составе платформы. Теперь помимо интеграции с R и Python в платформе появились простые в использовании инструменты продвинутого анализа данных, такие как, например, анализ влияющих факторов.</li>
+                                                      <li>Виртуальный ассистент построенный на технологиях искусственного интеллекта, который значительно упростит пользователям работу с информацией.</li>
+                                                    </ul>
+                                                    <p>Данный релиз платформы находится в фазе бета-версии и уже доступен для партнеров и клиентов. Версию, готовую к промышленному внедрению, компания Visiology планирует выпустить в начале 2019 года.</p>
+                                                    <section class="news__elem-bottom">
+                                                      <p class="news__elem-date">01 ноября 2018</p>
+                                                      <aside class="news__socials"><a class="news__socials-href js-share" href="#" data-type="fb" onclick="window.share.facebook(location.href, 'Заголовок', 'урл до картинки', 'текст шэринга')"></a><a class="news__socials-href js-share" href="#" data-type="tw" onclick="window.share.twitter(location.href, 'Заголовок')"></a></aside>
+                                                    </section><a class="common__back" href="#">Вернуться к списку новостей</a>
+                                                  </div>
+                                </section>
+                  </div>
+                </main>
+                <footer class="footer">
+                                  <section class="footer__top">
+                                                    <div class="footer__left">
+                                                                      <div class="footer__hrefover"><a class="footer__href" href="#">Соглашение на обработку персональных данных</a>
+                                                                      </div>
+                                                                      <div class="footer__hrefover"><a class="footer__href" href="#">Политика конфиденциальности</a>
+                                                                      </div>
+                                                                      <p class="footer__hint">Полное или частичное копирование материалов сайта запрещено, при согласованном копировании ссылка на ресурс обязательна.
+                                                                      </p>
+                                                    </div>
+                                                    <div class="footer__right">
+                                                                      <div class="footer__col">
+                                                                                        <nav class="footer__nav"><a class="footer__nav-href footer__nav-href_main" href="#">О компании</a><a class="footer__nav-href" href="#">Генеральный директор</a><a class="footer__nav-href" href="#">История</a><a class="footer__nav-href" href="#">Награды</a><a class="footer__nav-href" href="#">Партнеры</a><a class="footer__nav-href" href="#">СМИ о нас</a><a class="footer__nav-href" href="#">Реквизиты</a><a class="footer__nav-href" href="#">Новости</a><a class="footer__nav-href" href="#">Отзывы</a>
+                                                                                        </nav>
+                                                                      </div>
+                                                                      <div class="footer__col">
+                                                                                        <nav class="footer__nav"><a class="footer__nav-href footer__nav-href_main" href="#">Услуги</a><a class="footer__nav-href" href="#">Парк арендного оборудования</a><a class="footer__nav-href" href="#">Комплексное техническое оснащение мероприятий</a><a class="footer__nav-href" href="#">Сервисный центр</a><a class="footer__nav-href" href="#">Решения для мероприятий</a>
+                                                                                        </nav>
+                                                                      </div>
+                                                                      <div class="footer__col">
+                                                                                        <nav class="footer__nav"><a class="footer__nav-href footer__nav-href_main" href="#">Портфолио</a><a class="footer__nav-href" href="#">Реализованные проекты</a><a class="footer__nav-href" href="#">Видео</a><a class="footer__nav-href footer__nav-href_main" href="#">Контакты</a>
+                                                                                        </nav>
+                                                                      </div>
+                                                    </div>
+                                  </section>
+                                  <section class="footer__bottom">
+                                                    <div class="footer__left">
+                                                                      <p class="footer__copy">© Art Polymedia, 2019
+                                                                      </p>
+                                                    </div>
+                                                    <div class="footer__right">
+                                                                      <div class="footer__col"><a class="footer__tel" href="tel:+74959568587">+7 (495) 956-85-87</a>
+                                                                      </div>
+                                                                      <div class="footer__col footer__col_col2"><span class="footer__address">117218, Москва, улица Кржижановского, дом 29, корпус 1</span><a class="footer__dextra" href="https://www.dextra.ru/" target="_blank"><span>dextra</span>Разработка<br>сайта</a>
+                                                                      </div>
+                                                    </div>
+                                  </section>
+                </footer>
+    <div class="hidden-block">
+                  <div class="popup popup_search" id="search">
+                                    <button class="popup__close js-popclose" type="button" title="Закрыть">
+                                    </button>
+                                    <form class="popup__form popup__form_search">
+                                      <input class="popup__search-input" type="text" data-req="req" placeholder="Что будем искать?">
+                                      <button class="popup__search-sbm" type="submit" title="Найти"></button>
+                                    </form>
+                  </div>
+                  <div class="popup" id="order">
+                                    <button class="popup__close js-popclose" type="button" title="Закрыть">
+                                    </button>
+                                    <p class="popup__title">Заявка на аренду оборудования
+                                    </p>
+                                    <p class="popup__subtitle">Поля, отмеченные звездочкой <span>*</span>– обязательны для заполнения.
+                                    </p>
+                                    <form class="popup__form">
+                                                      <div class="popup__form-block">
+                                                                        <p class="popup__form-title">О вашей организации
+                                                                        </p>
+                                                        <div class="common__row">
+                                                          <input class="common__input" type="text" data-req="req">
+                                                          <label class="common__placeholder">Название<span>*</span></label>
+                                                        </div>
+                                                        <div class="common__row">
+                                                          <input class="common__input" type="text" data-req="req">
+                                                          <label class="common__placeholder">Контактное лицо<span>*</span></label>
+                                                        </div>
+                                                        <div class="common__row">
+                                                          <input class="common__input js-phone" type="text" data-req="req">
+                                                          <label class="common__placeholder">Телефон<span>*</span></label>
+                                                        </div>
+                                                        <div class="common__row">
+                                                          <input class="common__input" type="text" data-req="req" data-type="email">
+                                                          <label class="common__placeholder">Электронная почта<span>*</span></label>
+                                                        </div>
+                                                      </div>
+                                                      <div class="popup__form-block">
+                                                                        <p class="popup__form-title">О мероприятии
+                                                                        </p>
+                                                        <div class="common__row">
+                                                          <input class="common__input" type="text">
+                                                          <label class="common__placeholder">Место проведения</label>
+                                                        </div>
+                                                        <div class="common__row">
+                                                          <input class="common__input js-date" type="text">
+                                                          <label class="common__placeholder">Дата проведения</label>
+                                                        </div>
+                                                        <div class="common__row">
+                                                          <div class="common__fileover">
+                                                            <input class="common__file js-common-fileinput" type="file" name="" id="file_tz">
+                                                            <label class="common__filename js-common-file" for="file_tz" data-default="Прикрепить файл с техническим заданием">Прикрепить файл с техническим заданием</label>
+                                                            <button class="common__filedelete js-common-filedelete" type="button"></button>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="popup__form-block popup__form-block_bottom"><span class="popup__agreement">Нажимая кнопку «Отправить», я даю согласие на обработку персональных данных.</span>
+                                                        <button class="callback__send btn common__sbm" type="submit"> <span>Отправить</span></button>
+                                                      </div>
+                                                      <p class="popup__warning">Некоторые обязательные поля не заполнены или заполнены с ошибками.
+                                                      </p>
+                                    </form>
+                  </div>
+                  <div class="popup" id="text">
+                                    <button class="popup__close js-popclose" type="button" title="Закрыть">
+                                    </button>
+                                    <p class="popup__title">Заявка на аренду оборудования
+                                    </p>
+                                    <p class="popup__subtitle">Ваша заявка успешно отправлена. Мы свяжемся с вами по указанному номеру телефона.
+                                    </p>
+                                    <button class="popup__btn-exit btn js-popclose" type="button">Закрыть
+                                    </button>
+                  </div>
     </div>
-    <aside class="header__right">
-      <div class="header__row"><a class="header__lang" href="#">ENG</a><a class="header__tel" href="tel:+74959568587">+7
-          (495) 956-85-87</a>
-      </div>
-      <div class="header__row">
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__item"><a class="menu__href menu__href_active" href="#">Главная</a>
-            </li>
-            <li class="menu__item"><a class="menu__href menu__href_havesub" href="#">О компании</a>
-              <ul class="menu__sublist">
-                <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Генеральный директор</a>
-                </li>
-                <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">История</a>
-                </li>
-                <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Награды</a>
-                </li>
-                <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Партнеры</a>
-                </li>
-                <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">СМИ о нас</a>
-                </li>
-                <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Реквизиты</a>
-                </li>
-                <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Новости</a>
-                </li>
-                <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Отзывы</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu__item"><a class="menu__href menu__href_havesub" href="#">Портфолио</a>
-              <ul class="menu__sublist">
-                <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Реализованные проекты</a>
-                </li>
-                <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Видео</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu__item"><a class="menu__href menu__href_havesub" href="#">Услуги</a>
-              <ul class="menu__sublist">
-                <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Парк арендного оборудования</a>
-                </li>
-                <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Комплексное техническое оснащение
-                    мероприятий</a>
-                </li>
-                <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Сервисный центр</a>
-                </li>
-                <li class="menu__sublist-item"><a class="menu__sublist-href" href="#">Решения для мероприятий</a>
-                </li>
-              </ul>
-            </li>
-            <li class="menu__item"><a class="menu__href" href="#">Контакты</a>
-            </li>
-            <li class="menu__item menu__item_tablet"><a class="menu__lang" href="#">ENG</a><a class="menu__tel" href="tel:+74959568587">+7
-                (495) 956-85-87</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </aside>
-    <div class="burger">
-      <button class="burger__button js-burger" type="button" aria-label="открыть мобильное меню"><span class="burger__button-meat"></span>
-      </button><span class="burger__shadow"></span>
-    </div>
-  </header><a class="news__elem-prev" href="#" title="Заголовок предыдущей новости"></a><a class="news__elem-next" href="#"
-    title="Заголовок следующей новости"></a>
-  <main class="main" role="main">
-    <div class="container">
-      <section class="text">
-        <section class="breadcrumbs"><a class="breadcrumbs__href" href="#">Главная</a><span class="breadcrumbs__delim">
-          </span><a class="breadcrumbs__href" href="#">О компании</a><span class="breadcrumbs__delim"> </span><a class="breadcrumbs__href"
-            href="#">Новости</a><span class="breadcrumbs__delim"> </span>
-        </section>
-        <h1>Искусственный интеллект новой версии аналитической платформы Visiology</h1>
-        <section class="common__car swiper-container js-typecar">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img class="common__car-img" src="img/news-img.jpg" alt=""></div>
-            <div class="swiper-slide"><img class="common__car-img" src="img/text.jpg" alt=""></div>
-          </div>
-          <div class="swiper-buttons">
-            <div class="swiper-button-prev swiper-button-prev_dark"></div>
-            <div class="swiper-button-next swiper-button-next_dark"></div>
-          </div>
-        </section>
-        <div class="text__content">
-          <p>1 ноября 2018 года на конференции BI 4.0, организаторами которой выступили компании Polymedia и Visiology,
-            была представлена новая версия российской аналитической платформы Visiology.</p>
-          <p>«Сегодня мы анонсируем новую версию аналитической платформы Visiology, в которой реализован целый ряд
-            новых функций, направленных на то, чтобы сделать аналитику более масштабируемой и доступной, – рассказывает
-            Иван Вахмянин, генеральный директор Visiology. Конечно, наиболее интересная из них – это возможность
-            общаться с системой на естественном языке, руководителям теперь не нужно будет изучать вообще никакие
-            инструменты, чтобы получать аналитическую информацию. Но и другие функции не менее важны для наших
-            заказчиков – это новые возможности планирования и бюджетирования, глубоко интегрированного с аналитическим
-            модулем, а также поддержка так называемой эволюционной продвинутой аналитики, т.е. возможности бесшовно
-            переходить между инструментами продвинутой аналитики различной сложности в зависимости от требований задачи
-            и компетенций пользователя – от модели «черного ящика» до использования R и Python».</p>
-          <p>В новой версии появились три новых функциональных блока:</p>
-          <ul>
-            <li>ViPlan. Модуль планирования и бюджетирования, тесно интегрированный с ядром аналитической системы.
-              ViPlan позволит финансовой службе предприятия автоматизировать процесс планирования с минимальным
-              привлечением разработчиков.</li>
-            <li>ViTrend. Продвинутая аналитика в составе платформы. Теперь помимо интеграции с R и Python в платформе
-              появились простые в использовании инструменты продвинутого анализа данных, такие как, например, анализ
-              влияющих факторов.</li>
-            <li>Виртуальный ассистент построенный на технологиях искусственного интеллекта, который значительно
-              упростит пользователям работу с информацией.</li>
-          </ul>
-          <p>Данный релиз платформы находится в фазе бета-версии и уже доступен для партнеров и клиентов. Версию,
-            готовую к промышленному внедрению, компания Visiology планирует выпустить в начале 2019 года.</p>
-          <section class="news__elem-bottom">
-            <p class="news__elem-date">01 ноября 2018</p>
-            <aside class="news__socials"><a class="news__socials-href js-share" href="#" data-type="fb" onclick="window.share.facebook(location.href, 'Заголовок', 'урл до картинки', 'текст шэринга')"></a><a
-                class="news__socials-href js-share" href="#" data-type="tw" onclick="window.share.twitter(location.href, 'Заголовок')"></a></aside>
-          </section><a class="common__back" href="#">Вернуться к списку новостей</a>
-        </div>
-      </section>
-    </div>
-  </main>
-  <footer class="footer">
-    <section class="footer__top">
-      <div class="footer__left">
-        <div class="footer__hrefover"><a class="footer__href" href="#">Соглашение на обработку персональных данных</a>
-        </div>
-        <div class="footer__hrefover"><a class="footer__href" href="#">Политика конфиденциальности</a>
-        </div>
-        <p class="footer__hint">Полное или частичное копирование материалов сайта запрещено, при согласованном
-          копировании ссылка на ресурс обязательна.
-        </p>
-      </div>
-      <div class="footer__right">
-        <div class="footer__col">
-          <nav class="footer__nav"><a class="footer__nav-href footer__nav-href_main" href="#">О компании</a><a class="footer__nav-href"
-              href="#">Генеральный директор</a><a class="footer__nav-href" href="#">История</a><a class="footer__nav-href"
-              href="#">Награды</a><a class="footer__nav-href" href="#">Партнеры</a><a class="footer__nav-href" href="#">СМИ
-              о нас</a><a class="footer__nav-href" href="#">Реквизиты</a><a class="footer__nav-href" href="#">Новости</a><a
-              class="footer__nav-href" href="#">Отзывы</a>
-          </nav>
-        </div>
-        <div class="footer__col">
-          <nav class="footer__nav"><a class="footer__nav-href footer__nav-href_main" href="#">Услуги</a><a class="footer__nav-href"
-              href="#">Парк арендного оборудования</a><a class="footer__nav-href" href="#">Комплексное техническое
-              оснащение мероприятий</a><a class="footer__nav-href" href="#">Сервисный центр</a><a class="footer__nav-href"
-              href="#">Решения для мероприятий</a>
-          </nav>
-        </div>
-        <div class="footer__col">
-          <nav class="footer__nav"><a class="footer__nav-href footer__nav-href_main" href="#">Портфолио</a><a class="footer__nav-href"
-              href="#">Реализованные проекты</a><a class="footer__nav-href" href="#">Видео</a><a class="footer__nav-href footer__nav-href_main"
-              href="#">Контакты</a>
-          </nav>
-        </div>
-      </div>
-    </section>
-    <section class="footer__bottom">
-      <div class="footer__left">
-        <p class="footer__copy">© Art Polymedia, 2019
-        </p>
-      </div>
-      <div class="footer__right">
-        <div class="footer__col"><a class="footer__tel" href="tel:+74959568587">+7 (495) 956-85-87</a>
-        </div>
-        <div class="footer__col footer__col_col2"><span class="footer__address">117218, Москва, улица Кржижановского,
-            дом 29, корпус 1</span><a class="footer__dextra" href="https://www.dextra.ru/" target="_blank"><span>dextra</span>Разработка<br>сайта</a>
-        </div>
-      </div>
-    </section>
-  </footer>
-  <div class="hidden-block">
-    <div class="popup popup_search" id="search">
-      <button class="popup__close js-popclose" type="button" title="Закрыть">
-      </button>
-      <form class="popup__form popup__form_search">
-        <input class="popup__search-input" type="text" data-req="req" placeholder="Что будем искать?">
-        <button class="popup__search-sbm" type="submit" title="Найти"></button>
-      </form>
-    </div>
-    <div class="popup" id="order">
-      <button class="popup__close js-popclose" type="button" title="Закрыть">
-      </button>
-      <p class="popup__title">Заявка на аренду оборудования
-      </p>
-      <p class="popup__subtitle">Поля, отмеченные звездочкой <span>*</span>– обязательны для заполнения.
-      </p>
-      <form class="popup__form">
-        <div class="popup__form-block">
-          <p class="popup__form-title">О вашей организации
-          </p>
-          <div class="common__row">
-            <input class="common__input" type="text" data-req="req">
-            <label class="common__placeholder">Название<span>*</span></label>
-          </div>
-          <div class="common__row">
-            <input class="common__input" type="text" data-req="req">
-            <label class="common__placeholder">Контактное лицо<span>*</span></label>
-          </div>
-          <div class="common__row">
-            <input class="common__input js-phone" type="text" data-req="req">
-            <label class="common__placeholder">Телефон<span>*</span></label>
-          </div>
-          <div class="common__row">
-            <input class="common__input" type="text" data-req="req" data-type="email">
-            <label class="common__placeholder">Электронная почта<span>*</span></label>
-          </div>
-        </div>
-        <div class="popup__form-block">
-          <p class="popup__form-title">О мероприятии
-          </p>
-          <div class="common__row">
-            <input class="common__input" type="text">
-            <label class="common__placeholder">Место проведения</label>
-          </div>
-          <div class="common__row">
-            <input class="common__input js-date" type="text">
-            <label class="common__placeholder">Дата проведения</label>
-          </div>
-          <div class="common__row">
-            <div class="common__fileover">
-              <input class="common__file js-common-fileinput" type="file" name="" id="file_tz">
-              <label class="common__filename js-common-file" for="file_tz" data-default="Прикрепить файл с техническим заданием">Прикрепить
-                файл с техническим заданием</label>
-              <button class="common__filedelete js-common-filedelete" type="button"></button>
-            </div>
-          </div>
-        </div>
-        <div class="popup__form-block popup__form-block_bottom"><span class="popup__agreement">Нажимая кнопку
-            «Отправить», я даю согласие на обработку персональных данных.</span>
-          <button class="callback__send btn common__sbm" type="submit"> <span>Отправить</span></button>
-        </div>
-        <p class="popup__warning">Некоторые обязательные поля не заполнены или заполнены с ошибками.
-        </p>
-      </form>
-    </div>
-    <div class="popup" id="text">
-      <button class="popup__close js-popclose" type="button" title="Закрыть">
-      </button>
-      <p class="popup__title">Заявка на аренду оборудования
-      </p>
-      <p class="popup__subtitle">Ваша заявка успешно отправлена. Мы свяжемся с вами по указанному номеру телефона.
-      </p>
-      <button class="popup__btn-exit btn js-popclose" type="button">Закрыть
-      </button>
-    </div>
-  </div>
-  <script type="text/javascript" src="static/js/polyfill.js"></script>
-  <script type="text/javascript" src="static/js/vendor.js"></script>
-  <script type="text/javascript" src="static/js/script.js"></script>
-</body>
-
+    <script type="text/javascript" src="static/js/polyfill.js"></script>
+    <script type="text/javascript" src="static/js/vendor.js"></script>
+    <script type="text/javascript" src="static/js/script.js"></script>
+  </body>
 </html>
