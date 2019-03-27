@@ -8613,3 +8613,84 @@ ymaps[class$="ground-pane"] {
   line-height: 26px;
   margin-top: 15px;
 }
+html.no-touchevents .print {
+  z-index: 10;
+  width: 217px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 45px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  padding-left: 45px;
+  padding-right: 20px;
+  position: fixed;
+  top: calc(50% + 100px);
+  right: -172px;
+  background-color: #0b5fbc;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transition: 0.7s background-color;
+  transition: 0.7s background-color;
+}
+html.no-touchevents .print:before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  width: 17px;
+  height: 18px;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAQAAAAX8P3fAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxsMByjvUq6bAAAAUElEQVQoz+2RSw5AIQgDB8P9r9y3kBj8PPUAdkMI0CGpCQCiTDLw3ACKmg4LR3lDrFGqoMm6+0UXoLeylvOfMkQAfcJKQwNsB2rJebYcfEIfVLoQKtN9PegAAAAASUVORK5CYII=") no-repeat center;
+}
+@media (max-width: 500px) {
+  html.no-touchevents .print:before {
+    display: none;
+  }
+}
+html.no-touchevents .print:hover {
+  background-color: #0955a9;
+}
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+  }
+  .header,
+  .breadcrumbs,
+  .slider__thumbs,
+  .slider__thumbs .swiper-buttons,
+  .realized,
+  .footer__top,
+  .projects__elem-video,
+  .projects__elem-bottom,
+  .print,
+  .company__info-imgover,
+  .company__awwards,
+  .company__general,
+  .company__member,
+  .showreel,
+  .callback,
+  .sider,
+  .company__paper {
+    display: none;
+  }
+  .footer,
+  .main__bottom {
+    padding-top: 0;
+  }
+  .projects__elem {
+    padding-bottom: 0;
+  }
+  .main,
+  .projects__hash,
+  .footer__tel,
+  .footer {
+    color: #000;
+  }
+  .projects__hash,
+  .footer,
+  .footer__bottom {
+    background-color: transparent;
+  }
+}

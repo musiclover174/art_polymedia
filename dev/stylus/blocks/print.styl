@@ -1,0 +1,63 @@
+html.no-touchevents .print
+  z-index 10
+  w 217px
+  c white
+  fontify 12px 700 45px
+  text-transform uppercase
+  letter-spacing .18em
+  pl 45px
+  pr 20px
+  pos fixed
+  t calc(50% + 100px)
+  r -172px
+  bgc $blue
+  transform rotate(-90deg)
+  transform-origin 0 0
+  transition .7s background-color
+  &:before
+    content ""
+    pos absolute
+    l 12px
+    t 14px
+    size 17px 18px
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAASCAQAAAAX8P3fAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAxsMByjvUq6bAAAAUElEQVQoz+2RSw5AIQgDB8P9r9y3kBj8PPUAdkMI0CGpCQCiTDLw3ACKmg4LR3lDrFGqoMm6+0UXoLeylvOfMkQAfcJKQwNsB2rJebYcfEIfVLoQKtN9PegAAAAASUVORK5CYII=') no-repeat center
+    @media $PortraitMedium
+      dn()
+  &:hover
+    bgc #0955a9
+
+@media print 
+  * 
+    -webkit-print-color-adjust exact
+  .header,
+  .breadcrumbs,
+  .slider__thumbs,
+  .slider__thumbs .swiper-buttons,
+  .realized,
+  .footer__top,
+  .projects__elem-video,
+  .projects__elem-bottom,
+  .print,
+  .company__info-imgover
+  .company__awwards,
+  .company__general,
+  .company__member,
+  .showreel,
+  .callback,
+  .sider,
+  .company__paper
+    dn()
+  .footer,
+  .main__bottom
+    pt 0
+  .projects__elem
+    pb 0
+  .main,
+  .projects__hash,
+  .footer__tel,
+  .footer
+    c black
+  .projects__hash,
+  .footer,
+  .footer__bottom
+    bgc transparent

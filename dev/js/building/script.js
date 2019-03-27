@@ -99,6 +99,10 @@ document.addEventListener('DOMContentLoaded', () => {
     qs('.js-company-paper').addEventListener('click', () => qs('.js-company-openpaper').click());
   }
 
+  if (qs('.js-print')) {
+    qs('.js-print').addEventListener('click', () => window.print());
+  }
+
   resizeWatcher();
   elemVisCheck(elVisArray);
   let eventScroll;
