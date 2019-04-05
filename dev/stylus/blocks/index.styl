@@ -170,6 +170,16 @@
   &__spacer
     @media $LandscapeMin
       dn()
+  &__agreement
+    c $dark
+    fontify 18px 400 26px
+    mt 30px
+    a
+      color $blue
+      border-bottom 1px solid transparent
+      transition .5s border
+      &:hover
+        border-color alpha($blue, .4)
   
 body:not(.index) .callback .common__title
   fontify 48px 900 48px

@@ -61,6 +61,8 @@
         fontify 40px 900 40px
       @media $PortraitMax
         fontify 36px 900 36px
+      &:not([href])
+        border-color transparent
       span
         pos relative
         t 8px
@@ -107,6 +109,8 @@
       fontify 24px 600 32px
       border-bottom 1px solid rgba(132,132,132,0.4)
       transition .7s border
+      &:not([href])
+        border-color transparent
       @media $LandscapeMedium
         fontify 20px 600 28px
       &:hover
@@ -144,9 +148,10 @@
     &-href
       transition .7s filter, .7s opacity
       &:hover
-        filter brightness(0%)
-        @media $ie
-          opacity .7
+        opacity .7
+        // filter brightness(0%)
+        // @media $ie
+        //   opacity .7
       & + &
         ml 28px
       &[data-type="fb"]

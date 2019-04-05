@@ -56,6 +56,12 @@
     fontify 18px 400 26px
     max-width 240px
     mt -6px
+    a
+      color $blue
+      border-bottom 1px solid transparent
+      transition .5s border
+      &:hover
+        border-color alpha($blue, .4)
     @media $PortraitMax
       max-width none
       mb 20px

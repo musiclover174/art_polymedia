@@ -342,6 +342,8 @@
     margin 0 -124px
     padding 74px 124px 102px
     transition 1s opacity, 1s top
+    @media $desktopMedium
+      background-position right -180px center
     &[visible]
       t 0
       opacity 1
@@ -356,6 +358,8 @@
     @media $desktopMin
       background-size cover
       background-position bottom right -230px
+    @media $LandscapeMax
+      background-position bottom right -320px
     @media $LandscapeMedium
       background white !important
     @media $PortraitMedium
@@ -397,7 +401,7 @@
   &__member
     df(center, space-between)
     mt 93px
-    @media $LandscapeMedium
+    @media $dekstop1142
       flex-direction column
       align-items flex-start
       justify-content flex-start
@@ -409,16 +413,21 @@
         pb 60px
     &-text
       w calc(60% - 24px)
-      @media $LandscapeMedium
+      @media $dekstop1142
         w 100%
     &-logos
-      df(center, center)
+      df(center, space-between)
       w calc(40% - 24px)
-      @media $LandscapeMedium
+      @media $dekstop1142
         w 100%
         mt 40px
+        justify-content center
     &-logo
-      & + &
-        ml 130px
-        @media $PortraitMedium
+      max-width 100%
+      &-wrapper
+        & + &
           ml 30px
+          @media $dekstop1142
+            ml 50px
+          @media $PortraitMedium
+            ml 20px
