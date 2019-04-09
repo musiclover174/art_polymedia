@@ -14,6 +14,7 @@ export default class Slider {
         spaceBetween: 5,
         slidesPerView: 5,
         freeMode: true,
+        loop: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
         breakpoints: {
@@ -33,6 +34,7 @@ export default class Slider {
         spaceBetween: 10,
         slidesPerView: 1,
         speed: 1000,
+        loop: true,
         coverflowEffect: {
           rotate: 50,
           stretch: 0,
