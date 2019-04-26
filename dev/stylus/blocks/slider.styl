@@ -15,14 +15,20 @@
     ml -15px
     mr -15px
     padding 0
-  &:not(&_white) .swiper-slide:before
+  .swiper-slide:before
     content ""
     pos absolute
     t 0
     l 0
     size 100%
     z-index 1
+    transition .7s background-color
+  &:not(&_white) .swiper-slide:before
     bgc alpha(white, .07)
+  &_white .swiper-slide:before
+    bgc alpha(black, .2)
+  &_white .swiper-slide:hover:before
+    bgc transparent
   &__main
     &.swiper-container
       overflow visible
@@ -30,6 +36,7 @@
       background-size cover
       background-repeat no-repeat
       background-position center
+      pointer-events none
       h 600px
       opacity 0
       transition 1s transform, 1s opacity
@@ -39,6 +46,7 @@
         h 300px
       &-active
         opacity 1
+        pointer-events all
     &-href
       db()
       pos relative

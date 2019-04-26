@@ -3,10 +3,10 @@
   &__car
     opacity 0
     transition 2s opacity
-    min-height 100vh
+    min-height calc(100vh - 50px)
     @media $LandscapeMedium
       min-height 580px
-      h 100vh
+      h calc(100vh - 50px)
     @media $PortraitMedium
       min-height 500px
       h auto
@@ -32,16 +32,18 @@
     overflow hidden
     z-index 1
     df(flex-end, flex-start)
-    pb 213px
-    min-height 100vh
+    pb 233px
+    min-height calc(100vh - 50px)
     perspective 1000px
+    @media $lDesktopSmall
+      pb 170px
     @media $desktopMax
       pb 126px
     @media $LandscapeMax
       pb 97px
     @media $LandscapeMedium
       min-height 580px
-      h 100vh
+      h calc(100vh - 50px)
     @media $PortraitMedium
       min-height 500px
       pb 75px
@@ -58,6 +60,7 @@
     @media $lDesktopSmall
       max-width 1366px
       padding 0 32px
+      b 60px
     @media $desktopMax
       max-width 1142px
       b 60px

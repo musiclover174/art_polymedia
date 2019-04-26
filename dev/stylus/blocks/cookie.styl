@@ -1,0 +1,24 @@
+.cookie
+  pos fixed
+  l 50%
+  b 20px
+  z-index 2
+  bgc $blue
+  c white
+  fontify 18px 400 26px
+  w 80%
+  max-width 945px
+  padding 21px 50px
+  transform translateX(-50%)
+  &.hide
+    b -100%
+    transition 1.5s bottom
+  &__close
+    pos absolute
+    r 15px
+    t 15px
+    size 15px 15px
+    background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAQAAACR313BAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjBBoHACSvbCDjAAAAaUlEQVQY032RwRHAIAgEac6rympiedrD5qFGNCTjR2DxDjQKCQuPKEaihoCoyOiAoiLWgxPQjGfCA1r31TEB+Ze8XqKSd5ndUAayz5xuP7s15g+15Zbzcq5jc6KtuRWsdQBx8QGM6+/HbtJ9CMak/mPkAAAAAElFTkSuQmCC') no-repeat center
+    transition .7s opacity
+    &:hover
+      opacity .7

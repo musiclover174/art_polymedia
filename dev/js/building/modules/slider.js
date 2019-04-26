@@ -48,6 +48,9 @@ export default class Slider {
         thumbs: {
           swiper: galleryThumbs,
         },
+        autoplay: {
+          delay: 5000,
+        },
       });
     });
   }

@@ -12,6 +12,7 @@ import Realized from './modules/realized';
 import Filter from './modules/filter';
 import Slider from './modules/slider';
 import Partners from './modules/partners';
+import Cookie from './modules/cookie';
 
 document.addEventListener('DOMContentLoaded', () => {
   // const burger = new Burger();
@@ -78,6 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     });
   }
+
+  const cookie = new Cookie('.js-cookie', '.js-cookie-close');
 
   if (qs('.js-sticky')) {
     const sticky = new Sticky();

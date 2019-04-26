@@ -76,6 +76,9 @@ export default class Forms {
             e.preventDefault();
             e.stopPropagation();
             form.classList.add('warning');
+          } else {
+            const loader = qs(`#wait_comp_${qs('input[name="bxajaxid"]', form).value}`);
+            loader.parentNode.removeChild(loader);
           }
         });
       });
