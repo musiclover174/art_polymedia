@@ -12,11 +12,11 @@
       h auto
     &.show
       opacity 1
-      & ^[0]__img
+      & ^[0]__img-wrapper
         opacity 1
         transform-style preserve-3d
         @media $lDesktopSmallFrom
-          transform translate3d(5%, -4%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.5)
+          transform translate3d(5%, -11%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.5)
         @media (max-width: 1600px) and (min-width: 1401px)
           transform translate3d(5%, -12%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.4)
         @media (max-width: 1400px) and (min-width: 1001px)
@@ -26,7 +26,7 @@
         @media $LandscapeMax
           opacity .2
     &.animation
-      & ^[0]__img
+      & ^[0]__img-wrapper
         animation movie 8s infinite ease-in-out
   .swiper-slide
     overflow hidden
@@ -81,22 +81,34 @@
     @media $PortraitMedium
       padding 0 15px
   &__img
-    pos absolute
-    t 0
-    l 0
     min-width 100%
     min-height 100%
-    z-index -1
-    transform translate3d(0, 0, 0) rotate3d(0, 0, 0, 0) scale(1)
-    transition 2s transform
-    will-change transform
-    @media $LandscapeMax
-      max-width none
-      height 100%
-      min-height auto
-      min-width auto
-      l 50%
-      transform translateX(-50%)
+    &-wrapper
+      pos absolute
+      t 0
+      l 0
+      min-width 100%
+      min-height 100%
+      z-index -1
+      transform translate3d(0, 0, 0) rotate3d(0, 0, 0, 0) scale(1)
+      transition 2s transform
+      will-change transform
+      &:after
+        content ""
+        position absolute
+        t 0
+        l 0
+        w 100%
+        h calc(100% - 2px)
+        z-index 1
+        bgc rgba(255,255,255,0.07)
+      @media $LandscapeMax
+        max-width none
+        height 100%
+        min-height auto
+        min-width auto
+        l 50%
+        transform translateX(-50%)
   &__hrefover
     max-width 50%
     pb 23px
