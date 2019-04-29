@@ -710,13 +710,17 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-slide--image .fancybox-image{
-	transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 22deg) scale(1);
+	@media $desktopMaxFrom {
+		transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 22deg) scale(1);
+	}
 	transition: 2s transform;
 	will-change: transform;
 }
 
 .fancybox-slide--complete .fancybox-image{
-	transform: translate3d(5%, -4%, -60px) rotate3d(0.05, -0.2, 0, 22deg) scale(.8);
+	@media $desktopMaxFrom {
+		transform: translate3d(5%, -4%, -60px) rotate3d(0.05, -0.2, 0, 22deg) scale(.8);
+	}
 }
 
 .fancybox-share {

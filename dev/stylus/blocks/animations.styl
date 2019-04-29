@@ -69,6 +69,21 @@
   }
 }
 
+@keyframes video {
+  from,
+  to {
+    transform translate(-50%, -50%) rotate3d(0.2, -0.3, 0, 22deg) scale(.8)
+  }
+
+  33% {
+    transform translate(-50%, -50%) rotate3d(0.2, -0.3, 0, -12deg) scale(.8)
+  }
+
+  66% {
+    transform translate(-50%, -50%) rotate3d(0.2, 0.7, 0, 12deg) scale(.8)
+  }
+}
+
 @media $lDesktopSmallFrom
   @keyframes movie {
     from,
@@ -125,7 +140,7 @@
     }
 
     66% {
-      transform translate3d(-4%, -22%, -60px) rotate3d(0.2, 0.7, 0, 12deg) scale(0.3)
+      transform translate3d(-4%, -22%, -60px) rotate3d(0.2, 0.7, 0, 12deg) scale(.3)
     }
   }
 
@@ -155,7 +170,7 @@
     }
 
     66% {
-      transform translate3d(-4%, -22%, -60px) rotate3d(0.2, 0.7, 0, 12deg) scale(0.3)
+      transform translate3d(-4%, -22%, -60px) rotate3d(0.2, 0.7, 0, 12deg) scale(.3)
     }
   }
 
@@ -185,7 +200,7 @@
     }
 
     66% {
-      transform translate3d(-4%, -22%, -60px) rotate3d(0.2, 0.7, 0, 12deg) scale(0.3)
+      transform translate3d(-4%, -22%, -60px) rotate3d(0.2, 0.7, 0, 12deg) scale(.3)
     }
   }
 
@@ -201,7 +216,6 @@
     }
 
     66% {
-      transform translate3d(-16%, -22%, -60px) rotate3d(0.2, 0.7, 0, 12deg) scale(0.3)
+      transform translate3d(-16%, -22%, -60px) rotate3d(0.2, 0.7, 0, 12deg) scale(.3)
     }
   }
-

@@ -20,6 +20,7 @@
     transform scale(1)
     will-change transform
     transition .5s transform
+    perspective 1000px
     @media $LandscapeMedium
       dn()
     &.fixed
@@ -27,6 +28,7 @@
     &.bottom
       b 0
       t auto
+      overflow visible
       transition 1.4s transform
       transform scale(.5)
       transform-origin 50% 130%
@@ -49,6 +51,8 @@
       w 100%
       min-height auto
       transform translateY(-50%)
+    ^[0]__sticky.bottom &
+      animation video 8s infinite ease-in-out
   &__info
     df()
     @media $LandscapeMax

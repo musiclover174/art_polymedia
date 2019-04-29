@@ -93,21 +93,26 @@
   pt 105px
   pb 120px
   c $dark
+  oh()
   @media $LandscapeMedium
     pt 70px
     pb 80px
   @media $PortraitMedium
     bgc white
     pt 75px
-  oh()
   .swiper-buttons
     pos absolute
-    l 0
-    b -90px
+    r 0
+    t -111px
+    @media $lDesktopSmall
+      t -116px
+    @media $desktopMin
+      t -113px
     @media $LandscapeMedium
-      l 32px
-    @media $PortraitMedium
-      l 0
+      r 32px
+      t -111px
+    @media $Portrait560
+      dn()
   &__car
     mt 70px
     @media $LandscapeMedium
@@ -123,7 +128,7 @@
       overflow visible
   &__bottom
     mt 60px
-    text-align right
+    text-align center
     @media $Mobile370
       mt 140px
       text-align left

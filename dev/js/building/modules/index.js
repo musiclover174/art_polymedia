@@ -1,4 +1,4 @@
-import { qs } from './helpers';
+import { qs, qsAll } from './helpers';
 
 export default class Index {
   constructor(
@@ -46,8 +46,9 @@ export default class Index {
       speed: 800,
       slidesPerView: 1,
       spaceBetween: 48,
-      // loop: true,
-      // autoHeight: true,
+      loop: true,
+      loopedSlides: qsAll('.swiper-slide', qs(this.feedsClass)).length,
+      autoHeight: true,
       navigation: {
         nextEl: `${this.feedsClass} .swiper-button-next`,
         prevEl: `${this.feedsClass} .swiper-button-prev`,
