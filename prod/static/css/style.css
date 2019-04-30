@@ -1713,7 +1713,6 @@ body {
   background-color: #fbfbfb;
   color: #141414;
   padding-top: 48px;
-  padding-bottom: 30px;
 }
 .main__title {
   font-size: 72px;
@@ -5838,6 +5837,9 @@ body:not(.index) .callback .common__title {
   .review {
     padding: 30px;
   }
+}
+.review:last-child {
+  margin-bottom: 60px;
 }
 .review + .review {
   margin-top: 10px;
