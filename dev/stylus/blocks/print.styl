@@ -29,7 +29,6 @@ html.no-touchevents .print
 @media print 
   * 
     -webkit-print-color-adjust exact
-  .header,
   .breadcrumbs,
   .slider__thumbs,
   .slider__thumbs .swiper-buttons,
@@ -46,7 +45,8 @@ html.no-touchevents .print
   .callback,
   .sider,
   .company__paper,
-  .common__back
+  .common__back,
+  .contacts__info-row:before
     dn()
   .footer,
   .main__bottom
@@ -56,9 +56,27 @@ html.no-touchevents .print
   .main,
   .projects__hash,
   .footer__tel,
-  .footer
+  .footer,
+  .contacts__info-phone,
+  .contacts__info-mail
     c black
   .projects__hash,
   .footer,
   .footer__bottom
     bgc transparent
+  .header
+    padding 0
+  .header__right .header__row:first-child
+    display flex
+  .contacts__info
+    padding-bottom 0
+    border 0
+  .contacts__info-row + .contacts__info-row
+    mt 15px
+  .contacts__info-row
+    fontify 16px 400 22px
+  .contacts__info
+    max-width 320px
+    text-align right
+  .header__logo
+    t 0

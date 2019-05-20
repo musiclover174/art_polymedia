@@ -8863,7 +8863,6 @@ html.no-touchevents .print:hover {
   * {
     -webkit-print-color-adjust: exact;
   }
-  .header,
   .breadcrumbs,
   .slider__thumbs,
   .slider__thumbs .swiper-buttons,
@@ -8880,7 +8879,8 @@ html.no-touchevents .print:hover {
   .callback,
   .sider,
   .company__paper,
-  .common__back {
+  .common__back,
+  .contacts__info-row:before {
     display: none;
   }
   .footer,
@@ -8893,12 +8893,41 @@ html.no-touchevents .print:hover {
   .main,
   .projects__hash,
   .footer__tel,
-  .footer {
+  .footer,
+  .contacts__info-phone,
+  .contacts__info-mail {
     color: #000;
   }
   .projects__hash,
   .footer,
   .footer__bottom {
     background-color: transparent;
+  }
+  .header {
+    padding: 0;
+  }
+  .header__right .header__row:first-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contacts__info {
+    padding-bottom: 0;
+    border: 0;
+  }
+  .contacts__info-row + .contacts__info-row {
+    margin-top: 15px;
+  }
+  .contacts__info-row {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  .contacts__info {
+    max-width: 320px;
+    text-align: right;
+  }
+  .header__logo {
+    top: 0;
   }
 }
