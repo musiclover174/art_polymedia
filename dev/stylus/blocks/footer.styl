@@ -9,6 +9,7 @@
   &__top
     @media $PortraitMedium
       mb -70px
+      pb 40px
   &__top,
   &__bottom
     df()
@@ -26,9 +27,11 @@
     bgc $dark
     @media $desktopMin
       pb 13px
+      mt 40px
     @media $PortraitMedium
       pt 17px
       pb 17px
+      mt 75px
     & ^[0]__right
       @media $LandscapeMin
         flex-direction column
@@ -51,12 +54,20 @@
       ml -48px
       mt 10px
       ^[0]__top &
-        mt 40px
+        dn()
+    // @media $desktopMin
+    //   w calc(100% + 48px)
+    //   ml -48px
+    //   mt 10px
+    //   ^[0]__top &
+    //     mt 40px
     @media $LandscapeMin
       w calc(100% + 30px)
       ml -30px
     @media $PortraitMedium
       flex-direction column
+      // ^[0]__top &
+      //   dn()
   &__hrefover
     mb 20px
   &__href

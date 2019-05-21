@@ -7,6 +7,8 @@
     @media $LandscapeMedium
       min-height 580px
       h calc(100vh - 50px)
+    @media $LandscapeMin
+      h 100vh
     @media $PortraitMedium
       min-height 500px
       h auto
@@ -16,15 +18,17 @@
         opacity 1
         transform-style preserve-3d
         @media $lDesktopSmallFrom
-          transform translate3d(5%, -11%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.5)
+          transform translate3d(5%, -8%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.5)
         @media (max-width: 1600px) and (min-width: 1401px)
-          transform translate3d(5%, -12%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.4)
-        @media (max-width: 1400px) and (min-width: 1001px)
-          transform translate3d(3%, -17%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.3)
+          transform translate3d(2%, -10%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.4)
+        @media (max-width: 1400px) and (min-width: 1271px)
+          transform translate3d(-3%, -16%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.3)
         @media (max-width: 1270px) and (min-width: 1001px)
-          transform translate3d(-5%, -17%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.3)
+          transform translate3d(-10%, -16%, -60px) rotate3d(0.2, -0.3, 0, 22deg) scale(.3)
         @media $LandscapeMax
           opacity .2
+        @media $PortraitMedium
+          opacity .35
     &.animation
       & ^[0]__img-wrapper
         animation movie 8s infinite ease-in-out
@@ -32,7 +36,7 @@
     overflow hidden
     z-index 1
     df(flex-end, flex-start)
-    pb 233px
+    pb 195px
     min-height calc(100vh - 50px)
     perspective 1000px
     @media $lDesktopSmall
@@ -44,6 +48,8 @@
     @media $LandscapeMedium
       min-height 580px
       h calc(100vh - 50px)
+    @media $LandscapeMin
+      h 100vh
     @media $PortraitMedium
       min-height 500px
       pb 75px
@@ -51,7 +57,7 @@
   .swiper-buttons
     pos absolute
     z-index 1
-    b 137px
+    b 99px
     l 50%
     w 100%
     max-width 1573px
@@ -83,6 +89,9 @@
   &__img
     min-width 100%
     min-height 100%
+    @media $LandscapeMax
+      size 100%
+      object-fit cover
     &-wrapper
       pos absolute
       t 0
@@ -104,11 +113,11 @@
         bgc rgba(255,255,255,0.07)
       @media $LandscapeMax
         max-width none
-        height 100%
+        size 100%
         min-height auto
         min-width auto
-        l 50%
-        transform translateX(-50%)
+        l 0
+        transform none
   &__hrefover
     max-width 50%
     pb 23px
@@ -133,7 +142,7 @@
     @media $PortraitMedium
       fontify 42px 900 42px
     @media $Mobile
-      fontify 36px 900 40px
+      fontify 32px 900 36px
     &:hover
       border-color transparent
       t 5px

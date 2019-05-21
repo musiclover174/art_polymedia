@@ -14,7 +14,8 @@ export default class Slider {
         spaceBetween: 5,
         slidesPerView: 5,
         freeMode: true,
-        loop: true,
+        // loop: true,
+        // centeredSlides: true,
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
         breakpoints: {

@@ -13,13 +13,13 @@ export default class Contacts {
       const myMap = new ymaps.Map(t.mapId, {
         center: [parseFloat(pinCoord[0]), parseFloat(pinCoord[1])],
         zoom: window.innerWidth <= 1000 ? 15 : 17,
-        controls: ['smallMapDefaultSet']
+        controls: ['smallMapDefaultSet'],
       });
 
       const PMitem = new ymaps.Placemark([parseFloat(pinCoord[0]), parseFloat(pinCoord[1])], {}, {
         iconLayout: 'default#image',
         iconImageSize: [19, 32],
-        iconImageHref: '/static/i/pin.png',
+        iconImageHref: '/local/templates/art/static/i/pin.png',
         // iconImageOffset: [0, -42],
       });
 

@@ -2,7 +2,7 @@
   @media $LandscapeMedium
     pos fixed
     z-index 11
-    l -100%
+    l 0
     visibility hidden
     t 0
     opacity 0
@@ -12,6 +12,7 @@
     transition .7s visibility, .7s left, .7s opacity
     overflow-y auto
     text-align center
+    pointer-events none
   @media $PortraitMin
     padding 40px 15px
   &__list
@@ -69,8 +70,8 @@
         size 9px 5px
         background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAFCAQAAAA9Wg7gAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAhkOEDEaV7eYAAAARUlEQVQI1z3JqxGAQADE0C0Gg0MhwYG73uji2qAU4Pp4CD4Tk0mimuVnUmPUrG9YNGPE4FREcRnkub3D5tDLl6Kz6x6/AYwqN9FMsBeKAAAAAElFTkSuQmCC') no-repeat center
         transition .7s background
-    &_active,
-    &:hover
+    &_active[href],
+    &:hover[href]
       color $blue
       @media $LandscapeMedium
         color white
@@ -129,6 +130,6 @@ body.burgeropen
   w 100%
   .menu
     visibility visible
+    pointer-events all
     opacity 1
-    l 0
     transition-delay .7s

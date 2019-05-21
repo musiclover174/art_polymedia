@@ -17,6 +17,12 @@
     df(center, space-between)
     mt 30px
     @media $LandscapeMin
+      mt 0
+    &:last-child
+      pb 60px
+      @media $LandscapeMin
+        pb 0
+    @media $LandscapeMin
       flex-direction column-reverse
       justify-content flex-start
     &-text,
@@ -26,11 +32,13 @@
         w 100%
     &-text
       @media $LandscapeMin
-        mt 50px
+        // mt 50px
+        mt 0
     &-imgover
       text-align right
       @media $LandscapeMin
         text-align center
+        dn()
     &-img
       max-width 100%
     &-video

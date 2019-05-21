@@ -10,9 +10,16 @@
   max-width 945px
   padding 21px 50px
   transform translateX(-50%)
+  @media $LandscapeMin
+    l 0
+    transform none
+    w 100%
+    b 0
+    padding 20px 30px
   &.hide
+    opacity 0
     b -100%
-    transition 1.5s bottom
+    transition 1.5s bottom, .7s opacity
   &__close
     pos absolute
     r 15px

@@ -19,6 +19,7 @@ body
   @media $PortraitMedium
     padding 0 15px
 .main
+  overflow hidden
   color white
   &__top
     pt 36px
@@ -26,7 +27,8 @@ body
     bgc $grey
     color $dark
     pt 48px 
-    // pb 30px
+    @media $desktopMax
+      pb 32px
   &__title
     fontify 72px 900 72px
     margin 22px 0 42px -3px
@@ -60,6 +62,7 @@ body
     @media $PortraitMax
       fontify 30px 600 30px
   img:not([class])
+  iframe:not([class])
     max-width 100%
     @media $PortraitMediumFrom
       margin 14px 0
@@ -76,7 +79,7 @@ body
     content ""
     pos absolute
     l 0
-    t 13px
+    t 15px
     size 26px 1px
     bgc $blue
   ol:not([class])
@@ -246,7 +249,7 @@ div[class\^="table-scroller"]
       border-bottom 1px solid $blue
     &:focus + ^[0]__placeholder,
     &.notempty + ^[0]__placeholder
-      opacity .35
+      opacity .55
       t -7px
       font-size 12px
       line-height 12px
@@ -272,7 +275,7 @@ div[class\^="table-scroller"]
       t 12px
     &:focus + ^[0]__placeholder,
     &.notempty + ^[0]__placeholder
-      opacity .35
+      opacity .55
       t -7px
       font-size 12px
       line-height 12px
@@ -386,16 +389,22 @@ div[class\^="table-scroller"]
   transition .7s color
   @media $LandscapeMin
     fontify 14px 600 40px
+  &_white
+    c black
+    border 1px solid white
+    &:hover
+      c white
   span
     display block
     padding 0 24px
     pos relative
     z-index 1
+    @media $Mobile
+      padding 0 19px
     &:before
       content ""
       pos absolute
       z-index -1
-      bgc $blue
       l 0
       t 0
       w calc(50% + 1px)
@@ -405,12 +414,23 @@ div[class\^="table-scroller"]
       content ""
       pos absolute
       z-index -1
-      bgc $blue
       r 0
       t 0
       h 100%
       w calc(50% + 1px)
       transition .7s width
+  &:not(&_white)
+    span
+      &:before
+        bgc $blue
+      &:after
+        bgc $blue
+  &_white
+    span
+      &:before
+        bgc white
+      &:after
+        bgc white
   &:hover
     span
       &:before

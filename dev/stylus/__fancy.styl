@@ -75,6 +75,10 @@ body.compensate-for-scrollbar {
 	transition: opacity 0.25s,visibility 0s linear 0.25s;
 	visibility: hidden;
 	z-index: 99997;
+	@media $PortraitMedium{
+		opacity: 1;
+		visibility:visible;
+	}
 }
 
 .fancybox-show-caption .fancybox-caption,
@@ -110,6 +114,10 @@ body.compensate-for-scrollbar {
 .fancybox-toolbar {
 	right: 33px;
 	top: 33px;
+	@media $PortraitMedium{
+		right: 15px;
+		top: 15px;
+	}
 }
 
 .fancybox-stage {
@@ -355,7 +363,7 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-button--close:hover{
-	animation closeAnimation .6s steps(49)
+	animation closeAnimation 1s steps(49)
 }
 
 .fancybox-button,
@@ -425,6 +433,9 @@ body.compensate-for-scrollbar {
 	}
 	&:not(.disabled):hover{
     animation: arrAnimation 1s steps(49);
+	}
+	@media $PortraitMedium{
+		opacity: 1;
 	}
 }
 
@@ -525,6 +536,19 @@ body.compensate-for-scrollbar {
 	line-height: 1.5;
 	padding: 25px 44px;
 	right: 0;
+	@media $PortraitMedium{
+		display: none;
+	}
+}
+
+@media $PortraitMedium{
+	.fancybox-navigation{
+		pos absolute
+		b 23px
+		size 180px 33px
+		l 50%
+		ml -90px
+	}
 }
 
 .fancybox-caption:before {
@@ -711,7 +735,7 @@ body.compensate-for-scrollbar {
 
 .fancybox-slide--image .fancybox-image{
 	@media $desktopMaxFrom {
-		transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 22deg) scale(1);
+		transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 11deg) scale(1);
 	}
 	transition: 2s transform;
 	will-change: transform;
@@ -719,7 +743,7 @@ body.compensate-for-scrollbar {
 
 .fancybox-slide--complete .fancybox-image{
 	@media $desktopMaxFrom {
-		transform: translate3d(5%, -4%, -60px) rotate3d(0.05, -0.2, 0, 22deg) scale(.8);
+		transform: translate3d(5%, -4%, -60px) rotate3d(0.05, -0.2, 0, 11deg) scale(.8);
 	}
 }
 

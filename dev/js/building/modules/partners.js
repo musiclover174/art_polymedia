@@ -1,3 +1,5 @@
+import { qsAll } from './helpers';
+
 export default class Partners {
   constructor(partnersEl, partnersElPerv, partnersElNext) {
     this.partnersEl = partnersEl;
@@ -10,8 +12,8 @@ export default class Partners {
   init() {
     const partnersSlider = new Swiper(this.partnersEl, {
       spaceBetween: 13,
-      slidesPerView: 2,
-      loop: true,
+      slidesPerView: Math.min(qsAll(`${this.partnersEl} .swiper-slide`).length, 2),
+      // loop: true,
       speed: 800,
       navigation: {
         nextEl: '.js-partners-next',

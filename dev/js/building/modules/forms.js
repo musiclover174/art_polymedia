@@ -72,13 +72,12 @@ export default class Forms {
     if (forms.length) {
       forms.forEach((form) => {
         form.addEventListener('submit', (e) => {
+          const loader = qs(`#wait_comp_${qs('input[name="bxajaxid"]', form).value}`);
+          loader.parentNode.removeChild(loader);
           if (!Forms.checkForm(form)) {
             e.preventDefault();
             e.stopPropagation();
             form.classList.add('warning');
-          } else {
-            const loader = qs(`#wait_comp_${qs('input[name="bxajaxid"]', form).value}`);
-            loader.parentNode.removeChild(loader);
           }
         });
       });

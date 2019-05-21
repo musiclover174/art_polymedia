@@ -4,9 +4,12 @@
   align-items flex-start
   mt 60px
   transition .7s background
+  @media $desktopMax
+    mb -32px
   &__prev,
   &__next
     ib()
+    oh()
     pos relative
     size 120px
     bgc white
@@ -21,9 +24,17 @@
     @media $PortraitMin
       size 40px
       bgc transparent
+    &:before
+      content ""
+      pos absolute
+      bgc $blue
+      t 0
+      size 100%
+      transition .7s left, .7s right
     &:after
       content ""
       pos absolute
+      z-index 1
       size 33px 31px
       l 43px
       t 44px
@@ -44,7 +55,6 @@
         l 0
         t 11px
     &:not(.disabled):hover
-      bgc $blue
       &:after
         background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAfCAQAAADDnWw5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjAQ4KIB7jpwEYAAAA70lEQVRIx6XVW0oDQRBG4eNWvN8IISoSwhAQRMQHQYKgKLg/d+FKQpirmzg+SPCWjD1T3Y8FH01T9RfScqe+ttYRaStmvptFiImN0/+B9cTYyosUYB1xbuVlGrCaOLX2KhVYRYxsvE4H/hJDK2+6AL+JgYW33YCfxLG5d12B78ShhbPuwBexb+59H2BJ7LrwoR/wSWw796kvILjl3Jf+gGz4RkbsuBl9xfIvnmME7rjwMUbgXrQvEA8sY92JeGQRmxHEgXlsUhGHlrG8QBxZx1IL8cQmlp2IZ9EERxxbxvYI4sQ6ts0QM5vYTsXEzf4BwBwE7Q8Tzx8AAAAASUVORK5CYII=') no-repeat center
         background-size cover
@@ -54,6 +64,17 @@
         dn()
   &__next
     transform scaleX(-1)
+    &:before
+      r 100%
+    &:not(.disabled):hover
+      &:before
+        r 0
+  &__prev
+    &:before
+      l -100%
+    &:not(.disabled):hover
+      &:before
+        l 0
   &__list
     display flex
   &__item

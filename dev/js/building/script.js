@@ -13,9 +13,11 @@ import Filter from './modules/filter';
 import Slider from './modules/slider';
 import Partners from './modules/partners';
 import Cookie from './modules/cookie';
+import Spacer from './modules/spacer';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // const burger = new Burger();
+  const spacer = new Spacer('.main *:not([class])');
+
   const elVisArray = ['.about__feat, .company__general, .about__info-title'];
   if (document.body.classList.contains('index')) {
     const index = new Index(
@@ -62,6 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
           PREV: 'Предыдудщий',
           NEXT: 'Следующий',
         },
+      },
+      afterShow: (instance, current) => {
+        current.$content.find('.popup__search-input').focus();
       },
     });
   }

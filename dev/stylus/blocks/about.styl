@@ -15,7 +15,7 @@
     l 0
     t 0
     z-index -1
-    opacity .35
+    opacity .25
     overflow hidden
     transform scale(1)
     will-change transform
@@ -57,19 +57,31 @@
     df()
     @media $LandscapeMax
       flex-direction column
+      max-width 80%
+    @media $Portrait560
+      max-width 100%
     &-title
       color white
       fontify 120px 700 120px
       mt -16px
       ml -8px
+      @media $lDesktopSmall
+        fontify 100px 700 100px
+      @media $LandscapeMax
+        fontify 80px 700 80px
+      @media $LandscapeMedium
+        fontify 62px 900 62px
+      @media $PortraitMedium
+        fontify 42px 900 42px
+        ml -4px
+      @media $Mobile
+        fontify 34px 900 34px
       span
         db()
         h 120px
         oh()
         @media $desktopMax
           h 100px
-        @media $desktopMin
-          h 72px
         @media $LandscapeMax
           display inline
         &:last-child:after
@@ -98,17 +110,6 @@
           transition .7s .7s opacity
         i
           t 0
-      @media $lDesktopSmall
-        fontify 100px 700 100px
-      @media $desktopMin
-        fontify 72px 700 72px
-      @media $LandscapeMedium
-        fontify 62px 900 62px
-      @media $PortraitMedium
-        fontify 42px 900 42px
-        ml -4px
-      @media $Mobile
-        fontify 34px 900 34px
     &-col
       w calc(50% - 24px)
       color white
@@ -131,9 +132,7 @@
     mt 175px
     mb -65px
     @media $LandscapeMedium
-      mt 100px
-    @media $PortraitMedium
-      mt 67px
+      mt 30px
     @media $PortraitMedium
       mb -78px
   &__feat
@@ -172,6 +171,8 @@
     fontify 60px 700 60px
     @media $lDesktopSmall
       fontify 48px 700 48px
+    @media $desktopMin
+      mt 200px
     @media $LandscapeMedium
       dn()
       mt 120px
@@ -236,8 +237,11 @@
     @media $LandscapeMax
       flex-direction column
       mt 170px
+      max-width 80%
     @media $LandscapeMedium
       mt 90px
+    @media $Portrait560
+      max-width 100%
     &-text
       w calc(50% - 24px)
       color white
@@ -287,11 +291,13 @@
         w 100%
     &-text
       @media $LandscapeMin
-        mt 50px
+        // mt 50px
+        mt 0
     &-imgover
       text-align right
       @media $LandscapeMin
         text-align center
+        dn()
     &-video
       max-width 100%
       @media $PortraitMedium

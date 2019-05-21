@@ -15,10 +15,10 @@ export default class Cookie {
         this.cookieEl.classList.add('hide');
         localStorage.setItem('cookie', true);
       });
-      setTimeout(() => {
-        this.cookieEl.classList.add('hide');
-        localStorage.setItem('cookie', true);
-      }, 5000);
+      // setTimeout(() => {
+      //   this.cookieEl.classList.add('hide');
+      //   localStorage.setItem('cookie', true);
+      // }, 5000);
     }
   }
 }

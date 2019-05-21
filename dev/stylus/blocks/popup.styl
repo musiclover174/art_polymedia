@@ -38,8 +38,8 @@
       mt 66px
     &_search
       pos relative
-    &.warning ^[0]__warning
-      db()
+    // &.warning ^[0]__warning
+    //   db()
     &-title
       c $dark
       fontify 24px 600 32px
@@ -79,6 +79,8 @@
   .common__filename
     display inline
     max-width calc(100% - 23px)
+    &:before
+      t 4px
   &__search
     &-input
       width 100%

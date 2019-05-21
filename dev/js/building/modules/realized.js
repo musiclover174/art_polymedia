@@ -14,7 +14,7 @@ export default class Realized {
       });
 
       item.addEventListener('click', (e) => {
-        if (window.innerWidth >= 768) {
+        if (window.innerWidth >= 1000) {
           $.fancybox.open({
             src: item.getAttribute('data-href'),
             type: 'ajax',
