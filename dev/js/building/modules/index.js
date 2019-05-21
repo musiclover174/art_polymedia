@@ -53,6 +53,13 @@ export default class Index {
         nextEl: `${this.feedsClass} .swiper-button-next`,
         prevEl: `${this.feedsClass} .swiper-button-prev`,
       },
+      on: {
+        slideChange: () => {
+          qsAll(`${this.feedsClass} .swiper-slide-duplicate [data-fancybox]`).forEach((item, index) => {
+            item.dataset.fancybox += index;
+          });
+        },
+      },
     });
   }
 
