@@ -30,11 +30,13 @@ export default class Forms {
     });
 
     const date = qs('.js-date');
-    const dateMask = new IMask(date, {
-      mask: Date,
-      min: new Date(),
-      max: new Date(2030, 0, 1),
-    });
+    if (date) {
+      const dateMask = new IMask(date, {
+        mask: Date,
+        min: new Date(),
+        max: new Date(2030, 0, 1),
+      });
+    }
 
     if (qsAll('.js-common-file').length) {
       const commonFile = qsAll('.js-common-fileinput');
