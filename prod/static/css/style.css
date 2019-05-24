@@ -888,15 +888,6 @@ body.compensate-for-scrollbar {
   visibility: hidden;
   z-index: 99997;
 }
-@media (max-width: 500px) {
-  .fancybox-caption,
-  .fancybox-infobar,
-  .fancybox-navigation .fancybox-button,
-  .fancybox-toolbar {
-    opacity: 1;
-    visibility: visible;
-  }
-}
 .fancybox-show-caption .fancybox-caption,
 .fancybox-show-infobar .fancybox-infobar,
 .fancybox-show-nav .fancybox-navigation .fancybox-button,
@@ -1013,11 +1004,6 @@ body.compensate-for-scrollbar {
   vertical-align: middle;
   opacity: 0;
   top: 30px;
-}
-@media (max-width: 767px) {
-  .fancybox-content {
-    margin-top: 60px;
-  }
 }
 .fancybox-slide--image .fancybox-content {
   -webkit-animation-timing-function: cubic-bezier(0.5, 0, 0.14, 1);
@@ -1232,7 +1218,7 @@ body.compensate-for-scrollbar {
 .fancybox-navigation .fancybox-button:after {
   content: "";
   left: -25px;
-  padding: 50px;
+  padding: 25px;
   position: absolute;
   top: -25px;
 }
@@ -2002,7 +1988,9 @@ div[class^="table-scroller"] {
   margin-bottom: 35px;
 }
 .common__car-img {
+  display: block;
   max-width: 100%;
+  margin: 0 auto;
 }
 .common__car .swiper-buttons {
   margin-top: 28px;
@@ -3385,6 +3373,11 @@ textarea.warning + .common__placeholder {
 .popup {
   font-family: SourceSansPro;
 }
+@media (max-width: 670px) {
+  .popup#order {
+    margin-top: 55px;
+  }
+}
 .popup_search {
   max-width: 900px;
   width: 95%;
@@ -3636,7 +3629,7 @@ textarea.warning + .common__placeholder {
     width: 100%;
     position: fixed;
     z-index: 1;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     top: auto;
     -webkit-transform: none;
@@ -3688,6 +3681,11 @@ textarea.warning + .common__placeholder {
     overflow-y: scroll;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+  }
+}
+@media (max-width: 500px) {
+  .filter__wrapper {
+    max-height: calc(100vh - 110px);
   }
 }
 .filter__themes,
@@ -3922,7 +3920,7 @@ textarea.warning + .common__placeholder {
   position: fixed;
   left: 50%;
   bottom: 20px;
-  z-index: 2;
+  z-index: 9;
   background-color: #0b5fbc;
   color: #fff;
   font-size: 18px;
@@ -3946,9 +3944,10 @@ textarea.warning + .common__placeholder {
 }
 .cookie.hide {
   opacity: 0;
-  bottom: -100%;
-  -webkit-transition: 1.5s bottom, 0.7s opacity;
-  transition: 1.5s bottom, 0.7s opacity;
+  bottom: -200%;
+  visibility: hidden;
+  -webkit-transition: 1.5s bottom, 0.7s opacity, 0.7s visibilty;
+  transition: 1.5s bottom, 0.7s opacity, 0.7s visibilty;
 }
 .cookie__close {
   position: absolute;
@@ -8988,6 +8987,26 @@ ymaps[class$="ymaps-layers-pane"] {
 .evcInformer {
   opacity: 0;
   pointer-events: none;
+  height: 0;
+  overflow: hidden;
+}
+.header .contacts__info {
+  margin-top: 26px;
+  padding-bottom: 0;
+  border-bottom: none;
+  max-width: inherit;
+}
+.header .contacts__info-row {
+  padding-left: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.header .contacts__info-row + .contacts__info-row {
+  margin-top: 9px;
+}
+.header .contacts__info-row::before {
+  display: none;
 }
 html.touchevents .print {
   display: none;

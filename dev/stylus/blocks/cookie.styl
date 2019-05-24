@@ -2,7 +2,7 @@
   pos fixed
   l 50%
   b 20px
-  z-index 2
+  z-index 9
   bgc $blue
   c white
   fontify 18px 400 26px
@@ -18,8 +18,9 @@
     padding 20px 30px
   &.hide
     opacity 0
-    b -100%
-    transition 1.5s bottom, .7s opacity
+    b -200%
+    visibility hidden
+    transition 1.5s bottom, .7s opacity, .7s visibilty
   &__close
     pos absolute
     r 15px

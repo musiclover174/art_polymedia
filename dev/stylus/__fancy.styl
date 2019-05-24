@@ -75,10 +75,10 @@ body.compensate-for-scrollbar {
 	transition: opacity 0.25s,visibility 0s linear 0.25s;
 	visibility: hidden;
 	z-index: 99997;
-	@media $PortraitMedium{
-		opacity: 1;
-		visibility:visible;
-	}
+	// @media $PortraitMedium{
+	// 	opacity: 1;
+	// 	visibility:visible;
+	// }
 }
 
 .fancybox-show-caption .fancybox-caption,
@@ -206,11 +206,11 @@ body.compensate-for-scrollbar {
 	top: 30px;
 }
 
-@media (max-width: 767px) {
-  .fancybox-content{
-    margin-top: 60px;
-  }
-}
+// @media (max-width: 767px) {
+//   .fancybox-content{
+//     margin-top: 60px;
+//   }
+// }
 
 .fancybox-slide--image .fancybox-content {
 	-webkit-animation-timing-function: cubic-bezier(.5,0,.14,1);
@@ -446,7 +446,7 @@ body.compensate-for-scrollbar {
 .fancybox-navigation .fancybox-button:after {
 	content: "";
 	left: -25px;
-	padding: 50px;
+	padding: 25px;
 	position: absolute;
 	top: -25px;
 }
