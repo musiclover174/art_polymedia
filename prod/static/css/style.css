@@ -8932,6 +8932,7 @@ ymaps[class$="ymaps-layers-pane"] {
 }
 .search__request span {
   color: #0b5fbc;
+  font-weight: 600;
 }
 .search__item {
   position: relative;
