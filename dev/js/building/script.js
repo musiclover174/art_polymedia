@@ -16,7 +16,7 @@ import Cookie from './modules/cookie';
 import Spacer from './modules/spacer';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const spacer = new Spacer('.main *:not([class])');
+  const spacer = new Spacer('.main *:not([class]):not([id])');
 
   const elVisArray = ['.about__feat, .company__general, .about__info-title'];
   if (document.body.classList.contains('index')) {
