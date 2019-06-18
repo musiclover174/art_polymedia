@@ -75,7 +75,7 @@ export default class Forms {
       forms.forEach((form) => {
         form.addEventListener('submit', (e) => {
           const loader = qs(`#wait_comp_${qs('input[name="bxajaxid"]', form).value}`);
-          loader.parentNode.removeChild(loader);
+          if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
           if (!Forms.checkForm(form)) {
             e.preventDefault();
             e.stopPropagation();

@@ -112,9 +112,10 @@
       color alpha(white, .35)
       fontify 14px 400 18px
       transition .7s color
-      &:not(&_main):hover, 
-      &:not(&_main).active
+      &:not(&_main):hover
         color white
+      &:not(&_main).active
+        color alpha(white, .65)
       &:not(&_main) + &:not(&_main)
         mt 14px
       &_main
