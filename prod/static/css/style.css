@@ -5283,7 +5283,7 @@ body.burgeropen .menu {
   }
 }
 .banner__hrefover {
-  max-width: 50%;
+  max-width: 65%;
   padding-bottom: 23px;
   margin-left: -6px;
 }
@@ -5294,7 +5294,7 @@ body.burgeropen .menu {
 }
 @media (max-width: 1170px) {
   .banner__hrefover {
-    max-width: 70%;
+    max-width: 75%;
   }
 }
 @media (max-width: 900px) {
