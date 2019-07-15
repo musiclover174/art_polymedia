@@ -111,6 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
     qs('.js-print').addEventListener('click', () => window.print());
   }
 
+  if (qs('.js-lazy')) {
+    const lazyLoadInstance = new LazyLoad({
+      elements_selector: '.js-lazy',
+    });
+  }
+
   resizeWatcher();
   elemVisCheck(elVisArray);
   let eventScroll;

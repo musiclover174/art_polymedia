@@ -35,7 +35,7 @@ html
               while n < 7
                 +e('article').item
                   +e(href="#").item-imgover
-                    +e.item-img(src="img/news" + n + ".jpg")
+                    +e.item-img.js-lazy(data-src="img/news" + n + ".jpg", src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII=")
                   +e.item-content
                     +e('p').item-date 25 октября 2018
                     +e.item-href(href="#") Art Polymedia завоевали две награды Prointegration Awards 2018 
