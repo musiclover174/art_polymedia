@@ -87,21 +87,26 @@
     @media $PortraitMedium
       padding 0 15px
   &__img
-    min-width 100%
-    min-height 100%
-    @media $LandscapeMax
-      size 100%
-      object-fit cover
+    size 100%
+    object-fit cover
     &-wrapper
       pos absolute
       t 0
       l 0
+      size 2000px 1124px
       min-width 100%
       min-height 100%
       z-index -1
       transform translate3d(0, 0, 0) rotate3d(0, 0, 0, 0) scale(1)
       transition 2s transform
       will-change transform
+      @media $LandscapeMax
+        max-width none
+        size 100%
+        min-height auto
+        min-width auto
+        l 0
+        transform none
       &:after
         content ""
         position absolute
@@ -111,13 +116,6 @@
         h calc(100% - 2px)
         z-index 1
         bgc rgba(255,255,255,0.07)
-      @media $LandscapeMax
-        max-width none
-        size 100%
-        min-height auto
-        min-width auto
-        l 0
-        transform none
   &__hrefover
     max-width 65%
     pb 23px

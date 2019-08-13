@@ -5234,21 +5234,17 @@ body.burgeropen .menu {
   }
 }
 .banner__img {
-  min-width: 100%;
-  min-height: 100%;
-}
-@media (max-width: 1000px) {
-  .banner__img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-  }
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 .banner__img-wrapper {
   position: absolute;
   top: 0;
   left: 0;
+  width: 2000px;
+  height: 1124px;
   min-width: 100%;
   min-height: 100%;
   z-index: -1;
